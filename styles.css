@@ -1,0 +1,324 @@
+/* ==========================================================================
+   CSS DESIGN SYSTEM FOR DENT HOUSE CLINIC
+   Group: SE-2531
+   Authors: Saparkhan Shyngyskhan & Turarbek Nurakhmet
+   ========================================================================== */
+
+/* 1. GLOBAL DESIGN VARIABLES & RESET */
+:root {
+  --primary-color: #005f73;
+  --secondary-color: #0a9396;
+  --accent-color: #ee9b00;
+  --dark-neutral: #1d2d44;
+  --light-bg: #f8f9fa;
+  --card-bg: #ffffff;
+  --border-color: #e0e0e0;
+  --font-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-body: Arial, Helvetica, sans-serif;
+  --base-spacing: 1.5rem;
+  --border-radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  color: var(--dark-neutral);
+  background-color: var(--light-bg);
+}
+
+/* 2. TYPOGRAPHY & HEADINGS */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+h1.site-title {
+  font-size: 2.2rem;
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 1.6rem;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.4rem;
+  margin-top: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* 3. HEADER & FLEXBOX NAVIGATION */
+.main-header {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: var(--base-spacing) 0;
+}
+
+.header-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.site-tagline {
+  font-style: italic;
+  color: #e0f2f1;
+  margin-bottom: 1rem;
+}
+
+.main-nav {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+
+.nav-link.active {
+  background-color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* 4. MAIN LAYOUT CONTAINER */
+.main-content {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* 5. CSS GRID LAYOUTS */
+.info-grid, .team-grid, .contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.info-card, .doctor-card, .contact-info-card, .booking-form-wrapper, .founder-card, .workflow-card, .doc-section {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+/* Demonstration of CSS Specificity */
+.doctor-card.highlight-card {
+  border-left: 6px solid var(--accent-color);
+  background-color: #fffdf9;
+}
+
+.doctor-spec, .role-title {
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* 6. CLINIC GALLERY STYLING */
+.clinic-gallery {
+  margin-top: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.gallery-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin: 0;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-card figcaption {
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  color: var(--dark-neutral);
+  text-align: center;
+  background-color: #ffffff;
+  font-style: italic;
+}
+
+/* 7. LIST STYLING */
+.schedule-list, .step-list, .task-list {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.schedule-list li, .step-list li, .task-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* 8. DATA TABLES */
+.table-wrapper {
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--card-bg);
+  margin-top: 1rem;
+}
+
+.data-table caption {
+  caption-side: top;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  color: var(--primary-color);
+}
+
+.data-table th, .data-table td {
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.data-table thead {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background-color: #f2f4f5;
+}
+
+/* 9. FORM STYLING (Flexbox Form) */
+.appointment-form {
+  margin-top: 1rem;
+}
+
+.form-group {
+  border: 1px solid var(--border-color);
+  padding: 1.2rem;
+  border-radius: var(--border-radius);
+}
+
+.form-group legend {
+  padding: 0 0.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-field label {
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.form-field input, .form-field select, .form-field textarea {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 4px rgba(10, 147, 150, 0.4);
+}
+
+.submit-btn {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-color);
+}
+
+/* 10. FOOTER */
+.main-footer {
+  background-color: var(--dark-neutral);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+.main-footer p {
+  margin-bottom: 0.3rem;
+}
+
+/* 11. RESPONSIVE MEDIA QUERIES */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-link {
+    text-align: center;
+    display: block;
+  }
+
+  h1.site-title {
+    font-size: 1.8rem;
+  }
+
+  .info-grid, .team-grid, .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

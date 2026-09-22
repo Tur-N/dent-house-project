@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Saparkhan Shyngyskhan">
+    <meta name="description" content="Technical documentation and colophon for Dent house dental clinic website project. Group SE-2531.">
+    <title>Colophon & Technical Documentation — Dent house Clinic</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Author: Saparkhan Shyngyskhan | Group: SE-2531 -->
+
+<header class="main-header">
+    <div class="header-container">
+        <h1 class="site-title">Technical Documentation (Colophon)</h1>
+        <p class="site-tagline">Web Technologies Course — Assignment 1 & Assignment 2 Project Report</p>
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services & Pricing</a></li>
+                <li><a href="orthodontics.html" class="nav-link">Orthodontics & 3D Scanning</a></li>
+                <li><a href="team.html" class="nav-link">Medical Team</a></li>
+                <li><a href="contacts.html" class="nav-link">Contacts & Booking</a></li>
+                <li><a href="colophon.html" class="nav-link active">Colophon</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="main-content">
+    <section class="doc-section">
+        <h2>Project Overview & Collaboration Architecture</h2>
+        <p>This website was developed for the physically existing entity <strong>Dent house Dental Clinic</strong> in Astana, Kazakhstan (48 Alikhan Bokeikhan Street). The project represents the combined efforts of Group SE-2531 students: <strong>Saparkhan Shyngyskhan</strong> and <strong>Turarbek Nurakhmet</strong>. The codebase adheres to strict pure semantic HTML5 standards and clean custom CSS architecture without using external frameworks.</p>
+    </section>
+
+    <section class="doc-section">
+        <h2>Team Task Allocation</h2>
+        <ul class="task-list">
+            <li><strong>Saparkhan Shyngyskhan:</strong> Developed <code>index.html</code>, <code>services.html</code>, and <code>colophon.html</code>. Architected the global CSS design system in <code>styles.css</code> including CSS variables, CSS Grid layouts, and typography resets.</li>
+            <li><strong>Turarbek Nurakhmet:</strong> Developed <code>orthodontics.html</code>, <code>team.html</code>, and <code>contacts.html</code>. Engineered Flexbox navigation components, responsive booking form styles, and media queries.</li>
+        </ul>
+    </section>
+
+    <section class="doc-section">
+        <h2>Semantic Tag Rationale</h2>
+        <p>In accordance with Assignment 1 requirements, non-semantic <code>&lt;div&gt;</code> tags were systematically replaced with explicit HTML5 structural elements:</p>
+        <ul>
+            <li><code>&lt;header&gt;</code> and <code>&lt;nav&gt;</code> structure the persistent header and global navigation menu.</li>
+            <li><code>&lt;main&gt;</code> encloses primary page content, partitioned logically into <code>&lt;section&gt;</code> and <code>&lt;article&gt;</code> components.</li>
+            <li><code>&lt;address&gt;</code> encapsulates contact phone numbers and geographical location for search engine indexing.</li>
+            <li><code>&lt;table&gt;</code> elements structure medical pricing using <code>&lt;caption&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;th scope="col"&gt;</code> for accessibility.</li>
+            <li><code>&lt;form&gt;</code> structures appointment booking using <code>&lt;fieldset&gt;</code>, <code>&lt;legend&gt;</code>, and explicit <code>&lt;label&gt;</code> associations.</li>
+        </ul>
+    </section>
+
+    <section class="doc-section">
+        <h2>W3C Validation & Technical Compliance</h2>
+        <p>All 6 HTML files and <code>styles.css</code> have been validated using W3C markup and CSS validation services with 0 errors. All assets are served locally and conform strictly to the assignment rules.</p>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <p>&copy; 2026 Dent house Dental Clinic. All rights reserved.</p>
+    <p>Page Developed by: Saparkhan Shyngyskhan (SE-2531)</p>
+</footer>
+</body>
+</html>
