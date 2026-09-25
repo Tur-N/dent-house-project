@@ -4,93 +4,407 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Saparkhan Shyngyskhan">
-  <meta name="description" content="Official website of Dent house dental clinic in Astana. High-precision microscopic treatment and digital orthopedics.">
-  <title>Dent house — Dental Clinic in Astana</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Dent house Dental Clinic in Astana — precision dentistry, digital diagnostics and specialist care.">
+  <title>Home — Dent house Dental Clinic</title>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/saparkhan.css">
+
+  <!-- Internal style demonstration:
+       this rule intentionally overrides the external stylesheet because
+       the internal style is loaded later in the cascade. -->
+  <style>
+    #home-title {
+        letter-spacing: 0.06em;
+    }
+  </style>
 </head>
-<body>
+
+<body class="home-page">
 <!-- Author: Saparkhan Shyngyskhan | Group: SE-2531 -->
 
 <header class="main-header">
-  <div class="header-container">
-    <h1 class="site-title">Dent house Dental Clinic</h1>
-    <p class="site-tagline">Advanced Precision Dentistry & Digital Orthopedics in Astana</p>
-    <nav class="main-nav">
-      <ul class="nav-list">
-        <li><a href="index.html" class="nav-link active">Home</a></li>
-        <li><a href="services.html" class="nav-link">Services & Pricing</a></li>
-        <li><a href="orthodontics.html" class="nav-link">Orthodontics & 3D Scanning</a></li>
-        <li><a href="team.html" class="nav-link">Medical Team</a></li>
-        <li><a href="contacts.html" class="nav-link">Contacts & Booking</a></li>
-        <li><a href="colophon.html" class="nav-link">Colophon</a></li>
-      </ul>
-    </nav>
-  </div>
+  <p class="eyebrow">DENT HOUSE • ASTANA</p>
+
+  <h1 class="site-title">Dent house Dental Clinic</h1>
+
+  <p class="site-tagline">
+    Advanced Precision Dentistry & Digital Orthopedics
+  </p>
+
+  <nav class="main-nav" aria-label="Primary navigation">
+    <ul class="nav-list">
+      <li>
+        <a href="index.html"
+           class="nav-link active"
+           aria-current="page">
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="services.html" class="nav-link">
+          Services & Pricing
+        </a>
+      </li>
+
+      <li>
+        <a href="orthodontics.html" class="nav-link">
+          Orthodontics & 3D Scanning
+        </a>
+      </li>
+
+      <li>
+        <a href="team.html" class="nav-link">
+          Medical Team
+        </a>
+      </li>
+
+      <li>
+        <a href="contacts.html" class="nav-link">
+          Contacts & Booking
+        </a>
+      </li>
+
+      <li>
+        <a href="colophon.html" class="nav-link">
+          Colophon
+        </a>
+      </li>
+    </ul>
+  </nav>
 </header>
 
+
+<!-- Moving announcement bar -->
+<section class="announcement-bar" aria-label="Clinic highlights">
+  <p class="announcement-track">
+
+    <span>🦷 Microscopic Dentistry</span>
+    <span>•</span>
+
+    <span>3D Intraoral Scanning</span>
+    <span>•</span>
+
+    <span>Dental Implantation</span>
+    <span>•</span>
+
+    <span>Experienced Specialists</span>
+    <span>•</span>
+
+    <span>Book Your Consultation</span>
+    <span>•</span>
+
+    <span>🦷 Microscopic Dentistry</span>
+    <span>•</span>
+
+    <span>3D Intraoral Scanning</span>
+    <span>•</span>
+
+    <span>Dental Implantation</span>
+    <span>•</span>
+
+    <span>Experienced Specialists</span>
+    <span>•</span>
+
+    <span>Book Your Consultation</span>
+    <span>•</span>
+
+  </p>
+</section>
+
+
 <main class="main-content">
-  <section class="hero-section">
-    <h2>High-Tech Oral Healthcare in Astana</h2>
-    <p>Dent house Dental Clinic is a state-of-the-art medical center located at 48 Alikhan Bokeikhan Street, Astana. Our mission is to provide every patient with painless, high-precision, and comprehensive dental care. By utilizing advanced dental microscopes and 3D digital scanners, our specialists ensure flawless endodontic canal treatment, durable restorations, and premium prosthetic solutions.</p>
+
+  <!-- Hero -->
+  <section class="hero-banner" aria-labelledby="home-title">
+
+    <!-- Absolute positioned badge -->
+    <span class="hero-badge">
+            Precision Dentistry
+        </span>
+
+    <p class="hero-label">
+      MODERN CARE • DIGITAL DIAGNOSTICS • PATIENT COMFORT
+    </p>
+
+    <!--
+    ID is used once because this heading is the unique title
+    of the Home page hero section.
+    -->
+    <h2 id="home-title">
+      High-Tech Oral Healthcare in Astana
+    </h2>
+
+    <p class="hero-description">
+      Dent house Dental Clinic combines experienced dental specialists
+      with microscopy, digital 3D diagnostics and comprehensive treatment
+      planning. Our goal is precise care, understandable treatment plans
+      and comfortable visits for every patient.
+    </p>
+
+    <!-- Flexbox action group -->
+    <p class="hero-actions">
+      <a class="primary-action" href="contacts.html">
+        Book an Appointment
+      </a>
+
+      <a class="secondary-action" href="services.html">
+        Explore Services
+      </a>
+    </p>
+
   </section>
 
-  <section class="clinic-gallery">
-    <h2>Clinic Facilities & Interior</h2>
-    <p>Explore our modern dental facilities, welcoming reception area, and high-tech treatment operatory in Astana.</p>
 
-    <div class="gallery-grid">
-      <figure class="gallery-card">
-        <img src="images/1.jpeg" alt="Dent House exterior" class="gallery-img">
-        <figcaption>Main entrance of Dent House dental clinic</figcaption>
-      </figure>
+  <!-- Introduction -->
+  <section class="clinic-introduction" aria-labelledby="intro-heading">
 
-      <figure class="gallery-card">
-        <img src="images/2.jpeg" alt="Dent House reception" class="gallery-img">
-        <figcaption>Modern reception desk and patient lounge</figcaption>
-      </figure>
+    <p class="section-kicker">
+      ABOUT THE CLINIC
+    </p>
 
-      <figure class="gallery-card">
-        <img src="images/3.jpeg" alt="Dent House operatory" class="gallery-img">
-        <figcaption>State-of-the-art dental operatory room</figcaption>
-      </figure>
-    </div>
+    <h2 id="intro-heading">
+      Technology with a Human Approach
+    </h2>
+
+    <!-- Float demonstration -->
+    <p class="intro-copy">
+
+      <img
+              class="intro-image"
+              src="images/2.jpeg"
+              alt="Dent house reception area"
+      >
+
+      Dent house is designed as a modern dental environment where digital
+      diagnostics and careful clinical work support the patient experience.
+      The clinic works with therapeutic, surgical, orthodontic, pediatric,
+      periodontal and prosthetic cases in one coordinated space.
+    </p>
+
+    <!--
+    Clear demonstration:
+    without clear, this paragraph could continue wrapping
+    beside the floated image.
+    -->
+    <p class="clear-after">
+      Our specialists use structured consultations, clear explanations
+      and evidence-based treatment planning to make complex dental
+      procedures easier to understand.
+    </p>
+
   </section>
 
-  <section class="founder-section">
-    <h2>Message from the Founder</h2>
-    <article class="founder-card">
-      <h3>Dr. Mukhamedyarov Kanat Magauyanovich</h3>
-      <p class="role-title">Founder | Implantologist & Prosthodontist (Over 25 years experience)</p>
-      <blockquote cite="https://denthouse.kz">
-        <p>"Our core priority is the long-term health and aesthetic confidence of our patients. At Dent house, we follow international evidence-based clinical protocols. Through dental microscopy and digital 3D modeling, we execute complex full-arch restorations and root canal therapy with absolute precision."</p>
-      </blockquote>
+
+  <!--
+  Grid rationale:
+  these cards form a two-dimensional information layout and one item spans
+  the entire row, so CSS Grid is more suitable than a simple one-direction
+  Flexbox layout.
+  -->
+  <section class="home-grid" aria-label="Clinic highlights">
+
+    <article class="feature-card feature-card-wide">
+
+      <p class="feature-number">
+        01
+      </p>
+
+      <h2>
+        Microscopic Treatment
+      </h2>
+
+      <p>
+        High-precision endodontic and restorative procedures
+        under magnification.
+      </p>
+
     </article>
+
+
+    <article class="feature-card">
+
+      <p class="feature-number">
+        02
+      </p>
+
+      <h2>
+        Digital 3D Scanning
+      </h2>
+
+      <p>
+        Digital impressions and diagnostic models support
+        modern orthodontic planning.
+      </p>
+
+    </article>
+
+
+    <article class="feature-card">
+
+      <p class="feature-number">
+        03
+      </p>
+
+      <h2>
+        Specialist Team
+      </h2>
+
+      <p>
+        Implantology, surgery, therapy, periodontology,
+        pediatrics and orthodontics.
+      </p>
+
+    </article>
+
   </section>
 
-  <section class="info-grid">
-    <div class="info-card">
-      <h2>Working Hours</h2>
-      <p>We operate 7 days a week to accommodate your schedule:</p>
-      <ul class="schedule-list">
-        <li><strong>Weekdays (Mon – Fri):</strong> 10:00 AM – 09:00 PM (10:00 - 21:00)</li>
-        <li><strong>Weekends (Sat – Sun):</strong> 10:00 AM – 06:00 PM (10:00 - 18:00)</li>
-      </ul>
-    </div>
 
-    <div class="info-card">
-      <h2>Location & Direct Contact</h2>
-      <address class="contact-address">
-        <p><strong>Address:</strong> 48 Alikhan Bokeikhan Street, Astana, Kazakhstan</p>
-        <p><strong>Phone:</strong> <a href="tel:+77078087848" class="phone-link">+7 707 808 78 48</a></p>
-        <p><strong>Status:</strong> Open for appointments</p>
-      </address>
-    </div>
+  <!-- Additional Flexbox section -->
+  <section class="quick-facts" aria-label="Clinic facts">
+
+    <article class="fact-card">
+      <strong>10:00–21:00</strong>
+      <span>Monday–Friday</span>
+    </article>
+
+    <article class="fact-card">
+      <strong>10:00–18:00</strong>
+      <span>Saturday–Sunday</span>
+    </article>
+
+    <article class="fact-card">
+      <strong>48</strong>
+      <span>Alikhan Bokeikhan Street</span>
+    </article>
+
   </section>
+
+
+  <!-- Gallery -->
+  <section class="clinic-gallery" aria-labelledby="gallery-heading">
+
+    <p class="section-kicker">
+      CLINIC SPACE
+    </p>
+
+    <h2 id="gallery-heading">
+      A Modern Dental Environment
+    </h2>
+
+    <section class="gallery-grid" aria-label="Clinic gallery">
+
+      <figure class="gallery-card">
+
+        <img
+                src="images/1.jpeg"
+                alt="Exterior of Dent house Dental Clinic"
+        >
+
+        <figcaption>
+          Main entrance and exterior
+        </figcaption>
+
+      </figure>
+
+
+      <figure class="gallery-card">
+
+        <img
+                src="images/2.jpeg"
+                alt="Dent house reception and waiting area"
+        >
+
+        <figcaption>
+          Reception and patient lounge
+        </figcaption>
+
+      </figure>
+
+
+      <figure class="gallery-card">
+
+        <img
+                src="images/3.jpeg"
+                alt="Dent house treatment room"
+        >
+
+        <figcaption>
+          Modern treatment operatory
+        </figcaption>
+
+      </figure>
+
+    </section>
+
+  </section>
+
+
+  <!-- Founder -->
+  <section class="founder-message" aria-labelledby="founder-heading">
+
+    <p class="section-kicker">
+      FOUNDER MESSAGE
+    </p>
+
+    <h2 id="founder-heading">
+      Long-Term Oral Health First
+    </h2>
+
+    <article class="founder-card">
+
+      <h3>
+        Dr. Mukhamedyarov Kanat Magauyanovich
+      </h3>
+
+      <p class="role-title">
+        Founder • Implantologist & Prosthodontist
+      </p>
+
+      <blockquote>
+
+        <p>
+          “Our priority is careful, understandable treatment and
+          long-term oral health. Digital planning and clinical
+          precision help our team approach complex cases
+          systematically.”
+        </p>
+
+      </blockquote>
+
+    </article>
+
+  </section>
+
 </main>
 
+
+<!--
+Inline style demonstration:
+this one-off letter-spacing value intentionally overrides the
+external .quick-booking rule and demonstrates cascade priority.
+-->
+<a
+        class="quick-booking"
+        href="contacts.html"
+        style="letter-spacing: 0.12em;"
+>
+  BOOK VISIT
+</a>
+
+
 <footer class="main-footer">
-  <p>&copy; 2026 Dent house Dental Clinic. All rights reserved.</p>
-  <p>Page Developed by: Saparkhan Shyngyskhan (SE-2531)</p>
+
+  <p>
+    © 2026 Dent house Dental Clinic
+  </p>
+
+  <p>
+    Page developed by: Saparkhan Shyngyskhan • SE-2531
+  </p>
+
 </footer>
+
 </body>
 </html>
