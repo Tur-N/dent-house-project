@@ -79,3 +79,50 @@ Heading font:
 
 ```css
 "Segoe UI", Tahoma, Geneva, Verdana, sans-serif
+
+------------------------------------REMOVED CSS----------------------------------------------------------
+# Assignment 3 — Removed CSS
+
+Assignment 3 continues the Assignment 2 Dent house website.
+
+Bootstrap now handles most of the layout, spacing, navigation,
+buttons, responsive behaviour, forms and tables.
+
+| Assignment 2 CSS | Assignment 3 Bootstrap replacement |
+|---|---|
+| `.home-grid` | `.row` + `.col-*` |
+| `.pricing-layout` | `.row` + `.col-*` |
+| `.diagnostic-layout` | `.row` + `.col-*` |
+| `.team-grid` | `.row` + `.col-md-6` |
+| `.contact-layout` | `.row` + `.col-*` |
+| `.documentation-grid` | `.row` + `.col-*` |
+| `display: flex` | `.d-flex` |
+| `flex-wrap: wrap` | `.flex-wrap` |
+| `justify-content: center` | `.justify-content-center` |
+| `gap` | `.gap-*` |
+| Manual padding | `.p-*`, `.px-*`, `.py-*` |
+| Manual margins | `.m-*`, `.mt-*`, `.mb-*` |
+| Custom button styling | `.btn`, `.btn-primary`, `.btn-warning` |
+| Custom outline button | `.btn-outline-primary` |
+| Custom button sizing | `.btn-lg`, `.btn-sm` |
+| Custom navigation flexbox | `.navbar`, `.navbar-nav` |
+| Manual mobile navigation | `.navbar-toggler`, `.collapse` |
+| Manual table styling | `.table`, `.table-striped`, `.table-hover` |
+| Manual responsive table | `.table-responsive` |
+| Manual form control styling | `.form-control`, `.form-select` |
+| Manual badge styling | `.badge`, `.rounded-pill` |
+| Manual shadows | `.shadow-sm` |
+| Manual borders | `.border` |
+| Manual rounded cards | `.rounded-4` |
+| Float image CSS | `.float-start`, `.me-3`, `.mb-2` |
+| Form grid | `.row` + `.col-*` |
+
+Remaining custom CSS is only used for:
+
+- project colours
+- font families
+- header gradient
+- marquee animation
+- hero decoration
+- image height
+- small page-specific corrections

@@ -1,374 +1,675 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Saparkhan Shyngyskhan">
-  <meta name="description" content="Dent house Dental Clinic in Astana — precision dentistry, digital diagnostics and specialist care.">
-  <title>Home — Dent house Dental Clinic</title>
 
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/saparkhan.css">
+  <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+  >
 
-  <!-- Internal style demonstration:
-       this rule intentionally overrides the external stylesheet because
-       the internal style is loaded later in the cascade. -->
-  <style>
-    #home-title {
-        letter-spacing: 0.06em;
-    }
-  </style>
+  <meta
+          name="author"
+          content="Saparkhan Shyngyskhan"
+  >
+
+  <meta
+          name="description"
+          content="Dent house Dental Clinic in Astana — precision dentistry, digital diagnostics and specialist care."
+  >
+
+  <title>
+    Home — Dent house Dental Clinic
+  </title>
+
+
+  <!-- Bootstrap 5.3.8 -->
+
+  <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+  >
+
+  <!-- Custom CSS -->
+
+  <link
+          rel="stylesheet"
+          href="css/base.css"
+  >
+
+  <link
+          rel="stylesheet"
+          href="css/saparkhan.css"
+  >
+
 </head>
 
+
 <body class="home-page">
+
 <!-- Author: Saparkhan Shyngyskhan | Group: SE-2531 -->
 
+
 <header class="main-header">
-  <p class="eyebrow">DENT HOUSE • ASTANA</p>
 
-  <h1 class="site-title">Dent house Dental Clinic</h1>
+  <!-- container-fluid is used because the header
+       should span the full browser width. -->
 
-  <p class="site-tagline">
-    Advanced Precision Dentistry & Digital Orthopedics
-  </p>
+  <div class="container-fluid px-3 px-md-5 py-4">
 
-  <nav class="main-nav" aria-label="Primary navigation">
-    <ul class="nav-list">
-      <li>
-        <a href="index.html"
-           class="nav-link active"
-           aria-current="page">
-          Home
-        </a>
-      </li>
+    <p class="eyebrow text-uppercase fw-bold small mb-2">
+      DENT HOUSE • ASTANA
+    </p>
 
-      <li>
-        <a href="services.html" class="nav-link">
-          Services & Pricing
-        </a>
-      </li>
 
-      <li>
-        <a href="orthodontics.html" class="nav-link">
-          Orthodontics & 3D Scanning
-        </a>
-      </li>
+    <h1 class="site-title display-4 fw-bold mb-2">
+      Dent house Dental Clinic
+    </h1>
 
-      <li>
-        <a href="team.html" class="nav-link">
-          Medical Team
-        </a>
-      </li>
 
-      <li>
-        <a href="contacts.html" class="nav-link">
-          Contacts & Booking
-        </a>
-      </li>
+    <p class="site-tagline lead mb-4">
+      Advanced Precision Dentistry & Digital Orthopedics
+    </p>
 
-      <li>
-        <a href="colophon.html" class="nav-link">
-          Colophon
-        </a>
-      </li>
-    </ul>
-  </nav>
+
+    <!-- Bootstrap responsive navbar -->
+
+    <nav
+            class="navbar navbar-expand-lg navbar-dark"
+            aria-label="Primary navigation"
+    >
+
+      <button
+              class="navbar-toggler mx-auto"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#primaryNav"
+              aria-controls="primaryNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div
+              class="collapse navbar-collapse justify-content-center"
+              id="primaryNav"
+      >
+
+        <ul
+                class="navbar-nav flex-wrap justify-content-center gap-2"
+        >
+
+          <li class="nav-item">
+
+            <a
+                    href="index.html"
+                    class="nav-link active px-3 py-2 rounded"
+                    aria-current="page"
+            >
+              Home
+            </a>
+
+          </li>
+
+
+          <li class="nav-item">
+
+            <a
+                    href="services.html"
+                    class="nav-link px-3 py-2 rounded"
+            >
+              Services & Pricing
+            </a>
+
+          </li>
+
+
+          <li class="nav-item">
+
+            <a
+                    href="orthodontics.html"
+                    class="nav-link px-3 py-2 rounded"
+            >
+              Orthodontics & 3D Scanning
+            </a>
+
+          </li>
+
+
+          <li class="nav-item">
+
+            <a
+                    href="team.html"
+                    class="nav-link px-3 py-2 rounded"
+            >
+              Medical Team
+            </a>
+
+          </li>
+
+
+          <li class="nav-item">
+
+            <a
+                    href="contacts.html"
+                    class="nav-link px-3 py-2 rounded"
+            >
+              Contacts & Booking
+            </a>
+
+          </li>
+
+
+          <li class="nav-item">
+
+            <a
+                    href="colophon.html"
+                    class="nav-link px-3 py-2 rounded"
+            >
+              Colophon
+            </a>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+  </div>
+
 </header>
 
 
-<!-- Moving announcement bar -->
-<section class="announcement-bar" aria-label="Clinic highlights">
-  <p class="announcement-track">
+<!-- Announcement bar -->
 
-    <span>🦷 Microscopic Dentistry</span>
-    <span>•</span>
+<section
+        class="announcement-bar"
+        aria-label="Clinic highlights"
+>
 
-    <span>3D Intraoral Scanning</span>
-    <span>•</span>
+  <div class="container-fluid overflow-hidden">
 
-    <span>Dental Implantation</span>
-    <span>•</span>
+    <p
+            class="announcement-track d-flex gap-4 fw-bold py-2 mb-0"
+    >
 
-    <span>Experienced Specialists</span>
-    <span>•</span>
+      <span>🦷 Microscopic Dentistry</span>
+      <span>•</span>
+      <span>3D Intraoral Scanning</span>
+      <span>•</span>
+      <span>Dental Implantation</span>
+      <span>•</span>
+      <span>Experienced Specialists</span>
+      <span>•</span>
+      <span>Book Your Consultation</span>
+      <span>•</span>
 
-    <span>Book Your Consultation</span>
-    <span>•</span>
+      <span>🦷 Microscopic Dentistry</span>
+      <span>•</span>
+      <span>3D Intraoral Scanning</span>
+      <span>•</span>
+      <span>Dental Implantation</span>
+      <span>•</span>
+      <span>Experienced Specialists</span>
+      <span>•</span>
+      <span>Book Your Consultation</span>
+      <span>•</span>
 
-    <span>🦷 Microscopic Dentistry</span>
-    <span>•</span>
+    </p>
 
-    <span>3D Intraoral Scanning</span>
-    <span>•</span>
+  </div>
 
-    <span>Dental Implantation</span>
-    <span>•</span>
-
-    <span>Experienced Specialists</span>
-    <span>•</span>
-
-    <span>Book Your Consultation</span>
-    <span>•</span>
-
-  </p>
 </section>
 
 
-<main class="main-content">
+<main class="container py-4 py-md-5">
 
-  <!-- Hero -->
-  <section class="hero-banner" aria-labelledby="home-title">
 
-    <!-- Absolute positioned badge -->
-    <span class="hero-badge">
+  <!-- HERO -->
+
+  <section
+          class="hero-banner rounded-4 p-4 p-md-5 mb-4 text-center"
+          aria-labelledby="home-title"
+  >
+
+        <span
+                class="hero-badge badge text-bg-warning position-absolute top-0 start-50 translate-middle-x mt-3"
+        >
             Precision Dentistry
         </span>
 
-    <p class="hero-label">
+
+    <p
+            class="text-uppercase fw-bold small mt-4 mb-2"
+    >
       MODERN CARE • DIGITAL DIAGNOSTICS • PATIENT COMFORT
     </p>
 
-    <!--
-    ID is used once because this heading is the unique title
-    of the Home page hero section.
-    -->
-    <h2 id="home-title">
+
+    <h2
+            id="home-title"
+            class="display-3 fw-bold mb-3"
+    >
       High-Tech Oral Healthcare in Astana
     </h2>
 
-    <p class="hero-description">
+
+    <p
+            class="lead mb-4 d-none d-sm-block"
+    >
+
       Dent house Dental Clinic combines experienced dental specialists
       with microscopy, digital 3D diagnostics and comprehensive treatment
       planning. Our goal is precise care, understandable treatment plans
       and comfortable visits for every patient.
+
     </p>
 
-    <!-- Flexbox action group -->
-    <p class="hero-actions">
-      <a class="primary-action" href="contacts.html">
+
+    <div
+            class="d-flex flex-wrap justify-content-center align-items-center gap-2"
+    >
+
+      <a
+              class="btn btn-warning btn-lg fw-bold"
+              href="contacts.html"
+      >
         Book an Appointment
       </a>
 
-      <a class="secondary-action" href="services.html">
+
+      <a
+              class="btn btn-outline-light"
+              href="services.html"
+      >
         Explore Services
       </a>
-    </p>
+
+    </div>
 
   </section>
 
 
-  <!-- Introduction -->
-  <section class="clinic-introduction" aria-labelledby="intro-heading">
+  <!-- INTRODUCTION -->
 
-    <p class="section-kicker">
+  <section
+          class="bg-white border rounded-4 shadow-sm p-4 mb-4"
+          aria-labelledby="intro-heading"
+  >
+
+    <p
+            class="text-uppercase text-secondary fw-bold small mb-2"
+    >
       ABOUT THE CLINIC
     </p>
 
-    <h2 id="intro-heading">
+
+    <h2
+            id="intro-heading"
+            class="h2 fw-bold text-primary text-center text-md-start"
+    >
       Technology with a Human Approach
     </h2>
 
-    <!-- Float demonstration -->
-    <p class="intro-copy">
+
+    <p class="lead">
 
       <img
-              class="intro-image"
+              class="float-start me-3 mb-2 rounded-3 img-fluid"
               src="images/2.jpeg"
               alt="Dent house reception area"
+              width="190"
+              height="125"
       >
 
-      Dent house is designed as a modern dental environment where digital
-      diagnostics and careful clinical work support the patient experience.
-      The clinic works with therapeutic, surgical, orthodontic, pediatric,
-      periodontal and prosthetic cases in one coordinated space.
+      Dent house is designed as a modern dental environment where
+      digital diagnostics and careful clinical work support the
+      patient experience. The clinic works with therapeutic,
+      surgical, orthodontic, pediatric, periodontal and prosthetic
+      cases in one coordinated space.
+
     </p>
 
-    <!--
-    Clear demonstration:
-    without clear, this paragraph could continue wrapping
-    beside the floated image.
-    -->
-    <p class="clear-after">
+
+    <p class="mb-0">
+
       Our specialists use structured consultations, clear explanations
       and evidence-based treatment planning to make complex dental
       procedures easier to understand.
+
     </p>
 
   </section>
 
 
-  <!--
-  Grid rationale:
-  these cards form a two-dimensional information layout and one item spans
-  the entire row, so CSS Grid is more suitable than a simple one-direction
-  Flexbox layout.
-  -->
-  <section class="home-grid" aria-label="Clinic highlights">
+  <!-- Bootstrap grid -->
 
-    <article class="feature-card feature-card-wide">
-
-      <p class="feature-number">
-        01
-      </p>
-
-      <h2>
-        Microscopic Treatment
-      </h2>
-
-      <p>
-        High-precision endodontic and restorative procedures
-        under magnification.
-      </p>
-
-    </article>
+  <section
+          class="row g-4 mb-4"
+          aria-label="Clinic highlights"
+  >
 
 
-    <article class="feature-card">
+    <article class="col-12">
 
-      <p class="feature-number">
-        02
-      </p>
+      <div
+              class="bg-white border rounded-4 shadow-sm p-4 h-100"
+      >
 
-      <h2>
-        Digital 3D Scanning
-      </h2>
+        <p class="text-warning fw-bold small mb-2">
+          01
+        </p>
 
-      <p>
-        Digital impressions and diagnostic models support
-        modern orthodontic planning.
-      </p>
+        <h2 class="h3 text-primary">
+          Microscopic Treatment
+        </h2>
+
+        <p class="mb-0">
+          High-precision endodontic and restorative procedures
+          under magnification.
+        </p>
+
+      </div>
 
     </article>
 
 
-    <article class="feature-card">
+    <article class="col-12 col-md-6 col-lg-4">
 
-      <p class="feature-number">
-        03
-      </p>
+      <div
+              class="bg-white border rounded-4 shadow-sm p-4 h-100"
+      >
 
-      <h2>
-        Specialist Team
-      </h2>
+        <p class="text-warning fw-bold small mb-2">
+          02
+        </p>
 
-      <p>
-        Implantology, surgery, therapy, periodontology,
-        pediatrics and orthodontics.
-      </p>
+        <h2 class="h4 text-primary">
+          Digital 3D Scanning
+        </h2>
+
+        <p class="mb-0">
+          Digital impressions and diagnostic models support
+          modern orthodontic planning.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="col-12 col-md-6 col-lg-4">
+
+      <div
+              class="bg-white border rounded-4 shadow-sm p-4 h-100"
+      >
+
+        <p class="text-warning fw-bold small mb-2">
+          03
+        </p>
+
+        <h2 class="h4 text-primary">
+          Specialist Team
+        </h2>
+
+        <p class="mb-0">
+          Implantology, surgery, therapy, periodontology,
+          pediatrics and orthodontics.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="col-12 col-lg-4">
+
+      <div
+              class="bg-white border rounded-4 shadow-sm p-4 h-100"
+      >
+
+        <p class="text-secondary fw-bold small mb-2">
+          DIGITAL CARE
+        </p>
+
+        <h2 class="h4 text-primary">
+          Clear Treatment Plans
+        </h2>
+
+        <p class="mb-0">
+          Structured diagnostics help patients understand
+          the next clinical steps.
+        </p>
+
+      </div>
 
     </article>
 
   </section>
 
 
-  <!-- Additional Flexbox section -->
-  <section class="quick-facts" aria-label="Clinic facts">
+  <!-- QUICK FACTS -->
 
-    <article class="fact-card">
-      <strong>10:00–21:00</strong>
-      <span>Monday–Friday</span>
+  <section
+          class="row g-4 mb-5"
+          aria-label="Clinic facts"
+  >
+
+    <article class="col-12 col-md-4">
+
+      <div
+              class="bg-white border rounded-4 shadow-sm p-4 text-center h-100"
+      >
+
+        <strong class="fs-4 text-primary">
+          10:00–21:00
+        </strong>
+
+        <span class="d-block text-body-secondary small">
+                    Monday–Friday
+                </span>
+
+      </div>
+
     </article>
 
-    <article class="fact-card">
-      <strong>10:00–18:00</strong>
-      <span>Saturday–Sunday</span>
+
+    <article class="col-12 col-md-4">
+
+      <div
+              class="bg-white border rounded-4 shadow-sm p-4 text-center h-100"
+      >
+
+        <strong class="fs-4 text-primary">
+          10:00–18:00
+        </strong>
+
+        <span class="d-block text-body-secondary small">
+                    Saturday–Sunday
+                </span>
+
+      </div>
+
     </article>
 
-    <article class="fact-card">
-      <strong>48</strong>
-      <span>Alikhan Bokeikhan Street</span>
+
+    <article class="col-12 col-md-4">
+
+      <div
+              class="bg-white border rounded-4 shadow-sm p-4 text-center h-100"
+      >
+
+        <strong class="fs-4 text-primary">
+          48
+        </strong>
+
+        <span class="d-block text-body-secondary small">
+                    Alikhan Bokeikhan Street
+                </span>
+
+      </div>
+
     </article>
 
   </section>
 
 
-  <!-- Gallery -->
-  <section class="clinic-gallery" aria-labelledby="gallery-heading">
+  <!-- GALLERY -->
 
-    <p class="section-kicker">
+  <section
+          class="mb-5"
+          aria-labelledby="gallery-heading"
+  >
+
+    <p
+            class="text-uppercase text-secondary fw-bold small mb-2"
+    >
       CLINIC SPACE
     </p>
 
-    <h2 id="gallery-heading">
+
+    <h2
+            id="gallery-heading"
+            class="h2 text-primary text-center text-md-start"
+    >
       A Modern Dental Environment
     </h2>
 
-    <section class="gallery-grid" aria-label="Clinic gallery">
 
-      <figure class="gallery-card">
+    <div class="row g-4">
 
-        <img
-                src="images/1.jpeg"
-                alt="Exterior of Dent house Dental Clinic"
+
+      <figure class="col-12 col-md-6 col-lg-4 mb-0">
+
+        <div
+                class="bg-white border rounded-4 shadow-sm overflow-hidden h-100"
         >
 
-        <figcaption>
-          Main entrance and exterior
-        </figcaption>
+          <img
+                  class="w-100"
+                  src="images/1.jpeg"
+                  alt="Exterior of Dent house Dental Clinic"
+                  width="500"
+                  height="235"
+          >
+
+          <figcaption
+                  class="p-3 text-center text-body-secondary small"
+          >
+            Main entrance and exterior
+          </figcaption>
+
+        </div>
 
       </figure>
 
 
-      <figure class="gallery-card">
+      <figure class="col-12 col-md-6 col-lg-4 mb-0">
 
-        <img
-                src="images/2.jpeg"
-                alt="Dent house reception and waiting area"
+        <div
+                class="bg-white border rounded-4 shadow-sm overflow-hidden h-100"
         >
 
-        <figcaption>
-          Reception and patient lounge
-        </figcaption>
+          <img
+                  class="w-100"
+                  src="images/2.jpeg"
+                  alt="Dent house reception and waiting area"
+                  width="500"
+                  height="235"
+          >
+
+          <figcaption
+                  class="p-3 text-center text-body-secondary small"
+          >
+            Reception and patient lounge
+          </figcaption>
+
+        </div>
 
       </figure>
 
 
-      <figure class="gallery-card">
+      <figure class="col-12 col-md-6 col-lg-4 mb-0">
 
-        <img
-                src="images/3.jpeg"
-                alt="Dent house treatment room"
+        <div
+                class="bg-white border rounded-4 shadow-sm overflow-hidden h-100"
         >
 
-        <figcaption>
-          Modern treatment operatory
-        </figcaption>
+          <img
+                  class="w-100"
+                  src="images/3.jpeg"
+                  alt="Dent house treatment room"
+                  width="500"
+                  height="235"
+          >
+
+          <figcaption
+                  class="p-3 text-center text-body-secondary small"
+          >
+            Modern treatment operatory
+          </figcaption>
+
+        </div>
 
       </figure>
 
-    </section>
+
+    </div>
 
   </section>
 
 
-  <!-- Founder -->
-  <section class="founder-message" aria-labelledby="founder-heading">
+  <!-- FOUNDER -->
 
-    <p class="section-kicker">
+  <section
+          class="mb-5"
+          aria-labelledby="founder-heading"
+  >
+
+    <p
+            class="text-uppercase text-secondary fw-bold small mb-2"
+    >
       FOUNDER MESSAGE
     </p>
 
-    <h2 id="founder-heading">
+
+    <h2
+            id="founder-heading"
+            class="h2 text-primary"
+    >
       Long-Term Oral Health First
     </h2>
 
-    <article class="founder-card">
 
-      <h3>
+    <article
+            class="bg-white border border-top border-4 border-warning rounded-4 shadow-sm p-4"
+    >
+
+      <h3 class="h4 text-primary">
         Dr. Mukhamedyarov Kanat Magauyanovich
       </h3>
 
-      <p class="role-title">
+
+      <p class="fw-bold text-secondary">
         Founder • Implantologist & Prosthodontist
       </p>
 
-      <blockquote>
 
-        <p>
-          “Our priority is careful, understandable treatment and
-          long-term oral health. Digital planning and clinical
-          precision help our team approach complex cases
-          systematically.”
+      <blockquote class="mb-0">
+
+        <p class="lead mb-0">
+
+          “Our priority is careful, understandable treatment
+          and long-term oral health. Digital planning and
+          clinical precision help our team approach complex
+          cases systematically.”
+
         </p>
 
       </blockquote>
@@ -377,34 +678,54 @@
 
   </section>
 
+
+  <!-- Normal content buttons -->
+
+  <div
+          class="d-flex flex-wrap justify-content-center justify-content-md-end gap-2"
+  >
+
+    <a
+            class="btn btn-warning"
+            href="contacts.html"
+    >
+      BOOK VISIT
+    </a>
+
+
+    <a
+            class="btn btn-outline-primary btn-sm"
+            href="services.html"
+    >
+      VIEW PRICES
+    </a>
+
+  </div>
+
+
 </main>
 
 
-<!--
-Inline style demonstration:
-this one-off letter-spacing value intentionally overrides the
-external .quick-booking rule and demonstrates cascade priority.
--->
-<a
-        class="quick-booking"
-        href="contacts.html"
-        style="letter-spacing: 0.12em;"
+<footer
+        class="main-footer mt-5 py-4 text-center"
 >
-  BOOK VISIT
-</a>
 
-
-<footer class="main-footer">
-
-  <p>
+  <p class="mb-1 small">
     © 2026 Dent house Dental Clinic
   </p>
 
-  <p>
+  <p class="mb-0 small text-white-50">
     Page developed by: Saparkhan Shyngyskhan • SE-2531
   </p>
 
 </footer>
 
+
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
 </body>
+
 </html>

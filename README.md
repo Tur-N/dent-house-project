@@ -1,9 +1,4 @@
-
-Assignment бұл process талаптарын да бөлек бағалайды. :contentReference[oaicite:2]{index=2}
-
----
-
-## 12. `README.md`
+`README.md`
 
 ```markdown
 # Dent house Dental Clinic
@@ -119,3 +114,97 @@ Open:
 
 ```text
 index.html
+------------------------------------------------------------------------------------------------------------------
+# Dent house — Assignment 3
+
+## Bootstrap Responsive Website
+
+Assignment 3 continues the Assignment 2 Dent house website.
+
+The same project theme and pages are retained.
+
+Bootstrap 5.3.8 is used for:
+
+- responsive layout
+- grid system
+- navigation
+- typography
+- buttons
+- spacing
+- utilities
+- tables
+- forms
+- responsive behaviour
+- Bootstrap component
+
+## Pages
+
+- index.html
+- services.html
+- orthodontics.html
+- team.html
+- contacts.html
+- colophon.html
+
+## Responsive widths
+
+The website is tested at:
+
+- 375px phone
+- 768px tablet
+- desktop width
+
+## Bootstrap features used
+
+- container
+- container-fluid
+- row
+- col-12
+- col-md-6
+- col-lg-4
+- col-lg-6
+- d-flex
+- flex-wrap
+- justify-content-center
+- gap-2
+- p-4
+- mb-4
+- mt-4
+- shadow-sm
+- border
+- rounded-4
+- btn
+- btn-warning
+- btn-primary
+- btn-outline-primary
+- btn-lg
+- btn-sm
+- navbar
+- navbar-toggler
+- collapse
+- table
+- table-striped
+- table-hover
+- table-responsive
+- form-control
+- form-select
+- badge
+- alert
+
+## Required evidence
+
+- 375px screenshot
+- 768px screenshot
+- desktop screenshot
+- mobile collapsed navigation screenshot
+- updated AI log
+- removed-css.md
+- README.md
+
+## Validation
+
+All HTML pages should pass the W3C HTML validator
+with zero errors.
+
+All CSS files should pass the W3C CSS validator
+with zero errors.

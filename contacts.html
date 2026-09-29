@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <meta charset="UTF-8">
@@ -23,466 +24,726 @@
     Contacts & Booking — Dent house Dental Clinic
   </title>
 
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/turarbek.css">
+
+  <!-- Bootstrap 5.3.8 -->
+
+  <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+  >
+
+
+  <link
+          rel="stylesheet"
+          href="css/base.css"
+  >
+
+  <link
+          rel="stylesheet"
+          href="css/turarbek.css"
+  >
 
 </head>
+
 
 <body class="contacts-page">
 
 <!-- Author: Turarbek Nurakhmet | Group: SE-2531 -->
 
+
 <header class="main-header">
 
-  <p class="eyebrow">
-    DENT HOUSE • CONTACT
-  </p>
+  <div
+          class="container-fluid px-3 px-md-5 py-4"
+  >
 
-  <h1 class="site-title">
-    Contact Dent house & Book a Visit
-  </h1>
+    <p
+            class="eyebrow text-uppercase fw-bold small mb-2"
+    >
+      DENT HOUSE • CONTACT
+    </p>
 
-  <p class="site-tagline">
-    Schedule a Consultation with Our Dental Specialists
-  </p>
 
-  <nav class="main-nav" aria-label="Primary navigation">
+    <h1
+            class="site-title display-5 fw-bold mb-2"
+    >
+      Contact Dent house & Book a Visit
+    </h1>
 
-    <ul class="nav-list">
 
-      <li>
-        <a href="index.html" class="nav-link">
-          Home
-        </a>
-      </li>
+    <p
+            class="site-tagline lead mb-4"
+    >
+      Schedule a Consultation with Our Dental Specialists
+    </p>
 
-      <li>
-        <a href="services.html" class="nav-link">
-          Services & Pricing
-        </a>
-      </li>
 
-      <li>
-        <a href="orthodontics.html" class="nav-link">
-          Orthodontics & 3D Scanning
-        </a>
-      </li>
+    <nav
+            class="navbar navbar-expand-lg navbar-dark"
+            aria-label="Primary navigation"
+    >
 
-      <li>
-        <a href="team.html" class="nav-link">
-          Medical Team
-        </a>
-      </li>
 
-      <li>
-        <a
-                href="contacts.html"
-                class="nav-link active"
-                aria-current="page"
+      <button
+              class="navbar-toggler mx-auto"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#primaryNav"
+              aria-controls="primaryNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+      >
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+
+      <div
+              class="collapse navbar-collapse justify-content-center"
+              id="primaryNav"
+      >
+
+        <ul
+                class="navbar-nav flex-wrap justify-content-center gap-2"
         >
-          Contacts & Booking
-        </a>
-      </li>
 
-      <li>
-        <a href="colophon.html" class="nav-link">
-          Colophon
-        </a>
-      </li>
+          <li class="nav-item">
 
-    </ul>
+            <a
+                    href="index.html"
+                    class="nav-link px-3 py-2 rounded"
+            >
+              Home
+            </a>
 
-  </nav>
+          </li>
+
+
+          <li class="nav-item">
+
+            <a
+                    href="services.html"
+                    class="nav-link px-3 py-2 rounded"
+            >
+              Services & Pricing
+            </a>
+
+          </li>
+
+
+          <li class="nav-item">
+
+            <a
+                    href="orthodontics.html"
+                    class="nav-link px-3 py-2 rounded"
+            >
+              Orthodontics & 3D Scanning
+            </a>
+
+          </li>
+
+
+          <li class="nav-item">
+
+            <a
+                    href="team.html"
+                    class="nav-link px-3 py-2 rounded"
+            >
+              Medical Team
+            </a>
+
+          </li>
+
+
+          <li class="nav-item">
+
+            <a
+                    href="contacts.html"
+                    class="nav-link active px-3 py-2 rounded"
+                    aria-current="page"
+            >
+              Contacts & Booking
+            </a>
+
+          </li>
+
+
+          <li class="nav-item">
+
+            <a
+                    href="colophon.html"
+                    class="nav-link px-3 py-2 rounded"
+            >
+              Colophon
+            </a>
+
+          </li>
+
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+  </div>
 
 </header>
 
 
-<main class="main-content">
+<main
+        class="container py-4 py-md-5"
+>
 
-  <section class="page-intro">
 
-    <p class="section-kicker">
+  <!-- INTRO -->
+
+  <section
+          class="bg-white border rounded-4 shadow-sm p-4 mb-4"
+  >
+
+    <p
+            class="text-uppercase text-secondary fw-bold small"
+    >
       CONTACT
     </p>
 
-    <!-- Unique page heading ID -->
-    <h2 id="contacts-title">
+
+    <h2
+            id="contacts-title"
+            class="h2 text-primary text-center text-md-start"
+    >
       Clinic Location & Appointment Booking
     </h2>
 
-    <p>
+
+    <p
+            class="lead mb-0"
+    >
+
       Visit our clinic in Astana or send an appointment request
       using the form below. The request form is a demonstration
       interface for the project.
+
     </p>
 
   </section>
 
 
-  <!--
-  Grid rationale:
-  contact information and booking areas require predictable two-dimensional
-  placement, while the booking form needs the full available width.
-  -->
+  <!-- CONTACT GRID -->
+
   <section
-          class="contact-layout"
+          class="row g-4"
           aria-label="Contact information and booking"
   >
 
 
-    <article class="contact-card">
+    <!-- CLINIC DETAILS -->
 
-      <p class="section-kicker">
-        CLINIC DETAILS
-      </p>
+    <article
+            class="col-12 col-lg-6"
+    >
 
-      <h2>
-        Find Dent house
-      </h2>
-
-      <address class="contact-address">
-
-        <p>
-
-          <strong>
-            Address:
-          </strong>
-
-          <br>
-
-          48 Alikhan Bokeikhan Street,
-          <br>
-
-          Astana, Kazakhstan
-
-        </p>
-
-
-        <p>
-
-          <strong>
-            Phone:
-          </strong>
-
-          <br>
-
-          <a href="tel:+77078087848">
-            +7 707 808 78 48
-          </a>
-
-        </p>
-
-
-        <p>
-
-          <strong>
-            Working hours:
-          </strong>
-
-          <br>
-
-          Mon–Fri: 10:00–21:00
-
-          <br>
-
-          Sat–Sun: 10:00–18:00
-
-        </p>
-
-      </address>
-
-
-      <p class="contact-status">
-        Open for appointment requests
-      </p>
-
-    </article>
-
-
-    <article class="contact-card">
-
-      <p class="section-kicker">
-        QUICK CONTACT
-      </p>
-
-      <h2>
-        Direct Access
-      </h2>
-
-      <p>
-        For immediate questions, contact the clinic by phone.
-        For planned consultations, complete the booking request form.
-      </p>
-
-
-      <!-- Additional Flexbox block -->
-      <p class="contact-actions">
-
-        <a
-                class="primary-action"
-                href="tel:+77078087848"
-        >
-          Call Clinic
-        </a>
-
-        <a
-                class="secondary-action"
-                href="services.html"
-        >
-          View Prices
-        </a>
-
-      </p>
-
-    </article>
-
-
-    <article class="booking-card">
-
-      <p class="section-kicker">
-        ONLINE REQUEST
-      </p>
-
-      <h2>
-        Appointment Request Form
-      </h2>
-
-
-      <form
-              class="booking-form"
-              action="#"
-              method="post"
+      <div
+              class="bg-white border rounded-4 shadow-sm p-4 h-100"
       >
 
-        <fieldset>
+        <p
+                class="text-uppercase text-secondary fw-bold small"
+        >
+          CLINIC DETAILS
+        </p>
 
-          <legend>
-            Patient Information & Consultation Details
-          </legend>
+
+        <h2
+                class="h3 text-primary"
+        >
+          Find Dent house
+        </h2>
 
 
-          <label
-                  class="form-field"
-                  for="fullname"
-          >
+        <address>
 
-                        <span>
-                            Full Name
-                        </span>
 
-            <input
-                    type="text"
-                    id="fullname"
-                    name="fullname"
-                    required
-                    placeholder="e.g., Arman Aliyev"
+          <p>
+
+            <strong>
+              Address:
+            </strong>
+
+            <br>
+
+            48 Alikhan Bokeikhan Street,
+
+            <br>
+
+            Astana, Kazakhstan
+
+          </p>
+
+
+          <p>
+
+            <strong>
+              Phone:
+            </strong>
+
+            <br>
+
+
+            <a
+                    href="tel:+77078087848"
+                    class="text-primary fw-bold"
             >
+              +7 707 808 78 48
+            </a>
 
-          </label>
-
-
-          <label
-                  class="form-field"
-                  for="phone"
-          >
-
-                        <span>
-                            Phone Number
-                        </span>
-
-            <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    required
-                    placeholder="+7 707 000 00 00"
-            >
-
-          </label>
+          </p>
 
 
-          <label
-                  class="form-field"
-                  for="service"
-          >
+          <p>
 
-                        <span>
-                            Select Required Service
-                        </span>
+            <strong>
+              Working hours:
+            </strong>
 
-            <select
-                    id="service"
-                    name="service"
-                    required
-            >
+            <br>
 
-              <option value="">
-                Choose a service
-              </option>
+            Mon–Fri: 10:00–21:00
 
-              <option value="caries">
-                Caries Treatment
-              </option>
+            <br>
 
-              <option value="extraction">
-                Tooth Extraction
-              </option>
+            Sat–Sun: 10:00–18:00
 
-              <option value="microscope">
-                Microscopic Root Canal Therapy
-              </option>
-
-              <option value="implantation">
-                Dental Implantation
-              </option>
-
-              <option value="crown">
-                Zirconia / Metal-Ceramic Crown
-              </option>
-
-              <option value="orthodontics">
-                Orthodontics & 3D Scanning
-              </option>
-
-              <option value="pediatric">
-                Pediatric Dental Care
-              </option>
-
-            </select>
-
-          </label>
+          </p>
 
 
-          <label
-                  class="form-field"
-                  for="doctor"
-          >
-
-                        <span>
-                            Select Doctor (Optional)
-                        </span>
-
-            <select
-                    id="doctor"
-                    name="doctor"
-            >
-
-              <option value="">
-                Any Available Specialist
-              </option>
-
-              <option value="kanat">
-                Dr. Mukhamedyarov Kanat Magauyanovich
-              </option>
-
-              <option value="bagzhan">
-                Dr. Tauershe Bagzhan Ordabayevich
-              </option>
-
-              <option value="sarzhan">
-                Dr. Kenzhe Sarzhan Baizhanovich
-              </option>
-
-              <option value="zukhra">
-                Dr. Sagimbayeva Zukhra Berikovna
-              </option>
-
-              <option value="zhamilya">
-                Dr. Shalabay Zhamilya Kairatovna
-              </option>
-
-              <option value="svetlana">
-                Dr. Tukesheva Svetlana Maratovna
-              </option>
-
-              <option value="symbat">
-                Dr. Abzhapbar Symbat Bagdatovna
-              </option>
-
-              <option value="alma">
-                Dr. Otarbayeva Alma Amanzholovna
-              </option>
-
-            </select>
-
-          </label>
+        </address>
 
 
-          <label
-                  class="form-field"
-                  for="visit-date"
-          >
-
-                        <span>
-                            Preferred Appointment Date
-                        </span>
-
-            <input
-                    type="date"
-                    id="visit-date"
-                    name="visit-date"
-                    required
-            >
-
-          </label>
+        <span
+                class="badge text-bg-secondary"
+        >
+                    Open for appointment requests
+                </span>
 
 
-          <label
-                  class="form-field form-field-wide"
-                  for="comments"
-          >
-
-                        <span>
-                            Symptoms or Additional Requests
-                        </span>
-
-            <textarea
-                    id="comments"
-                    name="comments"
-                    rows="5"
-                    placeholder="Briefly describe your request..."
-            ></textarea>
-
-          </label>
-
-
-          <button
-                  type="submit"
-                  class="submit-btn"
-          >
-            Send Booking Request
-          </button>
-
-        </fieldset>
-
-      </form>
+      </div>
 
     </article>
 
+
+    <!-- QUICK CONTACT -->
+
+    <article
+            class="col-12 col-lg-6"
+    >
+
+      <div
+              class="bg-white border rounded-4 shadow-sm p-4 h-100"
+      >
+
+        <p
+                class="text-uppercase text-secondary fw-bold small"
+        >
+          QUICK CONTACT
+        </p>
+
+
+        <h2
+                class="h3 text-primary"
+        >
+          Direct Access
+        </h2>
+
+
+        <p>
+
+          For immediate questions, contact the clinic by phone.
+          For planned consultations, complete the booking request form.
+
+        </p>
+
+
+        <div
+                class="d-flex flex-wrap align-items-center gap-2 mt-3"
+        >
+
+          <a
+                  class="btn btn-primary"
+                  href="tel:+77078087848"
+          >
+            Call Clinic
+          </a>
+
+
+          <a
+                  class="btn btn-outline-primary btn-sm"
+                  href="services.html"
+          >
+            View Prices
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </article>
+
+
+    <!-- BOOKING FORM -->
+
+    <article
+            class="col-12"
+    >
+
+      <div
+              class="bg-white border rounded-4 shadow-sm p-4"
+      >
+
+        <p
+                class="text-uppercase text-secondary fw-bold small"
+        >
+          ONLINE REQUEST
+        </p>
+
+
+        <h2
+                class="h3 text-primary"
+        >
+          Appointment Request Form
+        </h2>
+
+
+        <form
+                class="booking-form"
+                action="#"
+                method="post"
+        >
+
+
+          <fieldset
+                  class="border rounded-4 p-3"
+          >
+
+
+            <legend
+                    class="float-none w-auto px-2 fw-bold text-primary"
+            >
+              Patient Information & Consultation Details
+            </legend>
+
+
+            <div
+                    class="row g-3"
+            >
+
+
+              <!-- NAME -->
+
+              <div
+                      class="col-12 col-md-6"
+              >
+
+                <label
+                        class="form-label fw-bold"
+                        for="fullname"
+                >
+                  Full Name
+                </label>
+
+
+                <input
+                        class="form-control"
+                        type="text"
+                        id="fullname"
+                        name="fullname"
+                        required
+                        placeholder="e.g., Arman Aliyev"
+                >
+
+              </div>
+
+
+              <!-- PHONE -->
+
+              <div
+                      class="col-12 col-md-6"
+              >
+
+                <label
+                        class="form-label fw-bold"
+                        for="phone"
+                >
+                  Phone Number
+                </label>
+
+
+                <input
+                        class="form-control"
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        required
+                        placeholder="+7 707 000 00 00"
+                >
+
+              </div>
+
+
+              <!-- SERVICE -->
+
+              <div
+                      class="col-12 col-md-6"
+              >
+
+                <label
+                        class="form-label fw-bold"
+                        for="service"
+                >
+                  Select Required Service
+                </label>
+
+
+                <select
+                        class="form-select"
+                        id="service"
+                        name="service"
+                        required
+                >
+
+                  <option value="">
+                    Choose a service
+                  </option>
+
+                  <option value="caries">
+                    Caries Treatment
+                  </option>
+
+                  <option value="extraction">
+                    Tooth Extraction
+                  </option>
+
+                  <option value="microscope">
+                    Microscopic Root Canal Therapy
+                  </option>
+
+                  <option value="implantation">
+                    Dental Implantation
+                  </option>
+
+                  <option value="crown">
+                    Zirconia / Metal-Ceramic Crown
+                  </option>
+
+                  <option value="orthodontics">
+                    Orthodontics & 3D Scanning
+                  </option>
+
+                  <option value="pediatric">
+                    Pediatric Dental Care
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <!-- DOCTOR -->
+
+              <div
+                      class="col-12 col-md-6"
+              >
+
+                <label
+                        class="form-label fw-bold"
+                        for="doctor"
+                >
+                  Select Doctor (Optional)
+                </label>
+
+
+                <select
+                        class="form-select"
+                        id="doctor"
+                        name="doctor"
+                >
+
+                  <option value="">
+                    Any Available Specialist
+                  </option>
+
+                  <option value="kanat">
+                    Dr. Mukhamedyarov Kanat Magauyanovich
+                  </option>
+
+                  <option value="bagzhan">
+                    Dr. Tauershe Bagzhan Ordabayevich
+                  </option>
+
+                  <option value="sarzhan">
+                    Dr. Kenzhe Sarzhan Baizhanovich
+                  </option>
+
+                  <option value="zukhra">
+                    Dr. Sagimbayeva Zukhra Berikovna
+                  </option>
+
+                  <option value="zhamilya">
+                    Dr. Shalabay Zhamilya Kairatovna
+                  </option>
+
+                  <option value="svetlana">
+                    Dr. Tukesheva Svetlana Maratovna
+                  </option>
+
+                  <option value="symbat">
+                    Dr. Abzhapbar Symbat Bagdatovna
+                  </option>
+
+                  <option value="alma">
+                    Dr. Otarbayeva Alma Amanzholovna
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <!-- DATE -->
+
+              <div
+                      class="col-12 col-md-6"
+              >
+
+                <label
+                        class="form-label fw-bold"
+                        for="visit-date"
+                >
+                  Preferred Appointment Date
+                </label>
+
+
+                <input
+                        class="form-control"
+                        type="date"
+                        id="visit-date"
+                        name="visit-date"
+                        required
+                >
+
+              </div>
+
+
+              <!-- COMMENTS -->
+
+              <div
+                      class="col-12"
+              >
+
+                <label
+                        class="form-label fw-bold"
+                        for="comments"
+                >
+                  Symptoms or Additional Requests
+                </label>
+
+
+                <textarea
+                        class="form-control"
+                        id="comments"
+                        name="comments"
+                        rows="5"
+                        placeholder="Briefly describe your request..."
+                ></textarea>
+
+              </div>
+
+
+              <!-- BUTTONS -->
+
+              <div
+                      class="col-12 d-flex flex-wrap gap-2"
+              >
+
+
+                <button
+                        type="submit"
+                        class="btn btn-primary btn-lg"
+                >
+                  Send Booking Request
+                </button>
+
+
+                <button
+                        type="reset"
+                        class="btn btn-outline-secondary btn-sm"
+                >
+                  Reset
+                </button>
+
+
+                <button
+                        type="button"
+                        class="btn btn-secondary"
+                        disabled
+                >
+                  Demo only
+                </button>
+
+
+              </div>
+
+
+            </div>
+
+
+          </fieldset>
+
+
+        </form>
+
+
+      </div>
+
+    </article>
+
+
   </section>
+
 
 </main>
 
 
-<a
-        class="quick-booking"
-        href="#contacts-title"
+<footer
+        class="main-footer mt-5 py-4 text-center"
 >
-  TOP OF PAGE
-</a>
 
 
-<footer class="main-footer">
-
-  <p>
+  <p
+          class="mb-1 small"
+  >
     © 2026 Dent house Dental Clinic
   </p>
 
-  <p>
+
+  <p
+          class="mb-0 small text-white-50"
+  >
     Page developed by: Turarbek Nurakhmet • SE-2531
   </p>
 
+
 </footer>
 
+
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
 </body>
+
 </html>

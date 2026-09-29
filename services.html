@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
             name="author"
@@ -18,481 +24,821 @@
         Services & Pricing — Dent house Dental Clinic
     </title>
 
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/saparkhan.css">
+
+    <!-- Bootstrap 5.3.8 -->
+
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+    >
+
+
+    <link
+            rel="stylesheet"
+            href="css/base.css"
+    >
+
+    <link
+            rel="stylesheet"
+            href="css/saparkhan.css"
+    >
+
 </head>
+
 
 <body class="services-page">
 
 <!-- Author: Saparkhan Shyngyskhan | Group: SE-2531 -->
 
+
 <header class="main-header">
 
-    <p class="eyebrow">
-        DENT HOUSE • ASTANA
-    </p>
+    <div
+            class="container-fluid px-3 px-md-5 py-4"
+    >
 
-    <h1 class="site-title">
-        Services & Official Price Directory
-    </h1>
+        <p
+                class="eyebrow text-uppercase fw-bold small mb-2"
+        >
+            DENT HOUSE • ASTANA
+        </p>
 
-    <p class="site-tagline">
-        Therapeutic, Surgical, Orthopedic & Microscopic Dentistry
-    </p>
 
-    <nav class="main-nav" aria-label="Primary navigation">
+        <h1
+                class="site-title display-5 fw-bold mb-2"
+        >
+            Services & Official Price Directory
+        </h1>
 
-        <ul class="nav-list">
 
-            <li>
-                <a href="index.html" class="nav-link">
-                    Home
-                </a>
-            </li>
+        <p
+                class="site-tagline lead mb-4"
+        >
+            Therapeutic, Surgical, Orthopedic & Microscopic Dentistry
+        </p>
 
-            <li>
-                <a
-                        href="services.html"
-                        class="nav-link active"
-                        aria-current="page"
+
+        <nav
+                class="navbar navbar-expand-lg navbar-dark"
+                aria-label="Primary navigation"
+        >
+
+            <button
+                    class="navbar-toggler mx-auto"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#primaryNav"
+                    aria-controls="primaryNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+            >
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div
+                    class="collapse navbar-collapse justify-content-center"
+                    id="primaryNav"
+            >
+
+                <ul
+                        class="navbar-nav flex-wrap justify-content-center gap-2"
                 >
-                    Services & Pricing
-                </a>
-            </li>
 
-            <li>
-                <a href="orthodontics.html" class="nav-link">
-                    Orthodontics & 3D Scanning
-                </a>
-            </li>
+                    <li class="nav-item">
 
-            <li>
-                <a href="team.html" class="nav-link">
-                    Medical Team
-                </a>
-            </li>
+                        <a
+                                href="index.html"
+                                class="nav-link px-3 py-2 rounded"
+                        >
+                            Home
+                        </a>
 
-            <li>
-                <a href="contacts.html" class="nav-link">
-                    Contacts & Booking
-                </a>
-            </li>
+                    </li>
 
-            <li>
-                <a href="colophon.html" class="nav-link">
-                    Colophon
-                </a>
-            </li>
 
-        </ul>
+                    <li class="nav-item">
 
-    </nav>
+                        <a
+                                href="services.html"
+                                class="nav-link active px-3 py-2 rounded"
+                                aria-current="page"
+                        >
+                            Services & Pricing
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                                href="orthodontics.html"
+                                class="nav-link px-3 py-2 rounded"
+                        >
+                            Orthodontics & 3D Scanning
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                                href="team.html"
+                                class="nav-link px-3 py-2 rounded"
+                        >
+                            Medical Team
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                                href="contacts.html"
+                                class="nav-link px-3 py-2 rounded"
+                        >
+                            Contacts & Booking
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                                href="colophon.html"
+                                class="nav-link px-3 py-2 rounded"
+                        >
+                            Colophon
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+    </div>
 
 </header>
 
 
-<main class="main-content">
+<main
+        class="container py-4 py-md-5"
+>
 
-    <section class="page-intro">
 
-        <p class="section-kicker">
+    <!-- PAGE INTRO -->
+
+    <section
+            class="bg-white border rounded-4 shadow-sm p-4 mb-4"
+    >
+
+        <p
+                class="text-uppercase text-secondary fw-bold small"
+        >
             PRICE DIRECTORY
         </p>
 
-        <!-- Unique page heading ID -->
-        <h2 id="services-title">
+
+        <h2
+                id="services-title"
+                class="h2 text-primary text-center text-md-start"
+        >
             Treatment & Prosthetic Services
         </h2>
 
-        <p>
+
+        <p
+                class="lead mb-0"
+        >
+
             The following starting prices are presented in Kazakhstani Tenge
             (KZT). Final treatment cost depends on diagnosis, clinical
             complexity and the treatment plan agreed with the doctor.
+
         </p>
 
     </section>
 
 
-    <!--
-    Grid rationale:
-    pricing sections form a two-dimensional layout. Grid allows one
-    major price card to span the full width.
-    -->
-    <section class="pricing-layout" aria-label="Services and prices">
+    <!-- BOOTSTRAP GRID -->
+
+    <section
+            class="row g-4"
+            aria-label="Services and prices"
+    >
 
 
-        <!-- Wide card -->
-        <article class="price-card price-card-wide">
+        <!-- GENERAL TREATMENT -->
 
-            <p class="price-category">
-                THERAPEUTIC & SURGICAL
-            </p>
+        <article
+                class="col-12"
+        >
 
-            <h2>
-                General Treatment
-            </h2>
+            <div
+                    class="bg-white border rounded-4 shadow-sm p-4"
+            >
 
-            <section class="table-wrapper">
-
-                <table class="data-table">
-
-                    <caption>
-                        Starting prices for therapeutic and surgical services
-                    </caption>
-
-                    <thead>
-
-                    <tr>
-                        <th scope="col">
-                            Service
-                        </th>
-
-                        <th scope="col">
-                            Clinical detail
-                        </th>
-
-                        <th scope="col">
-                            Price
-                        </th>
-                    </tr>
-
-                    </thead>
-
-                    <tbody>
-
-                    <tr>
-                        <td>
-                            Caries Treatment
-                        </td>
-
-                        <td>
-                            Depends on diagnosis and cavity depth
-                        </td>
-
-                        <td>
-                            From 24,000 KZT
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            Tooth Extraction
-                        </td>
-
-                        <td>
-                            Depends on tooth complexity and root access
-                        </td>
-
-                        <td>
-                            From 20,000 KZT
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            Dental Implantation
-                        </td>
-
-                        <td>
-                            Depends on selected implant manufacturer
-                        </td>
-
-                        <td>
-                            From 200,000 KZT
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            1-Canal Root Canal Therapy
-                        </td>
-
-                        <td>
-                            Microscopic cleaning and filling
-                        </td>
-
-                        <td>
-                            90,000 KZT
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            2-Canal Root Canal Therapy
-                        </td>
-
-                        <td>
-                            Dual canal treatment under microscope
-                        </td>
-
-                        <td>
-                            110,000 KZT
-                        </td>
-                    </tr>
-
-                    </tbody>
-
-                </table>
-
-            </section>
-
-        </article>
+                <p
+                        class="text-uppercase text-secondary fw-bold small"
+                >
+                    THERAPEUTIC & SURGICAL
+                </p>
 
 
-        <!-- Crown card -->
-        <article class="price-card">
+                <h2
+                        class="h3 text-primary"
+                >
+                    General Treatment
+                </h2>
 
-            <p class="price-category">
-                PROSTHETICS
-            </p>
 
-            <h2>
-                Crowns
-            </h2>
+                <div
+                        class="table-responsive"
+                >
 
-            <section class="table-wrapper">
+                    <table
+                            class="table table-striped table-hover align-middle mb-0"
+                    >
 
-                <table class="data-table">
+                        <caption
+                                class="caption-top"
+                        >
+                            Starting prices for therapeutic and surgical services
+                        </caption>
 
-                    <caption>
-                        Crown prices per unit
-                    </caption>
 
-                    <thead>
+                        <thead
+                                class="table-primary"
+                        >
 
-                    <tr>
+                        <tr>
 
-                        <th scope="col">
-                            Material
-                        </th>
+                            <th scope="col">
+                                Service
+                            </th>
 
-                        <th scope="col">
-                            Placement
-                        </th>
+                            <th scope="col">
+                                Clinical detail
+                            </th>
 
-                        <th scope="col">
-                            Price
-                        </th>
+                            <th scope="col">
+                                Price
+                            </th>
 
-                    </tr>
+                        </tr>
 
-                    </thead>
+                        </thead>
 
-                    <tbody>
 
-                    <tr>
-                        <td>
-                            Zirconium Dioxide
-                        </td>
+                        <tbody>
 
-                        <td>
-                            Natural tooth
-                        </td>
 
-                        <td>
-                            140,000 KZT
-                        </td>
-                    </tr>
+                        <tr>
 
-                    <tr>
-                        <td>
-                            Zirconium Dioxide
-                        </td>
+                            <td>
+                                Caries Treatment
+                            </td>
 
-                        <td>
-                            Dental implant
-                        </td>
+                            <td>
+                                Depends on diagnosis and cavity depth
+                            </td>
 
-                        <td>
-                            165,000 KZT
-                        </td>
-                    </tr>
+                            <td>
+                                From 24,000 KZT
+                            </td>
 
-                    <tr>
-                        <td>
-                            Metal-Ceramic
-                        </td>
+                        </tr>
 
-                        <td>
-                            Natural tooth
-                        </td>
 
-                        <td>
-                            85,000 KZT
-                        </td>
-                    </tr>
+                        <tr>
 
-                    <tr>
-                        <td>
-                            Metal-Ceramic
-                        </td>
+                            <td>
+                                Tooth Extraction
+                            </td>
 
-                        <td>
-                            Dental implant
-                        </td>
+                            <td>
+                                Depends on tooth complexity and root access
+                            </td>
 
-                        <td>
-                            120,000 KZT
-                        </td>
-                    </tr>
+                            <td>
+                                From 20,000 KZT
+                            </td>
 
-                    </tbody>
+                        </tr>
 
-                </table>
 
-            </section>
+                        <tr>
+
+                            <td>
+                                Dental Implantation
+                            </td>
+
+                            <td>
+                                Depends on selected implant manufacturer
+                            </td>
+
+                            <td>
+                                From 200,000 KZT
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                1-Canal Root Canal Therapy
+                            </td>
+
+                            <td>
+                                Microscopic cleaning and filling
+                            </td>
+
+                            <td>
+                                90,000 KZT
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                2-Canal Root Canal Therapy
+                            </td>
+
+                            <td>
+                                Dual canal treatment under microscope
+                            </td>
+
+                            <td>
+                                110,000 KZT
+                            </td>
+
+                        </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
 
         </article>
 
 
-        <!-- Full arch card -->
-        <article class="price-card">
+        <!-- CROWNS -->
 
-            <p class="price-category">
-                FULL-ARCH
-            </p>
+        <article
+                class="col-12 col-md-6"
+        >
 
-            <h2>
-                All-on-6 Prosthetics
-            </h2>
+            <div
+                    class="bg-white border rounded-4 shadow-sm p-4 h-100"
+            >
 
-            <section class="table-wrapper">
+                <p
+                        class="text-uppercase text-secondary fw-bold small"
+                >
+                    PROSTHETICS
+                </p>
 
-                <table class="data-table">
 
-                    <caption>
-                        Full-arch prosthetic starting prices
-                    </caption>
+                <h2
+                        class="h3 text-primary"
+                >
+                    Crowns
+                </h2>
 
-                    <thead>
 
-                    <tr>
+                <div
+                        class="table-responsive"
+                >
 
-                        <th scope="col">
-                            Structure
-                        </th>
+                    <table
+                            class="table table-striped table-hover align-middle"
+                    >
 
-                        <th scope="col">
-                            Base
-                        </th>
+                        <caption
+                                class="caption-top"
+                        >
+                            Crown prices per unit
+                        </caption>
 
-                        <th scope="col">
-                            Price
-                        </th>
 
-                    </tr>
+                        <thead
+                                class="table-primary"
+                        >
 
-                    </thead>
+                        <tr>
 
-                    <tbody>
+                            <th scope="col">
+                                Material
+                            </th>
 
-                    <tr>
-                        <td>
-                            Acrylic Full Arch
-                        </td>
+                            <th scope="col">
+                                Placement
+                            </th>
 
-                        <td>
-                            Cobalt-Chromium bar
-                        </td>
+                            <th scope="col">
+                                Price
+                            </th>
 
-                        <td>
-                            850,000 KZT
-                        </td>
-                    </tr>
+                        </tr>
 
-                    <tr>
-                        <td>
-                            Acrylic Full Arch
-                        </td>
+                        </thead>
 
-                        <td>
-                            Titanium bar
-                        </td>
 
-                        <td>
-                            1,110,000 KZT
-                        </td>
-                    </tr>
+                        <tbody>
 
-                    </tbody>
 
-                </table>
+                        <tr>
 
-            </section>
+                            <td>
+                                Zirconium Dioxide
+                            </td>
+
+                            <td>
+                                Natural tooth
+                            </td>
+
+                            <td>
+                                140,000 KZT
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Zirconium Dioxide
+                            </td>
+
+                            <td>
+                                Dental implant
+                            </td>
+
+                            <td>
+                                165,000 KZT
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Metal-Ceramic
+                            </td>
+
+                            <td>
+                                Natural tooth
+                            </td>
+
+                            <td>
+                                85,000 KZT
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Metal-Ceramic
+                            </td>
+
+                            <td>
+                                Dental implant
+                            </td>
+
+                            <td>
+                                120,000 KZT
+                            </td>
+
+                        </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
 
         </article>
+
+
+        <!-- ALL-ON-6 -->
+
+        <article
+                class="col-12 col-md-6"
+        >
+
+            <div
+                    class="bg-white border rounded-4 shadow-sm p-4 h-100"
+            >
+
+                <p
+                        class="text-uppercase text-secondary fw-bold small"
+                >
+                    FULL-ARCH
+                </p>
+
+
+                <h2
+                        class="h3 text-primary"
+                >
+                    All-on-6 Prosthetics
+                </h2>
+
+
+                <!-- Nested row -->
+
+                <div
+                        class="row g-3"
+                >
+
+
+                    <div
+                            class="col-12 col-lg-8"
+                    >
+
+                        <div
+                                class="table-responsive"
+                        >
+
+                            <table
+                                    class="table table-striped table-hover align-middle"
+                            >
+
+                                <caption
+                                        class="caption-top"
+                                >
+                                    Full-arch prosthetic starting prices
+                                </caption>
+
+
+                                <thead
+                                        class="table-primary"
+                                >
+
+                                <tr>
+
+                                    <th scope="col">
+                                        Structure
+                                    </th>
+
+                                    <th scope="col">
+                                        Base
+                                    </th>
+
+                                    <th scope="col">
+                                        Price
+                                    </th>
+
+                                </tr>
+
+                                </thead>
+
+
+                                <tbody>
+
+
+                                <tr>
+
+                                    <td>
+                                        Acrylic Full Arch
+                                    </td>
+
+                                    <td>
+                                        Cobalt-Chromium bar
+                                    </td>
+
+                                    <td>
+                                        850,000 KZT
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Acrylic Full Arch
+                                    </td>
+
+                                    <td>
+                                        Titanium bar
+                                    </td>
+
+                                    <td>
+                                        1,110,000 KZT
+                                    </td>
+
+                                </tr>
+
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                            class="col-12 col-lg-4"
+                    >
+
+                        <div
+                                class="bg-light border rounded-3 p-3 h-100"
+                        >
+
+                            <p
+                                    class="fw-bold text-primary mb-2"
+                            >
+                                Compare
+                            </p>
+
+
+                            <p
+                                    class="small text-body-secondary mb-0"
+                            >
+                                Ask the doctor which structure fits
+                                the treatment plan.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </article>
+
 
     </section>
 
 
-    <!-- Additional Flexbox block -->
+    <!-- PRICING PRINCIPLES -->
+
     <section
-            class="service-highlights"
+            class="row g-4 mt-4"
             aria-label="Pricing principles"
     >
 
-        <article class="service-point">
 
-            <strong>
-                Transparent
-            </strong>
+        <article
+                class="col-12 col-md-4"
+        >
 
-            <span>
-                Starting prices are shown clearly.
-            </span>
+            <div
+                    class="d-flex flex-column justify-content-center bg-white border rounded-4 shadow-sm p-4 h-100"
+            >
+
+                <strong
+                        class="text-primary"
+                >
+                    Transparent
+                </strong>
+
+
+                <span
+                        class="small text-body-secondary"
+                >
+                    Starting prices are shown clearly.
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <article
+                class="col-12 col-md-4"
+        >
+
+            <div
+                    class="d-flex flex-column justify-content-center bg-white border rounded-4 shadow-sm p-4 h-100"
+            >
+
+                <strong
+                        class="text-primary"
+                >
+                    Individual
+                </strong>
+
+
+                <span
+                        class="small text-body-secondary"
+                >
+                    Diagnosis determines the final plan.
+                </span>
+
+            </div>
 
         </article>
 
 
-        <article class="service-point">
+        <article
+                class="col-12 col-md-4"
+        >
 
-            <strong>
-                Individual
-            </strong>
+            <div
+                    class="d-flex flex-column justify-content-center bg-white border rounded-4 shadow-sm p-4 h-100"
+            >
 
-            <span>
-                Diagnosis determines the final plan.
-            </span>
+                <strong
+                        class="text-primary"
+                >
+                    Structured
+                </strong>
+
+
+                <span
+                        class="small text-body-secondary"
+                >
+                    Therapy follows a staged clinical workflow.
+                </span>
+
+            </div>
 
         </article>
 
-
-        <article class="service-point">
-
-            <strong>
-                Structured
-            </strong>
-
-            <span>
-                Therapy follows a staged clinical workflow.
-            </span>
-
-        </article>
 
     </section>
+
+
+    <!-- Normal buttons -->
+
+    <div
+            class="d-flex flex-wrap justify-content-center gap-2 mt-4"
+    >
+
+        <a
+                class="btn btn-warning"
+                href="contacts.html"
+        >
+            BOOK VISIT
+        </a>
+
+
+        <a
+                class="btn btn-outline-primary btn-sm"
+                href="index.html"
+        >
+            BACK HOME
+        </a>
+
+    </div>
+
 
 </main>
 
 
-<a
-        class="quick-booking"
-        href="contacts.html"
+<footer
+        class="main-footer mt-5 py-4 text-center"
 >
-    BOOK VISIT
-</a>
 
-
-<footer class="main-footer">
-
-    <p>
+    <p
+            class="mb-1 small"
+    >
         © 2026 Dent house Dental Clinic
     </p>
 
-    <p>
+
+    <p
+            class="mb-0 small text-white-50"
+    >
         Page developed by: Saparkhan Shyngyskhan • SE-2531
     </p>
 
 </footer>
 
+
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
 </body>
+
 </html>
