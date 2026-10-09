@@ -25,14 +25,20 @@
   </title>
 
 
-  <!-- Bootstrap 5.3.8 -->
+  <!-- =========================================================
+       Bootstrap 5.3.8
+       ========================================================= -->
 
   <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
           rel="stylesheet"
   >
 
-  <!-- Custom CSS -->
+
+  <!--
+      Bootstrap is loaded first.
+      Custom CSS is loaded after Bootstrap.
+  -->
 
   <link
           rel="stylesheet"
@@ -52,34 +58,55 @@
 <!-- Author: Saparkhan Shyngyskhan | Group: SE-2531 -->
 
 
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
 <header class="main-header">
 
-  <!-- container-fluid is used because the header
-       should span the full browser width. -->
+  <!--
+      container-fluid is used here because the header
+      should use the full browser width.
+  -->
 
-  <div class="container-fluid px-3 px-md-5 py-4">
+  <div
+          class="container-fluid px-3 px-md-5 py-4"
+  >
 
-    <p class="eyebrow text-uppercase fw-bold small mb-2">
+    <p
+            class="eyebrow text-uppercase fw-bold small mb-2"
+    >
       DENT HOUSE • ASTANA
     </p>
 
 
-    <h1 class="site-title display-4 fw-bold mb-2">
+    <h1
+            class="site-title display-4 fw-bold mb-2"
+    >
       Dent house Dental Clinic
     </h1>
 
 
-    <p class="site-tagline lead mb-4">
+    <p
+            class="site-tagline lead mb-4"
+    >
       Advanced Precision Dentistry & Digital Orthopedics
     </p>
 
 
-    <!-- Bootstrap responsive navbar -->
+    <!-- =====================================================
+         BOOTSTRAP NAVIGATION
+         ===================================================== -->
 
     <nav
             class="navbar navbar-expand-lg navbar-dark"
             aria-label="Primary navigation"
     >
+
+      <!--
+          On small screens this button opens
+          the collapsed navigation.
+      -->
 
       <button
               class="navbar-toggler mx-auto"
@@ -90,7 +117,9 @@
               aria-expanded="false"
               aria-label="Toggle navigation"
       >
+
         <span class="navbar-toggler-icon"></span>
+
       </button>
 
 
@@ -102,6 +131,9 @@
         <ul
                 class="navbar-nav flex-wrap justify-content-center gap-2"
         >
+
+
+          <!-- HOME -->
 
           <li class="nav-item">
 
@@ -116,6 +148,8 @@
           </li>
 
 
+          <!-- SERVICES -->
+
           <li class="nav-item">
 
             <a
@@ -127,6 +161,8 @@
 
           </li>
 
+
+          <!-- ORTHODONTICS -->
 
           <li class="nav-item">
 
@@ -140,6 +176,8 @@
           </li>
 
 
+          <!-- TEAM -->
+
           <li class="nav-item">
 
             <a
@@ -151,6 +189,8 @@
 
           </li>
 
+
+          <!-- CONTACTS -->
 
           <li class="nav-item">
 
@@ -164,6 +204,8 @@
           </li>
 
 
+          <!-- COLOPHON -->
+
           <li class="nav-item">
 
             <a
@@ -174,6 +216,7 @@
             </a>
 
           </li>
+
 
         </ul>
 
@@ -186,40 +229,105 @@
 </header>
 
 
-<!-- Announcement bar -->
+<!-- =========================================================
+     ANNOUNCEMENT BAR
+     ========================================================= -->
 
 <section
         class="announcement-bar"
         aria-label="Clinic highlights"
 >
 
-  <div class="container-fluid overflow-hidden">
+  <div
+          class="container-fluid overflow-hidden"
+  >
 
     <p
             class="announcement-track d-flex gap-4 fw-bold py-2 mb-0"
     >
 
-      <span>🦷 Microscopic Dentistry</span>
-      <span>•</span>
-      <span>3D Intraoral Scanning</span>
-      <span>•</span>
-      <span>Dental Implantation</span>
-      <span>•</span>
-      <span>Experienced Specialists</span>
-      <span>•</span>
-      <span>Book Your Consultation</span>
-      <span>•</span>
+            <span>
+                🦷 Microscopic Dentistry
+            </span>
 
-      <span>🦷 Microscopic Dentistry</span>
-      <span>•</span>
-      <span>3D Intraoral Scanning</span>
-      <span>•</span>
-      <span>Dental Implantation</span>
-      <span>•</span>
-      <span>Experienced Specialists</span>
-      <span>•</span>
-      <span>Book Your Consultation</span>
-      <span>•</span>
+      <span>
+                •
+            </span>
+
+      <span>
+                3D Intraoral Scanning
+            </span>
+
+      <span>
+                •
+            </span>
+
+      <span>
+                Dental Implantation
+            </span>
+
+      <span>
+                •
+            </span>
+
+      <span>
+                Experienced Specialists
+            </span>
+
+      <span>
+                •
+            </span>
+
+      <span>
+                Book Your Consultation
+            </span>
+
+      <span>
+                •
+            </span>
+
+
+      <!-- Repeated content for the marquee -->
+
+      <span>
+                🦷 Microscopic Dentistry
+            </span>
+
+      <span>
+                •
+            </span>
+
+      <span>
+                3D Intraoral Scanning
+            </span>
+
+      <span>
+                •
+            </span>
+
+      <span>
+                Dental Implantation
+            </span>
+
+      <span>
+                •
+            </span>
+
+      <span>
+                Experienced Specialists
+            </span>
+
+      <span>
+                •
+            </span>
+
+      <span>
+                Book Your Consultation
+            </span>
+
+      <span>
+                •
+            </span>
 
     </p>
 
@@ -228,15 +336,24 @@
 </section>
 
 
-<main class="container py-4 py-md-5">
+<!-- =========================================================
+     MAIN
+     ========================================================= -->
+
+<main
+        class="container py-4 py-md-5"
+>
 
 
-  <!-- HERO -->
+  <!-- =====================================================
+       HERO
+       ===================================================== -->
 
   <section
           class="hero-banner rounded-4 p-4 p-md-5 mb-4 text-center"
           aria-labelledby="home-title"
   >
+
 
         <span
                 class="hero-badge badge text-bg-warning position-absolute top-0 start-50 translate-middle-x mt-3"
@@ -260,6 +377,11 @@
     </h2>
 
 
+    <!--
+        Hidden on the smallest screens.
+        Visible from sm and above.
+    -->
+
     <p
             class="lead mb-4 d-none d-sm-block"
     >
@@ -271,6 +393,8 @@
 
     </p>
 
+
+    <!-- Bootstrap Flexbox -->
 
     <div
             class="d-flex flex-wrap justify-content-center align-items-center gap-2"
@@ -296,12 +420,16 @@
   </section>
 
 
-  <!-- INTRODUCTION -->
+  <!-- =====================================================
+       ABOUT THE CLINIC
+       FIXED IMAGE POSITION
+       ===================================================== -->
 
   <section
           class="bg-white border rounded-4 shadow-sm p-4 mb-4"
           aria-labelledby="intro-heading"
   >
+
 
     <p
             class="text-uppercase text-secondary fw-bold small mb-2"
@@ -312,43 +440,91 @@
 
     <h2
             id="intro-heading"
-            class="h2 fw-bold text-primary text-center text-md-start"
+            class="h2 fw-bold text-primary text-center text-md-start mb-4"
     >
       Technology with a Human Approach
     </h2>
 
 
-    <p class="lead">
+    <!--
+        Bootstrap row is used to place image and text.
+        This prevents the image from overlapping the next section.
+    -->
 
-      <img
-              class="float-start me-3 mb-2 rounded-3 img-fluid"
-              src="images/2.jpeg"
-              alt="Dent house reception area"
-              width="190"
-              height="125"
+    <div
+            class="row g-4 align-items-center"
+    >
+
+
+      <!-- =================================================
+           IMAGE
+           Mobile: full width
+           Tablet/Desktop: 3 columns
+           ================================================= -->
+
+      <div
+              class="col-12 col-md-3 text-center"
       >
 
-      Dent house is designed as a modern dental environment where
-      digital diagnostics and careful clinical work support the
-      patient experience. The clinic works with therapeutic,
-      surgical, orthodontic, pediatric, periodontal and prosthetic
-      cases in one coordinated space.
+        <img
+                class="img-fluid rounded-3 shadow-sm"
+                src="images/2.jpeg"
+                alt="Dent house reception area"
+                width="190"
+                height="125"
+        >
 
-    </p>
+      </div>
 
 
-    <p class="mb-0">
+      <!-- =================================================
+           TEXT
+           Mobile: full width
+           Tablet/Desktop: 9 columns
+           ================================================= -->
 
-      Our specialists use structured consultations, clear explanations
-      and evidence-based treatment planning to make complex dental
-      procedures easier to understand.
+      <div
+              class="col-12 col-md-9"
+      >
 
-    </p>
+
+        <p
+                class="lead mb-3"
+        >
+
+          Dent house is designed as a modern dental environment
+          where digital diagnostics and careful clinical work
+          support the patient experience. The clinic works with
+          therapeutic, surgical, orthodontic, pediatric,
+          periodontal and prosthetic cases in one coordinated space.
+
+        </p>
+
+
+        <p
+                class="mb-0"
+        >
+
+          Our specialists use structured consultations,
+          clear explanations and evidence-based treatment
+          planning to make complex dental procedures
+          easier to understand.
+
+        </p>
+
+
+      </div>
+
+
+    </div>
 
   </section>
 
 
-  <!-- Bootstrap grid -->
+  <!-- =====================================================
+       CLINIC HIGHLIGHTS
+       BOOTSTRAP GRID
+       ===================================================== -->
 
   <section
           class="row g-4 mb-4"
@@ -356,21 +532,35 @@
   >
 
 
-    <article class="col-12">
+    <!--
+        Full width
+    -->
+
+    <article
+            class="col-12"
+    >
 
       <div
               class="bg-white border rounded-4 shadow-sm p-4 h-100"
       >
 
-        <p class="text-warning fw-bold small mb-2">
+        <p
+                class="text-warning fw-bold small mb-2"
+        >
           01
         </p>
 
-        <h2 class="h3 text-primary">
+
+        <h2
+                class="h3 text-primary"
+        >
           Microscopic Treatment
         </h2>
 
-        <p class="mb-0">
+
+        <p
+                class="mb-0"
+        >
           High-precision endodontic and restorative procedures
           under magnification.
         </p>
@@ -380,21 +570,37 @@
     </article>
 
 
-    <article class="col-12 col-md-6 col-lg-4">
+    <!--
+        12 columns on mobile
+        6 columns on tablet
+        4 columns on large desktop
+    -->
+
+    <article
+            class="col-12 col-md-6 col-lg-4"
+    >
 
       <div
               class="bg-white border rounded-4 shadow-sm p-4 h-100"
       >
 
-        <p class="text-warning fw-bold small mb-2">
+        <p
+                class="text-warning fw-bold small mb-2"
+        >
           02
         </p>
 
-        <h2 class="h4 text-primary">
+
+        <h2
+                class="h4 text-primary"
+        >
           Digital 3D Scanning
         </h2>
 
-        <p class="mb-0">
+
+        <p
+                class="mb-0"
+        >
           Digital impressions and diagnostic models support
           modern orthodontic planning.
         </p>
@@ -404,21 +610,33 @@
     </article>
 
 
-    <article class="col-12 col-md-6 col-lg-4">
+    <!-- Specialist Team -->
+
+    <article
+            class="col-12 col-md-6 col-lg-4"
+    >
 
       <div
               class="bg-white border rounded-4 shadow-sm p-4 h-100"
       >
 
-        <p class="text-warning fw-bold small mb-2">
+        <p
+                class="text-warning fw-bold small mb-2"
+        >
           03
         </p>
 
-        <h2 class="h4 text-primary">
+
+        <h2
+                class="h4 text-primary"
+        >
           Specialist Team
         </h2>
 
-        <p class="mb-0">
+
+        <p
+                class="mb-0"
+        >
           Implantology, surgery, therapy, periodontology,
           pediatrics and orthodontics.
         </p>
@@ -428,21 +646,33 @@
     </article>
 
 
-    <article class="col-12 col-lg-4">
+    <!-- Digital Care -->
+
+    <article
+            class="col-12 col-lg-4"
+    >
 
       <div
               class="bg-white border rounded-4 shadow-sm p-4 h-100"
       >
 
-        <p class="text-secondary fw-bold small mb-2">
+        <p
+                class="text-secondary fw-bold small mb-2"
+        >
           DIGITAL CARE
         </p>
 
-        <h2 class="h4 text-primary">
+
+        <h2
+                class="h4 text-primary"
+        >
           Clear Treatment Plans
         </h2>
 
-        <p class="mb-0">
+
+        <p
+                class="mb-0"
+        >
           Structured diagnostics help patients understand
           the next clinical steps.
         </p>
@@ -451,27 +681,38 @@
 
     </article>
 
+
   </section>
 
 
-  <!-- QUICK FACTS -->
+  <!-- =====================================================
+       QUICK FACTS
+       ===================================================== -->
 
   <section
           class="row g-4 mb-5"
           aria-label="Clinic facts"
   >
 
-    <article class="col-12 col-md-4">
+
+    <article
+            class="col-12 col-md-4"
+    >
 
       <div
               class="bg-white border rounded-4 shadow-sm p-4 text-center h-100"
       >
 
-        <strong class="fs-4 text-primary">
+        <strong
+                class="fs-4 text-primary"
+        >
           10:00–21:00
         </strong>
 
-        <span class="d-block text-body-secondary small">
+
+        <span
+                class="d-block text-body-secondary small"
+        >
                     Monday–Friday
                 </span>
 
@@ -480,17 +721,24 @@
     </article>
 
 
-    <article class="col-12 col-md-4">
+    <article
+            class="col-12 col-md-4"
+    >
 
       <div
               class="bg-white border rounded-4 shadow-sm p-4 text-center h-100"
       >
 
-        <strong class="fs-4 text-primary">
+        <strong
+                class="fs-4 text-primary"
+        >
           10:00–18:00
         </strong>
 
-        <span class="d-block text-body-secondary small">
+
+        <span
+                class="d-block text-body-secondary small"
+        >
                     Saturday–Sunday
                 </span>
 
@@ -499,17 +747,24 @@
     </article>
 
 
-    <article class="col-12 col-md-4">
+    <article
+            class="col-12 col-md-4"
+    >
 
       <div
               class="bg-white border rounded-4 shadow-sm p-4 text-center h-100"
       >
 
-        <strong class="fs-4 text-primary">
+        <strong
+                class="fs-4 text-primary"
+        >
           48
         </strong>
 
-        <span class="d-block text-body-secondary small">
+
+        <span
+                class="d-block text-body-secondary small"
+        >
                     Alikhan Bokeikhan Street
                 </span>
 
@@ -517,15 +772,19 @@
 
     </article>
 
+
   </section>
 
 
-  <!-- GALLERY -->
+  <!-- =====================================================
+       GALLERY
+       ===================================================== -->
 
   <section
           class="mb-5"
           aria-labelledby="gallery-heading"
   >
+
 
     <p
             class="text-uppercase text-secondary fw-bold small mb-2"
@@ -542,10 +801,16 @@
     </h2>
 
 
-    <div class="row g-4">
+    <div
+            class="row g-4"
+    >
 
 
-      <figure class="col-12 col-md-6 col-lg-4 mb-0">
+      <!-- IMAGE 1 -->
+
+      <figure
+              class="col-12 col-md-6 col-lg-4 mb-0"
+      >
 
         <div
                 class="bg-white border rounded-4 shadow-sm overflow-hidden h-100"
@@ -559,6 +824,7 @@
                   height="235"
           >
 
+
           <figcaption
                   class="p-3 text-center text-body-secondary small"
           >
@@ -570,7 +836,11 @@
       </figure>
 
 
-      <figure class="col-12 col-md-6 col-lg-4 mb-0">
+      <!-- IMAGE 2 -->
+
+      <figure
+              class="col-12 col-md-6 col-lg-4 mb-0"
+      >
 
         <div
                 class="bg-white border rounded-4 shadow-sm overflow-hidden h-100"
@@ -584,6 +854,7 @@
                   height="235"
           >
 
+
           <figcaption
                   class="p-3 text-center text-body-secondary small"
           >
@@ -595,7 +866,11 @@
       </figure>
 
 
-      <figure class="col-12 col-md-6 col-lg-4 mb-0">
+      <!-- IMAGE 3 -->
+
+      <figure
+              class="col-12 col-md-6 col-lg-4 mb-0"
+      >
 
         <div
                 class="bg-white border rounded-4 shadow-sm overflow-hidden h-100"
@@ -608,6 +883,7 @@
                   width="500"
                   height="235"
           >
+
 
           <figcaption
                   class="p-3 text-center text-body-secondary small"
@@ -625,12 +901,15 @@
   </section>
 
 
-  <!-- FOUNDER -->
+  <!-- =====================================================
+       FOUNDER MESSAGE
+       ===================================================== -->
 
   <section
           class="mb-5"
           aria-labelledby="founder-heading"
   >
+
 
     <p
             class="text-uppercase text-secondary fw-bold small mb-2"
@@ -651,19 +930,27 @@
             class="bg-white border border-top border-4 border-warning rounded-4 shadow-sm p-4"
     >
 
-      <h3 class="h4 text-primary">
+
+      <h3
+              class="h4 text-primary"
+      >
         Dr. Mukhamedyarov Kanat Magauyanovich
       </h3>
 
-
-      <p class="fw-bold text-secondary">
+      <p
+              class="fw-bold text-secondary"
+      >
         Founder • Implantologist & Prosthodontist
       </p>
 
 
-      <blockquote class="mb-0">
+      <blockquote
+              class="mb-0"
+      >
 
-        <p class="lead mb-0">
+        <p
+                class="lead mb-0"
+        >
 
           “Our priority is careful, understandable treatment
           and long-term oral health. Digital planning and
@@ -674,16 +961,20 @@
 
       </blockquote>
 
+
     </article>
 
   </section>
 
 
-  <!-- Normal content buttons -->
+  <!-- =====================================================
+       NORMAL BUTTONS
+       ===================================================== -->
 
   <div
           class="d-flex flex-wrap justify-content-center justify-content-md-end gap-2"
   >
+
 
     <a
             class="btn btn-warning"
@@ -700,26 +991,42 @@
       VIEW PRICES
     </a>
 
+
   </div>
 
 
 </main>
 
 
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
 <footer
         class="main-footer mt-5 py-4 text-center"
 >
 
-  <p class="mb-1 small">
+
+  <p
+          class="mb-1 small"
+  >
     © 2026 Dent house Dental Clinic
   </p>
 
-  <p class="mb-0 small text-white-50">
-    Page developed by: Saparkhan Shyngyskhan • SE-2531
+
+  <p
+          class="mb-0 small text-white-50"
+  >
+    Page developed by: Turarbek Nurakhmet & Saparkhan Shyngyskhan • SE-2531
   </p>
 
 </footer>
 
+
+<!-- =========================================================
+     BOOTSTRAP JAVASCRIPT
+     Required for the mobile navbar toggler.
+     ========================================================= -->
 
 <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

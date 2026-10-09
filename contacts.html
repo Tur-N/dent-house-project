@@ -25,14 +25,17 @@
   </title>
 
 
-  <!-- Bootstrap 5.3.8 -->
-
+  <!-- ========================================
+       BOOTSTRAP 5.3.8
+       Bootstrap is used for layout,
+       responsive grid, spacing and buttons.
+       ======================================== -->
   <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
           rel="stylesheet"
   >
 
-
+  <!-- Custom CSS -->
   <link
           rel="stylesheet"
           href="css/base.css"
@@ -51,39 +54,36 @@
 <!-- Author: Turarbek Nurakhmet | Group: SE-2531 -->
 
 
+<!-- ========================================
+     1. NAVBAR
+     Main navigation menu of the website.
+     ======================================== -->
 <header class="main-header">
 
-  <div
-          class="container-fluid px-3 px-md-5 py-4"
-  >
+  <div class="container-fluid px-3 px-md-5 py-4">
 
-    <p
-            class="eyebrow text-uppercase fw-bold small mb-2"
-    >
+    <p class="eyebrow text-uppercase fw-bold small mb-2">
       DENT HOUSE • CONTACT
     </p>
 
 
-    <h1
-            class="site-title display-5 fw-bold mb-2"
-    >
+    <h1 class="site-title display-5 fw-bold mb-2">
       Contact Dent house & Book a Visit
     </h1>
 
 
-    <p
-            class="site-tagline lead mb-4"
-    >
+    <p class="site-tagline lead mb-4">
       Schedule a Consultation with Our Dental Specialists
     </p>
 
 
+    <!-- Bootstrap responsive navbar -->
     <nav
             class="navbar navbar-expand-lg navbar-dark"
             aria-label="Primary navigation"
     >
 
-
+      <!-- Mobile navbar toggler -->
       <button
               class="navbar-toggler mx-auto"
               type="button"
@@ -93,71 +93,59 @@
               aria-expanded="false"
               aria-label="Toggle navigation"
       >
-
         <span class="navbar-toggler-icon"></span>
-
       </button>
 
 
+      <!-- Collapsible navigation menu -->
       <div
               class="collapse navbar-collapse justify-content-center"
               id="primaryNav"
       >
 
-        <ul
-                class="navbar-nav flex-wrap justify-content-center gap-2"
-        >
+        <ul class="navbar-nav flex-wrap justify-content-center gap-2">
 
           <li class="nav-item">
-
             <a
                     href="index.html"
                     class="nav-link px-3 py-2 rounded"
             >
               Home
             </a>
-
           </li>
 
 
           <li class="nav-item">
-
             <a
                     href="services.html"
                     class="nav-link px-3 py-2 rounded"
             >
               Services & Pricing
             </a>
-
           </li>
 
 
           <li class="nav-item">
-
             <a
                     href="orthodontics.html"
                     class="nav-link px-3 py-2 rounded"
             >
               Orthodontics & 3D Scanning
             </a>
-
           </li>
 
 
           <li class="nav-item">
-
             <a
                     href="team.html"
                     class="nav-link px-3 py-2 rounded"
             >
               Medical Team
             </a>
-
           </li>
 
 
           <li class="nav-item">
-
             <a
                     href="contacts.html"
                     class="nav-link active px-3 py-2 rounded"
@@ -165,21 +153,17 @@
             >
               Contacts & Booking
             </a>
-
           </li>
 
 
           <li class="nav-item">
-
             <a
                     href="colophon.html"
                     class="nav-link px-3 py-2 rounded"
             >
               Colophon
             </a>
-
           </li>
-
 
         </ul>
 
@@ -192,20 +176,18 @@
 </header>
 
 
-<main
-        class="container py-4 py-md-5"
->
+<main class="container py-4 py-md-5">
 
 
-  <!-- INTRO -->
-
+  <!-- ========================================
+       2. INTRO SECTION
+       Introduction to the Contacts & Booking page.
+       ======================================== -->
   <section
           class="bg-white border rounded-4 shadow-sm p-4 mb-4"
   >
 
-    <p
-            class="text-uppercase text-secondary fw-bold small"
-    >
+    <p class="text-uppercase text-secondary fw-bold small">
       CONTACT
     </p>
 
@@ -218,56 +200,46 @@
     </h2>
 
 
-    <p
-            class="lead mb-0"
-    >
-
+    <p class="lead mb-0">
       Visit our clinic in Astana or send an appointment request
       using the form below. The request form is a demonstration
       interface for the project.
-
     </p>
 
   </section>
 
 
-  <!-- CONTACT GRID -->
 
+  <!-- ========================================
+       3. CONTACT INFORMATION
+       Contains clinic details and quick contact.
+       ======================================== -->
   <section
           class="row g-4"
           aria-label="Contact information and booking"
   >
 
 
-    <!-- CLINIC DETAILS -->
-
-    <article
-            class="col-12 col-lg-6"
-    >
+    <!-- Clinic Details -->
+    <article class="col-12 col-lg-6">
 
       <div
               class="bg-white border rounded-4 shadow-sm p-4 h-100"
       >
 
-        <p
-                class="text-uppercase text-secondary fw-bold small"
-        >
+        <p class="text-uppercase text-secondary fw-bold small">
           CLINIC DETAILS
         </p>
 
 
-        <h2
-                class="h3 text-primary"
-        >
+        <h2 class="h3 text-primary">
           Find Dent house
         </h2>
 
 
         <address>
 
-
           <p>
-
             <strong>
               Address:
             </strong>
@@ -279,31 +251,27 @@
             <br>
 
             Astana, Kazakhstan
-
           </p>
 
 
           <p>
-
             <strong>
               Phone:
             </strong>
 
             <br>
 
-
+            <!-- Click to call the clinic -->
             <a
                     href="tel:+77078087848"
                     class="text-primary fw-bold"
             >
               +7 707 808 78 48
             </a>
-
           </p>
 
 
           <p>
-
             <strong>
               Working hours:
             </strong>
@@ -315,69 +283,59 @@
             <br>
 
             Sat–Sun: 10:00–18:00
-
           </p>
-
 
         </address>
 
 
-        <span
-                class="badge text-bg-secondary"
-        >
-                    Open for appointment requests
-                </span>
-
+        <span class="badge text-bg-secondary">
+                        Open for appointment requests
+                    </span>
 
       </div>
 
     </article>
 
 
-    <!-- QUICK CONTACT -->
 
-    <article
-            class="col-12 col-lg-6"
-    >
+    <!-- Quick Contact -->
+    <article class="col-12 col-lg-6">
 
       <div
               class="bg-white border rounded-4 shadow-sm p-4 h-100"
       >
 
-        <p
-                class="text-uppercase text-secondary fw-bold small"
-        >
+        <p class="text-uppercase text-secondary fw-bold small">
           QUICK CONTACT
         </p>
 
 
-        <h2
-                class="h3 text-primary"
-        >
+        <h2 class="h3 text-primary">
           Direct Access
         </h2>
 
 
         <p>
-
           For immediate questions, contact the clinic by phone.
-          For planned consultations, complete the booking request form.
-
+          For planned consultations, complete the booking request
+          form.
         </p>
 
 
         <div
-                class="d-flex flex-wrap align-items-center gap-2 mt-3"
+                class="d-flex flex-wrap align-items-end gap-2 pb-3 "
         >
 
+          <!-- Real phone-call link -->
           <a
-                  class="btn btn-primary"
+                  class="btn btn-primary "
                   href="tel:+77078087848"
           >
             Call Clinic
           </a>
 
 
+          <!-- Link to Services & Pricing page -->
           <a
                   class="btn btn-outline-primary btn-sm"
                   href="services.html"
@@ -387,32 +345,28 @@
 
         </div>
 
-
       </div>
 
     </article>
 
 
-    <!-- BOOKING FORM -->
 
-    <article
-            class="col-12"
-    >
+    <!-- ========================================
+         4. APPOINTMENT REQUEST FORM
+         Form for submitting a booking request.
+         ======================================== -->
+    <article class="col-12">
 
       <div
               class="bg-white border rounded-4 shadow-sm p-4"
       >
 
-        <p
-                class="text-uppercase text-secondary fw-bold small"
-        >
+        <p class="text-uppercase text-secondary fw-bold small">
           ONLINE REQUEST
         </p>
 
 
-        <h2
-                class="h3 text-primary"
-        >
+        <h2 class="h3 text-primary">
           Appointment Request Form
         </h2>
 
@@ -423,11 +377,7 @@
                 method="post"
         >
 
-
-          <fieldset
-                  class="border rounded-4 p-3"
-          >
-
+          <fieldset class="border rounded-4 p-3">
 
             <legend
                     class="float-none w-auto px-2 fw-bold text-primary"
@@ -436,16 +386,11 @@
             </legend>
 
 
-            <div
-                    class="row g-3"
-            >
+            <div class="row g-3">
 
 
               <!-- NAME -->
-
-              <div
-                      class="col-12 col-md-6"
-              >
+              <div class="col-12 col-md-6">
 
                 <label
                         class="form-label fw-bold"
@@ -467,11 +412,9 @@
               </div>
 
 
-              <!-- PHONE -->
 
-              <div
-                      class="col-12 col-md-6"
-              >
+              <!-- PHONE -->
+              <div class="col-12 col-md-6">
 
                 <label
                         class="form-label fw-bold"
@@ -493,11 +436,9 @@
               </div>
 
 
-              <!-- SERVICE -->
 
-              <div
-                      class="col-12 col-md-6"
-              >
+              <!-- SERVICE -->
+              <div class="col-12 col-md-6">
 
                 <label
                         class="form-label fw-bold"
@@ -551,11 +492,9 @@
               </div>
 
 
-              <!-- DOCTOR -->
 
-              <div
-                      class="col-12 col-md-6"
-              >
+              <!-- DOCTOR -->
+              <div class="col-12 col-md-6">
 
                 <label
                         class="form-label fw-bold"
@@ -612,11 +551,9 @@
               </div>
 
 
-              <!-- DATE -->
 
-              <div
-                      class="col-12 col-md-6"
-              >
+              <!-- DATE -->
+              <div class="col-12 col-md-6">
 
                 <label
                         class="form-label fw-bold"
@@ -637,11 +574,9 @@
               </div>
 
 
-              <!-- COMMENTS -->
 
-              <div
-                      class="col-12"
-              >
+              <!-- COMMENTS -->
+              <div class="col-12">
 
                 <label
                         class="form-label fw-bold"
@@ -662,13 +597,11 @@
               </div>
 
 
+
               <!-- BUTTONS -->
+              <div class="col-12 d-flex flex-wrap gap-2">
 
-              <div
-                      class="col-12 d-flex flex-wrap gap-2"
-              >
-
-
+                <!-- Submit booking request -->
                 <button
                         type="submit"
                         class="btn btn-primary btn-lg"
@@ -677,6 +610,7 @@
                 </button>
 
 
+                <!-- Reset form -->
                 <button
                         type="reset"
                         class="btn btn-outline-secondary btn-sm"
@@ -685,6 +619,7 @@
                 </button>
 
 
+                <!-- Disabled demonstration button -->
                 <button
                         type="button"
                         class="btn btn-secondary"
@@ -693,18 +628,14 @@
                   Demo only
                 </button>
 
-
               </div>
 
 
             </div>
 
-
           </fieldset>
 
-
         </form>
-
 
       </div>
 
@@ -713,36 +644,33 @@
 
   </section>
 
-
 </main>
 
 
-<footer
-        class="main-footer mt-5 py-4 text-center"
->
 
+<!-- ========================================
+     FOOTER
+     Bottom section of the website.
+     ======================================== -->
+<footer class="main-footer mt-5 py-4 text-center">
 
-  <p
-          class="mb-1 small"
-  >
+  <p class="mb-1 small">
     © 2026 Dent house Dental Clinic
   </p>
 
 
-  <p
-          class="mb-0 small text-white-50"
-  >
+  <p class="mb-0 small text-white-50">
     Page developed by: Turarbek Nurakhmet • SE-2531
   </p>
-
 
 </footer>
 
 
+
+<!-- Bootstrap JavaScript Bundle -->
 <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
 ></script>
-
 
 </body>
 
