@@ -1,42 +1,46 @@
-# AI Log — Assignment 3
+# AI Log — Midterm Project
 
-## AI tool used
+## AI Tool Used
 
 ChatGPT
 
 ## Purpose
 
-ChatGPT was used to help migrate the existing Assignment 2
-Dent house HTML/CSS project to Bootstrap for Assignment 3.
+ChatGPT was used to review the Dent house HTML/CSS project against the Midterm Project requirements and prepare corrections to the source files and supporting documentation.
 
-## Main changes
+## AI-Assisted Changes
 
-1. Bootstrap 5.3.8 was added through CDN.
-2. The existing project theme and pages were preserved.
-3. Custom CSS Grid layouts were replaced by Bootstrap rows and columns.
-4. Custom Flexbox layouts were replaced by Bootstrap utility classes.
-5. Navigation was changed to a responsive Bootstrap navbar.
-6. Bootstrap responsive breakpoints were added.
-7. Bootstrap typography classes were added.
-8. Bootstrap button variants and sizes were added.
-9. Bootstrap utility classes were added.
-10. A Bootstrap Alert component was added.
-11. Tables were updated with Bootstrap table classes.
-12. Forms were updated with Bootstrap form classes.
-13. Custom CSS was reduced to a correction layer.
-14. A removed CSS list was prepared.
+1. Corrected the malformed CSS heading animation.
+2. Separated shared styles from page-specific stylesheets.
+3. Kept Bootstrap responsible for the main responsive layout and common UI components.
+4. Prepared stable IDs for navbar togglers, the booking form and form buttons.
+5. Added explanatory text to clarify that the booking form is a prototype.
+6. Prepared confirmation and error message containers for future JavaScript.
+7. Updated the README with the page list and three user journeys.
+8. Updated the project checklist and removed-CSS notes.
+9. Added a quality-pass record to distinguish prepared changes from tests that remain to be performed.
 
-## Human verification
+## Human Verification Still Required
 
-The student must:
+The following tasks have not been confirmed as completed:
 
-- open every page locally;
-- test all navigation links;
-- test the navbar toggler;
-- check 375px width;
-- check 768px width;
-- check desktop width;
-- run W3C HTML validation;
-- run W3C CSS validation;
-- take the four required screenshots;
-- commit the final changes to Git.
+- Open every HTML page locally.
+- Test every navigation and content link.
+- Test the navbar at 375 px, 768 px and desktop widths.
+- Test keyboard navigation and focus styles.
+- Test form validation.
+- Confirm that all local images load.
+- Check the browser console and page overflow.
+- Run the W3C HTML validator on every HTML page.
+- Run the W3C CSS validator on every stylesheet.
+- Capture the four required screenshots.
+- Complete the peer review or review on another device.
+- Verify Git history and the `midterm` tag.
+
+The team must complete these tasks and record the actual results before submission.
+
+## Important Note
+
+The booking form is a front-end prototype. It does not send an appointment request to the clinic.
+
+The real photographs referenced by the website must be supplied by the team. AI assistance does not replace the students' responsibility to understand, test and explain their project.

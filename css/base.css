@@ -1,7 +1,6 @@
 /* =========================================================
-   DENT HOUSE — ASSIGNMENT 3
-   Bootstrap correction layer
-   Bootstrap 5.3.8 does most of the layout and utilities.
+   DENT HOUSE — MIDTERM PROJECT
+   Shared Bootstrap correction layer
    ========================================================= */
 
 :root {
@@ -17,245 +16,169 @@
     --dent-dark: #1D2D44;
     --dent-bg: #F8F9FA;
 
-    --dent-font-heading:
-        "Segoe UI",
-        Tahoma,
-        Geneva,
-        Verdana,
-        sans-serif;
-
-    --dent-font-body:
-        Arial,
-        Helvetica,
-        sans-serif;
+    --dent-font-heading: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --dent-font-body: Arial, Helvetica, sans-serif;
 }
 
-
 /* Base document */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
-    font-family: var(--dent-font-body);
+    margin: 0;
+    min-width: 0;
     color: var(--dent-dark);
     background-color: var(--dent-bg);
+    font-family: var(--dent-font-body);
     line-height: 1.65;
+    overflow-wrap: break-word;
 }
 
+img,
+svg,
+video {
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--dent-font-heading);
 }
 
+:focus-visible {
+    outline: 3px solid var(--bs-warning);
+    outline-offset: 3px;
+}
 
-/* Header */
+/* Shared header */
 
 .main-header {
-    color: white;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--bs-primary),
-            var(--bs-secondary)
-        );
-
-    box-shadow:
-        0 6px 24px
-        rgba(29, 45, 68, 0.14);
+    color: #fff;
+    background: linear-gradient(
+        135deg,
+        var(--bs-primary),
+        var(--bs-secondary)
+    );
+    box-shadow: 0 6px 24px rgba(29, 45, 68, 0.14);
 }
-
 
 .site-title {
-    color: white;
-
-    text-shadow:
-        0 4px 16px
-        rgba(29, 45, 68, 0.25);
+    color: #fff;
+    text-shadow: 0 4px 16px rgba(29, 45, 68, 0.25);
 }
-
 
 .site-tagline {
-    color: white;
+    color: #fff;
 }
-
-
-/* Bootstrap navbar receives only brand corrections */
 
 .main-header .nav-link {
-    color: white;
+    color: #fff;
 }
-
 
 .main-header .nav-link:hover,
+.main-header .nav-link:focus-visible,
 .main-header .nav-link.active {
-    color: white;
-
-    background-color:
-        var(--bs-secondary);
+    color: #fff;
+    background-color: var(--bs-secondary);
 }
 
-
-/* Announcement */
-
-.announcement-bar {
-    overflow: hidden;
-
-    border-bottom:
-        3px solid
-        var(--bs-warning);
+.main-header .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.65);
 }
 
+/* Responsive tables */
 
-.announcement-track {
-    width: max-content;
-
-    white-space: nowrap;
-
-    animation:
-        marquee-scroll
-        24s
-        linear
-        infinite;
+.table-responsive {
+    max-width: 100%;
 }
-
-
-@keyframes marquee-scroll {
-
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
-
-}
-
-
-/* Hero */
-
-.hero-banner {
-    position: relative;
-
-    overflow: hidden;
-
-    color: white;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--bs-primary),
-            var(--bs-secondary)
-        );
-
-    box-shadow:
-        0 14px 32px
-        rgba(29, 45, 68, 0.16);
-}
-
-
-.hero-banner::before {
-    content: "";
-
-    position: absolute;
-
-    width: 240px;
-    height: 240px;
-
-    right: -60px;
-    bottom: -80px;
-
-    border-radius: 50%;
-
-    background-color:
-        rgba(255, 255, 255, 0.08);
-}
-
-
-.hero-banner > * {
-    position: relative;
-
-    z-index: 1;
-}
-
-
-/* Tables */
 
 .table-responsive > .table {
     min-width: 620px;
 }
 
-
 .data-table caption {
-    color:
-        var(--bs-primary);
-
+    color: var(--bs-primary);
     font-weight: 700;
 }
 
-
-/* Form correction */
+/* Form corrections */
 
 .booking-form textarea {
     resize: vertical;
 }
 
-
-/* Gallery */
-
-.gallery-card img {
-    width: 100%;
-    height: 235px;
-
-    object-fit: cover;
+.booking-form .form-control:focus,
+.booking-form .form-select:focus {
+    border-color: var(--bs-secondary);
+    box-shadow: 0 0 0 0.2rem rgba(10, 147, 150, 0.2);
 }
 
+.booking-form .form-control,
+.booking-form .form-select {
+    min-width: 0;
+}
 
-/* Footer */
+/* Interface states prepared for future JavaScript */
+
+.is-hidden {
+    display: none !important;
+}
+
+.is-active {
+    outline: 2px solid var(--bs-secondary);
+    outline-offset: 2px;
+}
+
+.is-selected {
+    border-color: var(--bs-primary) !important;
+    box-shadow: 0 0 0 0.15rem rgba(0, 95, 115, 0.15);
+}
+
+.is-error {
+    border-color: #b02a37 !important;
+}
+
+.is-success {
+    border-color: #146c43 !important;
+}
+
+/* Shared footer */
 
 .main-footer {
-    color: white;
-
-    background-color:
-        var(--dent-dark);
+    color: #fff;
+    background-color: var(--dent-dark);
 }
-
 
 .main-footer::before {
-    content: "";
-
     display: block;
-
     width: 70px;
     height: 3px;
-
-    margin:
-        0
-        auto
-        1rem;
-
-    background-color:
-        var(--bs-warning);
+    margin: 0 auto 1rem;
+    background-color: var(--bs-warning);
+    content: "";
 }
-
 
 /* Small-screen safety */
 
 @media (max-width: 575.98px) {
-
     .site-title {
-        font-size:
-            clamp(
-                1.8rem,
-                8vw,
-                2.5rem
-            );
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
     }
 
     .quick-booking {
@@ -266,5 +189,12 @@ h3 {
     .table-responsive > .table {
         min-width: 560px;
     }
+}
 
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }

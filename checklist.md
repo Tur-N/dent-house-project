@@ -1,128 +1,56 @@
-# Assignment 2 — CSS Feature & Tag Checklist
+# Midterm Project — Compliance Checklist
 
 **Group:** SE-2531  
 **Project:** Dent house Dental Clinic Website  
-**Students:** Saparkhan Shyngyskhan & Turarbek Nurakhmet
+**Students:** Saparkhan Shyngyskhan and Turarbek Nurakhmet
 
----
+Legend:
+- [x] Prepared in the source files.
+- [ ] Must be checked or completed manually.
 
-## 1. Shared stylesheet architecture
+## Structure and Consistency
 
-| Requirement | Location | Owner |
-|---|---|---|
-| Shared `base.css` | `css/base.css` | Both |
-| Saparkhan personal CSS | `css/saparkhan.css` | Saparkhan |
-| Turarbek personal CSS | `css/turarbek.css` | Turarbek |
-| Base loaded first | every HTML file | Both |
-| Personal stylesheet loaded second | every HTML file | Both |
+- [x] Six HTML pages are included.
+- [x] The pages use the same main navigation.
+- [x] The same visual theme is used across the pages.
+- [x] Bootstrap is used for the main layout and components.
+- [x] Custom CSS is used as a correction layer.
+- [x] README includes the page list.
+- [x] README includes three user journeys.
+- [x] The booking process is clearly described as a prototype.
 
----
+## Preparing for Future JavaScript
 
-## 2. Required selectors
+- [x] Navbar togglers have IDs.
+- [x] Booking form has a stable ID.
+- [x] Form controls have stable IDs.
+- [x] Submit and reset buttons have IDs.
+- [x] Confirmation message container is present.
+- [x] Error message container is present.
+- [x] CSS state classes are prepared.
+- [x] No custom booking JavaScript has been added.
 
-| Selector | Location |
-|---|---|
-| Universal `*` | `base.css` |
-| Type selector | `body`, `p`, `h1`, `h2` |
-| Class selector | multiple selectors |
-| ID selector | `#home-title` and other page IDs |
-| Descendant selector | `.doctor-card p` |
-| Child selector `>` | `.nav-list > li`, `.form-field > span` |
-| Adjacent sibling `+` | `.page-intro h2 + p` |
-| Grouping selector | `h1, h2, h3` |
-| Attribute selector | `a[href^="tel:"]`, `input[type="tel"]` |
-| `:hover` | `.nav-link:hover` |
-| `:focus` | `.nav-link:focus` |
-| `:first-child` | `.nav-list > li:first-child` |
-| `:nth-child()` | table rows and form field |
-| `::before` | hero/footer |
-| `::after` | section labels/workflow decoration |
+## Manual Testing — Pending
 
----
+- [ ] Open every HTML page locally.
+- [ ] Click every navigation link and content link.
+- [ ] Test form validation.
+- [ ] Test navbar at 375 px, 768 px and desktop widths.
+- [ ] Check for horizontal page overflow at 375 px.
+- [ ] Check keyboard navigation and focus styles.
+- [ ] Confirm all local images load.
+- [ ] Check the browser console.
+- [ ] Run W3C HTML validation with zero errors.
+- [ ] Run W3C CSS validation with zero errors.
+- [ ] Capture the 375 px screenshot.
+- [ ] Capture the 768 px screenshot.
+- [ ] Capture the desktop screenshot.
+- [ ] Capture the collapsed mobile navbar screenshot.
+- [ ] Complete peer review or review on a different device.
+- [ ] Record findings in `quality-pass.md`.
+- [ ] Create the final commit and `midterm` Git tag.
+- [ ] Verify the required commit history for both students.
 
-## 3. IDs
+## Known Item
 
-Meaningful IDs are used for unique page headings.
-
-- `#home-title`
-- `#services-title`
-- `#orthodontics-title`
-- `#team-title`
-- `#contacts-title`
-- `#colophon-title`
-
-Each page uses its heading ID only once.
-
----
-
-## 4. Colours
-
-Five main palette colours:
-
-- `#005F73`
-- `#0A9396`
-- `#EE9B00`
-- `#1D2D44`
-- `#F8F9FA`
-
-Named colour:
-
-- `white`
-
-RGBA is also used for transparency.
-
----
-
-## 5. Fonts
-
-Heading font:
-
-```css
-"Segoe UI", Tahoma, Geneva, Verdana, sans-serif
-
-------------------------------------REMOVED CSS----------------------------------------------------------
-# Assignment 3 — Removed CSS
-
-Assignment 3 continues the Assignment 2 Dent house website.
-
-Bootstrap now handles most of the layout, spacing, navigation,
-buttons, responsive behaviour, forms and tables.
-
-| Assignment 2 CSS | Assignment 3 Bootstrap replacement |
-|---|---|
-| `.home-grid` | `.row` + `.col-*` |
-| `.pricing-layout` | `.row` + `.col-*` |
-| `.diagnostic-layout` | `.row` + `.col-*` |
-| `.team-grid` | `.row` + `.col-md-6` |
-| `.contact-layout` | `.row` + `.col-*` |
-| `.documentation-grid` | `.row` + `.col-*` |
-| `display: flex` | `.d-flex` |
-| `flex-wrap: wrap` | `.flex-wrap` |
-| `justify-content: center` | `.justify-content-center` |
-| `gap` | `.gap-*` |
-| Manual padding | `.p-*`, `.px-*`, `.py-*` |
-| Manual margins | `.m-*`, `.mt-*`, `.mb-*` |
-| Custom button styling | `.btn`, `.btn-primary`, `.btn-warning` |
-| Custom outline button | `.btn-outline-primary` |
-| Custom button sizing | `.btn-lg`, `.btn-sm` |
-| Custom navigation flexbox | `.navbar`, `.navbar-nav` |
-| Manual mobile navigation | `.navbar-toggler`, `.collapse` |
-| Manual table styling | `.table`, `.table-striped`, `.table-hover` |
-| Manual responsive table | `.table-responsive` |
-| Manual form control styling | `.form-control`, `.form-select` |
-| Manual badge styling | `.badge`, `.rounded-pill` |
-| Manual shadows | `.shadow-sm` |
-| Manual borders | `.border` |
-| Manual rounded cards | `.rounded-4` |
-| Float image CSS | `.float-start`, `.me-3`, `.mb-2` |
-| Form grid | `.row` + `.col-*` |
-
-Remaining custom CSS is only used for:
-
-- project colours
-- font families
-- header gradient
-- marquee animation
-- hero decoration
-- image height
-- small page-specific corrections
+The project references local photographs. Add the team's own images using the filenames referenced by the HTML, or update the image paths before submission.

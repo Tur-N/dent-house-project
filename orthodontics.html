@@ -1,689 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="author" content="Turarbek Nurakhmet">
+    <meta name="description" content="Orthodontics, digital diagnostics and 3D scanning services at Dent house.">
 
-    <meta
-            name="author"
-            content="Turarbek Nurakhmet"
-    >
+    <title>Orthodontics & 3D Diagnostics — Dent house</title>
 
-    <meta
-            name="description"
-            content="Dent house orthodontics and 3D intraoral scanning services in Astana."
-    >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
 
-    <title>
-        Orthodontics & 3D Diagnostics — Dent house
-    </title>
-
-
-    <!-- Bootstrap 5.3.8 -->
-
-    <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-    >
-
-
-    <link
-            rel="stylesheet"
-            href="css/base.css"
-    >
-
-    <link
-            rel="stylesheet"
-            href="css/turarbek.css"
-    >
-
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/turarbek.css">
 </head>
-
 
 <body class="orthodontics-page">
 
-<!-- Author: Turarbek Nurakhmet | Group: SE-2531 -->
-
-
 <header class="main-header">
+    <div class="container-fluid px-3 px-md-5 py-4">
 
-    <div
-            class="container-fluid px-3 px-md-5 py-4"
-    >
-
-        <p
-                class="eyebrow text-uppercase fw-bold small mb-2"
-        >
+        <p class="eyebrow text-uppercase fw-bold small mb-2">
             DENT HOUSE • DIGITAL ORTHODONTICS
         </p>
 
-
-        <h1
-                class="site-title display-5 fw-bold mb-2"
-        >
+        <h1 class="site-title display-5 fw-bold mb-2">
             Orthodontics & 3D Diagnostics
         </h1>
 
-
-        <p
-                class="site-tagline lead mb-4"
-        >
+        <p class="site-tagline lead mb-4">
             Digital Scanning • Treatment Planning • Bite Correction
         </p>
 
+        <nav class="navbar navbar-expand-lg navbar-dark"
+             aria-label="Primary navigation">
 
-        <nav
-                class="navbar navbar-expand-lg navbar-dark"
-                aria-label="Primary navigation"
-        >
-
-            <button
+            <button id="nav-toggle"
                     class="navbar-toggler mx-auto"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#primaryNav"
                     aria-controls="primaryNav"
                     aria-expanded="false"
-                    aria-label="Toggle navigation"
-            >
-
+                    aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-
             </button>
 
+            <div class="collapse navbar-collapse justify-content-center"
+                 id="primaryNav">
 
-            <div
-                    class="collapse navbar-collapse justify-content-center"
-                    id="primaryNav"
-            >
-
-                <ul
-                        class="navbar-nav flex-wrap justify-content-center gap-2"
-                >
+                <ul class="navbar-nav flex-wrap justify-content-center gap-2">
 
                     <li class="nav-item">
-
-                        <a
-                                href="index.html"
-                                class="nav-link px-3 py-2 rounded"
-                        >
+                        <a href="index.html" class="nav-link px-3 py-2 rounded">
                             Home
                         </a>
-
                     </li>
 
-
                     <li class="nav-item">
-
-                        <a
-                                href="services.html"
-                                class="nav-link px-3 py-2 rounded"
-                        >
+                        <a href="services.html" class="nav-link px-3 py-2 rounded">
                             Services & Pricing
                         </a>
-
                     </li>
 
-
                     <li class="nav-item">
-
-                        <a
-                                href="orthodontics.html"
-                                class="nav-link active px-3 py-2 rounded"
-                                aria-current="page"
-                        >
+                        <a href="orthodontics.html"
+                           class="nav-link active px-3 py-2 rounded"
+                           aria-current="page">
                             Orthodontics & 3D Scanning
                         </a>
-
                     </li>
 
-
                     <li class="nav-item">
-
-                        <a
-                                href="team.html"
-                                class="nav-link px-3 py-2 rounded"
-                        >
+                        <a href="team.html" class="nav-link px-3 py-2 rounded">
                             Medical Team
                         </a>
-
                     </li>
 
-
                     <li class="nav-item">
-
-                        <a
-                                href="contacts.html"
-                                class="nav-link px-3 py-2 rounded"
-                        >
+                        <a href="contacts.html" class="nav-link px-3 py-2 rounded">
                             Contacts & Booking
                         </a>
-
                     </li>
-
 
                     <li class="nav-item">
-
-                        <a
-                                href="colophon.html"
-                                class="nav-link px-3 py-2 rounded"
-                        >
+                        <a href="colophon.html" class="nav-link px-3 py-2 rounded">
                             Colophon
                         </a>
-
                     </li>
 
-
                 </ul>
-
             </div>
-
         </nav>
 
     </div>
-
 </header>
 
+<main class="container py-4 py-md-5">
 
-<main
-        class="container py-4 py-md-5"
->
+    <section class="bg-white border rounded-4 shadow-sm p-4 mb-4"
+             aria-labelledby="orthodontics-title">
 
-
-    <!-- INTRO -->
-
-    <section
-            class="bg-white border rounded-4 shadow-sm p-4 mb-4"
-    >
-
-        <p
-                class="text-uppercase text-secondary fw-bold small"
-        >
+        <p class="text-uppercase text-secondary fw-bold small">
             ORTHODONTICS
         </p>
 
-
-        <h2
-                id="orthodontics-title"
-                class="h2 text-primary text-center text-md-start"
-        >
+        <h2 id="orthodontics-title" class="h2 text-primary">
             Digital Orthodontics & Bite Correction
         </h2>
 
-
-        <p
-                class="lead mb-0"
-        >
-
-            Under the supervision of Dr. Otarbayeva Alma Amanzholovna,
-            the department uses high-resolution intraoral scanning to support
-            orthodontic assessment, treatment planning and digital modelling.
-
+        <p class="lead mb-0">
+            Digital scanning supports orthodontic assessment, treatment
+            planning and the creation of digital models. Treatment decisions
+            must be made by a qualified dental professional.
         </p>
 
     </section>
 
-
-    <!-- DIAGNOSTIC GRID -->
-
-    <section
-            class="row g-4"
-            aria-label="Orthodontic diagnostics and pricing"
-    >
-
-
-        <article
-                class="col-12"
-        >
-
-            <div
-                    class="bg-white border rounded-4 shadow-sm p-4"
-            >
-
-                <p
-                        class="text-uppercase text-secondary fw-bold small"
-                >
-                    DIGITAL DIAGNOSTICS
-                </p>
-
-
-                <h2
-                        class="h3 text-primary"
-                >
-                    Diagnostic Price Directory
-                </h2>
-
-
-                <div
-                        class="table-responsive"
-                >
-
-                    <table
-                            class="table table-striped table-hover align-middle"
-                    >
-
-
-                        <caption
-                                class="caption-top"
-                        >
-                            3D scanning, modelling and custom component prices
-                        </caption>
-
-
-                        <thead
-                                class="table-primary"
-                        >
-
-                        <tr>
-
-                            <th scope="col">
-                                Service / Component
-                            </th>
-
-                            <th scope="col">
-                                Clinical application
-                            </th>
-
-                            <th scope="col">
-                                Price
-                            </th>
-
-                        </tr>
-
-                        </thead>
-
-
-                        <tbody>
-
-
-                        <tr>
-
-                            <td>
-                                3D Intraoral Scanning
-                            </td>
-
-                            <td>
-                                High-resolution digital optical jaw impression
-                            </td>
-
-                            <td>
-                                15,000 KZT
-                            </td>
-
-                        </tr>
-
-
-                        <tr>
-
-                            <td>
-                                3D Diagnostic Model
-                            </td>
-
-                            <td>
-                                Computerized treatment planning model
-                            </td>
-
-                            <td>
-                                25,000 KZT
-                            </td>
-
-                        </tr>
-
-
-                        <tr>
-
-                            <td>
-                                Perfect System with White Coating
-                            </td>
-
-                            <td>
-                                Aesthetic orthodontic appliance component
-                            </td>
-
-                            <td>
-                                9,600 KZT
-                            </td>
-
-                        </tr>
-
-
-                        <tr>
-
-                            <td>
-                                Additional Expansion Screw
-                            </td>
-
-                            <td>
-                                Supplementary orthodontic expansion screw
-                            </td>
-
-                            <td>
-                                3,000 KZT
-                            </td>
-
-                        </tr>
-
-
-                        <tr>
-
-                            <td>
-                                Custom Zirconia Post-Inlay
-                            </td>
-
-                            <td>
-                                Individual zirconium stump inlay
-                            </td>
-
-                            <td>
-                                25,000 KZT
-                            </td>
-
-                        </tr>
-
-
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- WHY DIGITAL -->
-
-        <article
-                class="col-12 col-md-6"
-        >
-
-            <div
-                    class="bg-white border rounded-4 shadow-sm p-4 h-100"
-            >
-
-                <p
-                        class="text-uppercase text-secondary fw-bold small"
-                >
-                    WHY DIGITAL
-                </p>
-
-
-                <h2
-                        class="h4 text-primary"
-                >
+    <!-- Diagnostic prices -->
+    <section class="bg-white border rounded-4 shadow-sm p-4 mb-4"
+             aria-labelledby="diagnostic-price-heading">
+
+        <h2 id="diagnostic-price-heading" class="h3 text-primary">
+            Diagnostic Price Directory
+        </h2>
+
+        <div class="table-responsive">
+
+            <table class="table table-striped table-hover align-middle">
+                <caption class="caption-top">
+                    3D scanning, modelling and orthodontic component prices
+                </caption>
+
+                <thead class="table-primary">
+                <tr>
+                    <th scope="col">Service / Component</th>
+                    <th scope="col">Clinical Application</th>
+                    <th scope="col">Price</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>3D Intraoral Scanning</td>
+                    <td>Digital optical jaw impression</td>
+                    <td>15,000 KZT</td>
+                </tr>
+
+                <tr>
+                    <td>3D Diagnostic Model</td>
+                    <td>Computerized treatment planning model</td>
+                    <td>25,000 KZT</td>
+                </tr>
+
+                <tr>
+                    <td>Perfect System with White Coating</td>
+                    <td>Aesthetic orthodontic appliance component</td>
+                    <td>9,600 KZT</td>
+                </tr>
+
+                <tr>
+                    <td>Additional Expansion Screw</td>
+                    <td>Supplementary orthodontic expansion screw</td>
+                    <td>3,000 KZT</td>
+                </tr>
+
+                <tr>
+                    <td>Custom Zirconia Post-Inlay</td>
+                    <td>Individual zirconium component</td>
+                    <td>25,000 KZT</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+
+    <!-- Benefits and journey -->
+    <section class="row g-4 mb-4">
+
+        <article class="col-12 col-md-6">
+            <div class="bg-white border rounded-4 shadow-sm p-4 h-100">
+
+                <h2 class="h4 text-primary">
                     What 3D Scanning Adds
                 </h2>
 
-
-                <ul
-                        class="list-group"
-                >
-
+                <ul class="list-group">
                     <li class="list-group-item">
-                        More readable digital impressions
+                        Digital dental impressions
                     </li>
-
                     <li class="list-group-item">
                         Visual treatment planning
                     </li>
-
                     <li class="list-group-item">
-                        Faster comparison of models
+                        Easier comparison of models
                     </li>
-
                     <li class="list-group-item">
                         Digital records for follow-up
                     </li>
-
                 </ul>
 
             </div>
-
         </article>
 
+        <article class="col-12 col-md-6">
+            <div class="bg-white border rounded-4 shadow-sm p-4 h-100">
 
-        <!-- PATIENT JOURNEY -->
-
-        <article
-                class="col-12 col-md-6"
-        >
-
-            <div
-                    class="bg-white border rounded-4 shadow-sm p-4 h-100"
-            >
-
-                <p
-                        class="text-uppercase text-secondary fw-bold small"
-                >
-                    PATIENT JOURNEY
-                </p>
-
-
-                <h2
-                        class="h4 text-primary"
-                >
+                <h2 class="h4 text-primary">
                     From Scan to Plan
                 </h2>
 
-
-                <p
-                        class="mb-0"
-                >
-
-                    Consultation begins with clinical assessment,
-                    followed by scanning, digital modelling and
-                    discussion of treatment options.
-
+                <p class="mb-0">
+                    A typical patient journey starts with a consultation
+                    and clinical assessment. Scanning and digital modelling
+                    can then support the discussion of treatment options.
                 </p>
 
             </div>
-
         </article>
-
 
     </section>
 
+    <!-- Workflow -->
+    <section aria-labelledby="workflow-heading">
 
-    <!-- WORKFLOW -->
+        <h2 id="workflow-heading" class="h2 text-primary mb-3">
+            Orthodontic Workflow
+        </h2>
 
-    <section
-            class="row g-4 mt-4"
-            aria-label="Orthodontic workflow"
-    >
+        <div class="row g-4">
 
+            <article class="col-12 col-sm-6 col-lg-3">
+                <div class="workflow-step bg-white border rounded-4 shadow-sm p-4 h-100">
 
-        <article
-                class="col-12 col-sm-6 col-lg-3"
-        >
+                    <span class="badge text-bg-warning mb-3">01</span>
 
-            <div
-                    class="workflow-step bg-white border rounded-4 shadow-sm p-4 h-100"
-            >
+                    <h3 class="h4 text-primary">
+                        Consult
+                    </h3>
 
-                <span
-                        class="badge text-bg-warning mb-3"
-                >
-                    01
-                </span>
+                    <p class="mb-0">
+                        Assess the bite and define treatment goals.
+                    </p>
 
+                </div>
+            </article>
 
-                <h2
-                        class="h4 text-primary"
-                >
-                    Consult
-                </h2>
+            <article class="col-12 col-sm-6 col-lg-3">
+                <div class="workflow-step bg-white border rounded-4 shadow-sm p-4 h-100">
 
+                    <span class="badge text-bg-warning mb-3">02</span>
 
-                <p
-                        class="mb-0"
-                >
-                    Assess the bite and define treatment goals.
-                </p>
+                    <h3 class="h4 text-primary">
+                        Scan
+                    </h3>
 
-            </div>
+                    <p class="mb-0">
+                        Capture a digital image of the teeth and jaw.
+                    </p>
 
-        </article>
+                </div>
+            </article>
 
+            <article class="col-12 col-sm-6 col-lg-3">
+                <div class="workflow-step bg-white border rounded-4 shadow-sm p-4 h-100">
 
-        <article
-                class="col-12 col-sm-6 col-lg-3"
-        >
+                    <span class="badge text-bg-warning mb-3">03</span>
 
-            <div
-                    class="workflow-step bg-white border rounded-4 shadow-sm p-4 h-100"
-            >
+                    <h3 class="h4 text-primary">
+                        Model
+                    </h3>
 
-                <span
-                        class="badge text-bg-warning mb-3"
-                >
-                    02
-                </span>
+                    <p class="mb-0">
+                        Prepare and review digital diagnostic models.
+                    </p>
 
+                </div>
+            </article>
 
-                <h2
-                        class="h4 text-primary"
-                >
-                    Scan
-                </h2>
+            <article class="col-12 col-sm-6 col-lg-3">
+                <div class="workflow-step bg-white border rounded-4 shadow-sm p-4 h-100">
 
+                    <span class="badge text-bg-warning mb-3">04</span>
 
-                <p
-                        class="mb-0"
-                >
-                    Create a digital intraoral record.
-                </p>
+                    <h3 class="h4 text-primary">
+                        Plan
+                    </h3>
 
-            </div>
+                    <p class="mb-0">
+                        Discuss possible treatment options with the patient.
+                    </p>
 
-        </article>
+                </div>
+            </article>
 
-
-        <article
-                class="col-12 col-sm-6 col-lg-3"
-        >
-
-            <div
-                    class="workflow-step bg-white border rounded-4 shadow-sm p-4 h-100"
-            >
-
-                <span
-                        class="badge text-bg-warning mb-3"
-                >
-                    03
-                </span>
-
-
-                <h2
-                        class="h4 text-primary"
-                >
-                    Model
-                </h2>
-
-
-                <p
-                        class="mb-0"
-                >
-                    Build a digital diagnostic model.
-                </p>
-
-            </div>
-
-        </article>
-
-
-        <article
-                class="col-12 col-sm-6 col-lg-3"
-        >
-
-            <div
-                    class="workflow-step bg-white border rounded-4 shadow-sm p-4 h-100"
-            >
-
-                <span
-                        class="badge text-bg-warning mb-3"
-                >
-                    04
-                </span>
-
-
-                <h2
-                        class="h4 text-primary"
-                >
-                    Treat
-                </h2>
-
-
-                <p
-                        class="mb-0"
-                >
-                    Apply and adjust the selected orthodontic system.
-                </p>
-
-            </div>
-
-        </article>
-
-
+        </div>
     </section>
 
-
-    <div
-            class="d-flex flex-wrap justify-content-center gap-2 mt-4"
-    >
-
-        <a
-                class="btn btn-warning"
-                href="contacts.html"
-        >
-            BOOK VISIT
+    <section class="alert alert-info mt-4" role="note">
+        For information about an appointment, contact the clinic directly.
+        <a href="contacts.html" class="alert-link">
+            Open Contacts & Booking.
         </a>
-
-
-        <a
-                class="btn btn-outline-primary btn-sm"
-                href="services.html"
-        >
-            VIEW SERVICES
-        </a>
-
-    </div>
-
+    </section>
 
 </main>
 
-
-<footer
-        class="main-footer mt-5 py-4 text-center"
->
-
-    <p
-            class="mb-1 small"
-    >
-        © 2026 Dent house Dental Clinic
-    </p>
-
-
-    <p
-            class="mb-0 small text-white-50"
-    >
-        Page developed by: Turarbek Nurakhmet • SE-2531
-    </p>
-
+<footer class="main-footer text-center py-4 px-3 mt-4">
+    <div class="container">
+        <p class="fw-bold mb-1">Dent house Dental Clinic</p>
+        <p class="mb-1">Astana, Kazakhstan</p>
+        <p class="mb-2">
+            <a href="tel:+77078087848" class="link-light">
+                +7 707 808 78 48
+            </a>
+        </p>
+        <p class="small mb-0">
+            &copy; 2026 Dent house — SE-2531 Web Technologies Project
+        </p>
+    </div>
 </footer>
 
-
-<script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        defer></script>
 
 </body>
-
 </html>

@@ -1,14 +1,74 @@
-#home-title {
-    animation:
-        home-title-reveal
-        0.8s
-        ease
-        both;
+/* =========================================================
+   DENT HOUSE — SAPARKHAN
+   Pages: Home, Services, Colophon
+   ========================================================= */
+
+/* Announcement strip */
+
+.announcement-bar {
+    overflow: hidden;
+    border-bottom: 3px solid var(--bs-warning);
 }
 
+.announcement-track {
+    width: max-content;
+    white-space: nowrap;
+    animation: marquee-scroll 24s linear infinite;
+}
+
+@keyframes marquee-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Home hero */
+
+.hero-banner {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+
+    background: linear-gradient(
+        135deg,
+        var(--bs-primary),
+        var(--bs-secondary)
+    );
+
+    box-shadow: 0 14px 32px rgba(29, 45, 68, 0.16);
+}
+
+.hero-banner::before {
+    position: absolute;
+    right: -60px;
+    bottom: -80px;
+
+    width: 240px;
+    height: 240px;
+
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.08);
+
+    content: "";
+}
+
+.hero-banner > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Home heading animation */
+
+#home-title {
+    animation: home-title-reveal 0.8s ease both;
+}
 
 @keyframes home-title-reveal {
-
     from {
         opacity: 0;
         transform: translateY(18px);
@@ -18,5 +78,21 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
 
+/* Gallery */
+
+.gallery-card img {
+    width: 100%;
+    height: 235px;
+    object-fit: cover;
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .announcement-track,
+    #home-title {
+        animation: none;
+    }
 }

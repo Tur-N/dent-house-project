@@ -1,210 +1,167 @@
-`README.md`
+# Dent house Dental Clinic — Midterm Project
 
-```markdown
-# Dent house Dental Clinic
+**Course:** Introduction to Web Technologies  
+**Group:** SE-2531  
+**Students:** Saparkhan Shyngyskhan and Turarbek Nurakhmet
 
-## Assignment 2 — Web Technologies
+## 1. Project Overview
 
-**Group:** SE-2531
+Dent house is a six-page dental clinic website continued from Assignment 1.
 
-**Students:**
+The website uses HTML5, CSS3 and Bootstrap 5.3.8. Bootstrap handles the main layout, responsive grid, spacing, navigation, typography, tables and form controls.
 
-- Saparkhan Shyngyskhan
-- Turarbek Nurakhmet
+Custom CSS is kept as a correction layer for the website's colours, fonts, hero section, animations, doctor cards and small responsive adjustments.
 
----
+No custom JavaScript or backend has been added for the booking process in this midterm version. The booking form is a front-end prototype and does not send a real appointment request.
 
-## Project
+## 2. Page List
 
-This project is a continuation of the Dent house Dental Clinic website
-created in Assignment 1.
+| Page | Purpose |
+|---|---|
+| `index.html` | Clinic overview, highlights and gallery |
+| `services.html` | Dental services and price tables |
+| `orthodontics.html` | Orthodontics, 3D diagnostics and workflow |
+| `team.html` | Doctors, experience and specialities |
+| `contacts.html` | Address, opening hours, telephone and booking form |
+| `colophon.html` | Technical documentation and team responsibilities |
 
-The theme remains the same.
-
-The project uses only HTML and CSS.
-
-No JavaScript or CSS frameworks are used.
-
----
-
-## Pages
+## 3. Team Responsibilities
 
 ### Saparkhan Shyngyskhan
 
-- `index.html`
-- `services.html`
-- `colophon.html`
+- Home page
+- Services and Pricing page
+- Colophon page
+- `css/saparkhan.css`
+- Shared design contributions
 
 ### Turarbek Nurakhmet
 
-- `orthodontics.html`
-- `team.html`
-- `contacts.html`
+- Orthodontics page
+- Medical Team page
+- Contacts and Booking page
+- `css/turarbek.css`
+- Shared design contributions
 
----
+## 4. CSS Architecture
 
-## CSS Architecture
+### `css/base.css`
 
-The CSS is separated into three stylesheets:
+Contains shared colour variables, typography, header and navigation styles, table and form corrections, footer styles, responsive safety and prepared interface-state classes.
 
-### base.css
+### `css/saparkhan.css`
 
-Shared stylesheet containing:
+Contains the announcement animation, home hero decoration, heading animation and gallery image styling.
 
-- colour palette
-- typography
-- header
-- navigation
-- main
-- footer
-- shared components
-- common table/form styles
+### `css/turarbek.css`
 
-### saparkhan.css
+Contains doctor-card and orthodontic workflow decoration.
 
-Personal stylesheet for:
+Each HTML page loads Bootstrap first, then `css/base.css`, followed by the appropriate personal stylesheet.
 
-- Home
-- Services
-- Colophon
+## 5. Three User Journeys
 
-### turarbek.css
+### Journey 1 — Find the Clinic and Opening Hours
 
-Personal stylesheet for:
+1. Start on `index.html`.
+2. Select **Contacts & Booking** in the navigation.
+3. Read the clinic address and opening hours.
+4. Click **Call Clinic** on a compatible device.
+5. End: the visitor has found the address, opening hours and telephone contact.
 
-- Orthodontics
-- Medical Team
-- Contacts
+### Journey 2 — Compare Services and Contact the Clinic
 
-Each HTML page loads:
+1. Start on `index.html`.
+2. Open **Services & Pricing**.
+3. Compare the treatment and prosthetic service prices.
+4. Open **Contacts & Booking**.
+5. Review the booking form and select a service.
+6. Use the telephone link to contact the clinic for a real appointment.
+7. End: the visitor has compared services and has a working contact route.
 
-1. `base.css`
-2. personal stylesheet
+Note: the booking form is a front-end prototype and does not send a real request.
 
----
+### Journey 3 — Choose a Specialist
 
-## Technologies
+1. Start on `index.html`.
+2. Open **Medical Team**.
+3. Read the doctors' specialities, experience and focus areas.
+4. Open **Contacts & Booking**.
+5. Contact the clinic to discuss a suitable specialist.
+6. End: the visitor can connect the doctor information with a direct contact action.
+
+## 6. Preparing HTML for Future JavaScript
+
+- Each page has a navbar toggler with a stable ID.
+- The booking form uses `id="booking-form"`.
+- Form controls use consistent IDs and labels.
+- The submit and reset buttons have their own IDs.
+- Confirmation and error message containers are prepared.
+- CSS state classes are prepared: `.is-hidden`, `.is-active`,
+  `.is-selected`, `.is-error` and `.is-success`.
+
+These elements are prepared for later work. They do not mean that the booking form works or that an appointment is actually sent.
+
+## 7. Technologies
 
 - HTML5
 - CSS3
-- CSS Flexbox
-- CSS Grid
-- CSS positioning
-- CSS animations
-- CSS pseudo-classes
-- CSS pseudo-elements
+- Bootstrap 5.3.8
+- Bootstrap Grid and responsive breakpoints
+- Bootstrap Navbar
+- Bootstrap tables and form controls
+- CSS animations and pseudo-elements
 
----
+## 8. Local Setup
 
-## Forbidden technologies avoided
+1. Keep all six HTML pages in the same project folder.
+2. Keep all three stylesheets in the `css/` folder.
+3. Add the team's own photographs to the `images/` folder.
+4. Make sure the image filenames match the paths used in `index.html`.
+5. Open `index.html` in a browser.
 
-- Bootstrap
-- Tailwind
-- Bulma
-- JavaScript
-- Site builders
-- downloaded CSS templates
-- copied stylesheets
+Bootstrap is loaded through a CDN, so an internet connection is needed for Bootstrap resources.
 
----
+## 9. Responsive Testing
 
-## Local use
+Check the website at these viewport widths:
 
-Open:
+- Mobile: 375 px
+- Tablet: 768 px
+- Desktop: approximately 1366 px
 
-```text
-index.html
-------------------------------------------------------------------------------------------------------------------
-# Dent house — Assignment 3
+Also test the collapsed mobile navigation.
 
-## Bootstrap Responsive Website
+Save the four screenshots in the `evidence/` folder:
 
-Assignment 3 continues the Assignment 2 Dent house website.
+- `phone-375.png`
+- `tablet-768.png`
+- `desktop.png`
+- `mobile-navbar-collapsed.png`
 
-The same project theme and pages are retained.
+## 10. Quality Pass
 
-Bootstrap 5.3.8 is used for:
+Before submission:
 
-- responsive layout
-- grid system
-- navigation
-- typography
-- buttons
-- spacing
-- utilities
-- tables
-- forms
-- responsive behaviour
-- Bootstrap component
+1. Open every HTML page.
+2. Click every navigation link and content link.
+3. Test form validation.
+4. Check the website at mobile, tablet and desktop sizes.
+5. Check for horizontal overflow at 375 px.
+6. Confirm that all local images load.
+7. Check the browser console.
+8. Run the W3C HTML validator on every HTML page.
+9. Run the W3C CSS validator on every stylesheet.
+10. Record actual findings in `quality-pass.md`.
 
-## Pages
+The target is zero W3C validation errors.
 
-- index.html
-- services.html
-- orthodontics.html
-- team.html
-- contacts.html
-- colophon.html
+## 11. Final Submission
 
-## Responsive widths
+The repository must contain the six HTML pages, all CSS files, README, AI log, removed-CSS notes, quality-pass record and the required screenshots.
 
-The website is tested at:
+Create the final Git commit and tag it `midterm`.
 
-- 375px phone
-- 768px tablet
-- desktop width
+The commit history must be checked in the actual repository to confirm contributions from both students across at least four different days.
 
-## Bootstrap features used
-
-- container
-- container-fluid
-- row
-- col-12
-- col-md-6
-- col-lg-4
-- col-lg-6
-- d-flex
-- flex-wrap
-- justify-content-center
-- gap-2
-- p-4
-- mb-4
-- mt-4
-- shadow-sm
-- border
-- rounded-4
-- btn
-- btn-warning
-- btn-primary
-- btn-outline-primary
-- btn-lg
-- btn-sm
-- navbar
-- navbar-toggler
-- collapse
-- table
-- table-striped
-- table-hover
-- table-responsive
-- form-control
-- form-select
-- badge
-- alert
-
-## Required evidence
-
-- 375px screenshot
-- 768px screenshot
-- desktop screenshot
-- mobile collapsed navigation screenshot
-- updated AI log
-- removed-css.md
-- README.md
-
-## Validation
-
-All HTML pages should pass the W3C HTML validator
-with zero errors.
-
-All CSS files should pass the W3C CSS validator
-with zero errors.
+Manual tests, validation results, screenshots and Git requirements must not be marked complete until they have actually been verified.

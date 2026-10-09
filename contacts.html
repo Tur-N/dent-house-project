@@ -1,677 +1,481 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="author" content="Turarbek Nurakhmet">
+  <meta name="description" content="Contact Dent house Dental Clinic and review the appointment request prototype.">
 
-  <meta
-          name="author"
-          content="Turarbek Nurakhmet"
-  >
+  <title>Contacts & Booking — Dent house</title>
 
-  <meta
-          name="description"
-          content="Dent house Dental Clinic contact information and appointment request form."
-  >
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
 
-  <title>
-    Contacts & Booking — Dent house Dental Clinic
-  </title>
-
-
-  <!-- ========================================
-       BOOTSTRAP 5.3.8
-       Bootstrap is used for layout,
-       responsive grid, spacing and buttons.
-       ======================================== -->
-  <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-  >
-
-  <!-- Custom CSS -->
-  <link
-          rel="stylesheet"
-          href="css/base.css"
-  >
-
-  <link
-          rel="stylesheet"
-          href="css/turarbek.css"
-  >
-
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/turarbek.css">
 </head>
-
 
 <body class="contacts-page">
 
-<!-- Author: Turarbek Nurakhmet | Group: SE-2531 -->
-
-
-<!-- ========================================
-     1. NAVBAR
-     Main navigation menu of the website.
-     ======================================== -->
 <header class="main-header">
-
   <div class="container-fluid px-3 px-md-5 py-4">
 
     <p class="eyebrow text-uppercase fw-bold small mb-2">
       DENT HOUSE • CONTACT
     </p>
 
-
     <h1 class="site-title display-5 fw-bold mb-2">
       Contact Dent house & Book a Visit
     </h1>
-
 
     <p class="site-tagline lead mb-4">
       Schedule a Consultation with Our Dental Specialists
     </p>
 
+    <nav class="navbar navbar-expand-lg navbar-dark"
+         aria-label="Primary navigation">
 
-    <!-- Bootstrap responsive navbar -->
-    <nav
-            class="navbar navbar-expand-lg navbar-dark"
-            aria-label="Primary navigation"
-    >
-
-      <!-- Mobile navbar toggler -->
-      <button
+      <button id="nav-toggle"
               class="navbar-toggler mx-auto"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#primaryNav"
               aria-controls="primaryNav"
               aria-expanded="false"
-              aria-label="Toggle navigation"
-      >
+              aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-
-      <!-- Collapsible navigation menu -->
-      <div
-              class="collapse navbar-collapse justify-content-center"
-              id="primaryNav"
-      >
+      <div class="collapse navbar-collapse justify-content-center"
+           id="primaryNav">
 
         <ul class="navbar-nav flex-wrap justify-content-center gap-2">
 
           <li class="nav-item">
-            <a
-                    href="index.html"
-                    class="nav-link px-3 py-2 rounded"
-            >
+            <a href="index.html" class="nav-link px-3 py-2 rounded">
               Home
             </a>
           </li>
 
-
           <li class="nav-item">
-            <a
-                    href="services.html"
-                    class="nav-link px-3 py-2 rounded"
-            >
+            <a href="services.html" class="nav-link px-3 py-2 rounded">
               Services & Pricing
             </a>
           </li>
 
-
           <li class="nav-item">
-            <a
-                    href="orthodontics.html"
-                    class="nav-link px-3 py-2 rounded"
-            >
+            <a href="orthodontics.html" class="nav-link px-3 py-2 rounded">
               Orthodontics & 3D Scanning
             </a>
           </li>
 
-
           <li class="nav-item">
-            <a
-                    href="team.html"
-                    class="nav-link px-3 py-2 rounded"
-            >
+            <a href="team.html" class="nav-link px-3 py-2 rounded">
               Medical Team
             </a>
           </li>
 
-
           <li class="nav-item">
-            <a
-                    href="contacts.html"
-                    class="nav-link active px-3 py-2 rounded"
-                    aria-current="page"
-            >
+            <a href="contacts.html"
+               class="nav-link active px-3 py-2 rounded"
+               aria-current="page">
               Contacts & Booking
             </a>
           </li>
 
-
           <li class="nav-item">
-            <a
-                    href="colophon.html"
-                    class="nav-link px-3 py-2 rounded"
-            >
+            <a href="colophon.html" class="nav-link px-3 py-2 rounded">
               Colophon
             </a>
           </li>
 
         </ul>
-
       </div>
-
     </nav>
 
   </div>
-
 </header>
-
 
 <main class="container py-4 py-md-5">
 
-
-  <!-- ========================================
-       2. INTRO SECTION
-       Introduction to the Contacts & Booking page.
-       ======================================== -->
-  <section
-          class="bg-white border rounded-4 shadow-sm p-4 mb-4"
-  >
+  <!-- Introduction -->
+  <section class="bg-white border rounded-4 shadow-sm p-4 mb-4"
+           aria-labelledby="contacts-title">
 
     <p class="text-uppercase text-secondary fw-bold small">
       CONTACT
     </p>
 
-
-    <h2
-            id="contacts-title"
-            class="h2 text-primary text-center text-md-start"
-    >
+    <h2 id="contacts-title" class="h2 text-primary">
       Clinic Location & Appointment Booking
     </h2>
 
-
     <p class="lead mb-0">
-      Visit our clinic in Astana or send an appointment request
-      using the form below. The request form is a demonstration
-      interface for the project.
+      Visit our clinic in Astana or use the contact details below.
+      The request form on this page is a demonstration interface;
+      it does not send an appointment request.
     </p>
 
   </section>
 
+  <!-- Contact information -->
+  <section class="row g-4 mb-4"
+           aria-label="Contact information">
 
-
-  <!-- ========================================
-       3. CONTACT INFORMATION
-       Contains clinic details and quick contact.
-       ======================================== -->
-  <section
-          class="row g-4"
-          aria-label="Contact information and booking"
-  >
-
-
-    <!-- Clinic Details -->
     <article class="col-12 col-lg-6">
-
-      <div
-              class="bg-white border rounded-4 shadow-sm p-4 h-100"
-      >
+      <div class="bg-white border rounded-4 shadow-sm p-4 h-100">
 
         <p class="text-uppercase text-secondary fw-bold small">
           CLINIC DETAILS
         </p>
 
-
         <h2 class="h3 text-primary">
           Find Dent house
         </h2>
 
-
-        <address>
+        <address class="mb-3">
 
           <p>
-            <strong>
-              Address:
-            </strong>
-
-            <br>
-
-            48 Alikhan Bokeikhan Street,
-
-            <br>
-
+            <strong>Address:</strong><br>
+            48 Alikhan Bokeikhan Street,<br>
             Astana, Kazakhstan
           </p>
 
-
           <p>
-            <strong>
-              Phone:
-            </strong>
-
-            <br>
-
-            <!-- Click to call the clinic -->
-            <a
-                    href="tel:+77078087848"
-                    class="text-primary fw-bold"
-            >
+            <strong>Phone:</strong><br>
+            <a href="tel:+77078087848"
+               class="fw-bold text-primary">
               +7 707 808 78 48
             </a>
           </p>
 
-
-          <p>
-            <strong>
-              Working hours:
-            </strong>
-
-            <br>
-
-            Mon–Fri: 10:00–21:00
-
-            <br>
-
+          <p class="mb-0">
+            <strong>Working hours:</strong><br>
+            Mon–Fri: 10:00–21:00<br>
             Sat–Sun: 10:00–18:00
           </p>
 
         </address>
 
-
         <span class="badge text-bg-secondary">
-                        Open for appointment requests
-                    </span>
+                    Contact the clinic for appointments
+                </span>
 
       </div>
-
     </article>
 
-
-
-    <!-- Quick Contact -->
     <article class="col-12 col-lg-6">
-
-      <div
-              class="bg-white border rounded-4 shadow-sm p-4 h-100"
-      >
+      <div class="bg-white border rounded-4 shadow-sm p-4 h-100">
 
         <p class="text-uppercase text-secondary fw-bold small">
           QUICK CONTACT
         </p>
 
-
         <h2 class="h3 text-primary">
           Direct Access
         </h2>
 
-
         <p>
-          For immediate questions, contact the clinic by phone.
-          For planned consultations, complete the booking request
-          form.
+          For immediate questions, contact the clinic by telephone.
+          To review available treatment options, open the price list.
         </p>
 
+        <div class="d-flex flex-wrap align-items-center gap-2">
 
-        <div
-                class="d-flex flex-wrap align-items-end gap-2 pb-3 "
-        >
-
-          <!-- Real phone-call link -->
-          <a
-                  class="btn btn-primary "
-                  href="tel:+77078087848"
-          >
+          <a href="tel:+77078087848"
+             class="btn btn-primary">
             Call Clinic
           </a>
 
-
-          <!-- Link to Services & Pricing page -->
-          <a
-                  class="btn btn-outline-primary btn-sm"
-                  href="services.html"
-          >
+          <a href="services.html"
+             class="btn btn-outline-primary">
             View Prices
+          </a>
+
+          <a href="team.html"
+             class="btn btn-outline-secondary">
+            Meet the Team
           </a>
 
         </div>
 
       </div>
-
     </article>
 
+  </section>
+
+  <!-- Booking form -->
+  <section class="bg-white border rounded-4 shadow-sm p-4"
+           aria-labelledby="booking-heading">
+
+    <p class="text-uppercase text-secondary fw-bold small">
+      ONLINE REQUEST
+    </p>
 
+    <h2 id="booking-heading" class="h3 text-primary">
+      Appointment Request Form
+    </h2>
 
-    <!-- ========================================
-         4. APPOINTMENT REQUEST FORM
-         Form for submitting a booking request.
-         ======================================== -->
-    <article class="col-12">
+    <p id="booking-form-note" class="alert alert-info" role="note">
+      This form is a front-end prototype for the midterm project.
+      It does not transmit personal information or confirm an actual
+      appointment. For a real appointment, contact the clinic by phone.
+    </p>
 
-      <div
-              class="bg-white border rounded-4 shadow-sm p-4"
-      >
+    <form id="booking-form"
+          class="booking-form"
+          method="post"
+          aria-describedby="booking-form-note">
 
-        <p class="text-uppercase text-secondary fw-bold small">
-          ONLINE REQUEST
-        </p>
+      <fieldset class="border rounded-4 p-3">
 
+        <legend class="float-none w-auto px-2 fw-bold text-primary">
+          Patient Information & Consultation Details
+        </legend>
 
-        <h2 class="h3 text-primary">
-          Appointment Request Form
-        </h2>
+        <div class="row g-3">
 
+          <!-- Full name -->
+          <div class="col-12 col-md-6">
 
-        <form
-                class="booking-form"
-                action="#"
-                method="post"
-        >
+            <label for="fullname" class="form-label fw-bold">
+              Full Name
+            </label>
 
-          <fieldset class="border rounded-4 p-3">
+            <input id="fullname"
+                   name="fullname"
+                   class="form-control"
+                   type="text"
+                   autocomplete="name"
+                   placeholder="Enter your full name"
+                   required>
 
-            <legend
-                    class="float-none w-auto px-2 fw-bold text-primary"
-            >
-              Patient Information & Consultation Details
-            </legend>
+          </div>
 
+          <!-- Phone -->
+          <div class="col-12 col-md-6">
 
-            <div class="row g-3">
+            <label for="phone" class="form-label fw-bold">
+              Phone Number
+            </label>
 
+            <input id="phone"
+                   name="phone"
+                   class="form-control"
+                   type="tel"
+                   autocomplete="tel"
+                   placeholder="+7 707 000 00 00"
+                   required>
 
-              <!-- NAME -->
-              <div class="col-12 col-md-6">
+          </div>
 
-                <label
-                        class="form-label fw-bold"
-                        for="fullname"
-                >
-                  Full Name
-                </label>
+          <!-- Service -->
+          <div class="col-12 col-md-6">
 
+            <label for="service" class="form-label fw-bold">
+              Select Required Service
+            </label>
 
-                <input
-                        class="form-control"
-                        type="text"
-                        id="fullname"
-                        name="fullname"
-                        required
-                        placeholder="e.g., Arman Aliyev"
-                >
+            <select id="service"
+                    name="service"
+                    class="form-select"
+                    required>
 
-              </div>
+              <option value="">
+                Choose a service
+              </option>
 
+              <option value="caries">
+                Caries Treatment
+              </option>
 
+              <option value="extraction">
+                Tooth Extraction
+              </option>
 
-              <!-- PHONE -->
-              <div class="col-12 col-md-6">
+              <option value="implantation">
+                Dental Implantation
+              </option>
 
-                <label
-                        class="form-label fw-bold"
-                        for="phone"
-                >
-                  Phone Number
-                </label>
+              <option value="orthodontics">
+                Orthodontics
+              </option>
 
+              <option value="3d-scanning">
+                3D Intraoral Scanning
+              </option>
 
-                <input
-                        class="form-control"
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        required
-                        placeholder="+7 707 000 00 00"
-                >
+              <option value="consultation">
+                General Consultation
+              </option>
 
-              </div>
+            </select>
 
+          </div>
 
+          <!-- Doctor -->
+          <div class="col-12 col-md-6">
 
-              <!-- SERVICE -->
-              <div class="col-12 col-md-6">
+            <label for="doctor" class="form-label fw-bold">
+              Preferred Specialist
+            </label>
 
-                <label
-                        class="form-label fw-bold"
-                        for="service"
-                >
-                  Select Required Service
-                </label>
+            <select id="doctor"
+                    name="doctor"
+                    class="form-select"
+                    required>
 
+              <option value="">
+                Choose a specialist
+              </option>
 
-                <select
-                        class="form-select"
-                        id="service"
-                        name="service"
-                        required
-                >
+              <option value="mukhamedyarov">
+                Dr. Mukhamedyarov Kanat Magauyanovich
+              </option>
 
-                  <option value="">
-                    Choose a service
-                  </option>
+              <option value="tauershe">
+                Dr. Tauershe Bagzhan Ordabayevich
+              </option>
 
-                  <option value="caries">
-                    Caries Treatment
-                  </option>
+              <option value="kenzhe">
+                Dr. Kenzhe Sarzhan Baizhanovich
+              </option>
 
-                  <option value="extraction">
-                    Tooth Extraction
-                  </option>
+              <option value="sagimbayeva">
+                Dr. Sagimbayeva Zukhra Berikovna
+              </option>
 
-                  <option value="microscope">
-                    Microscopic Root Canal Therapy
-                  </option>
+              <option value="no-preference">
+                No preference
+              </option>
 
-                  <option value="implantation">
-                    Dental Implantation
-                  </option>
+            </select>
 
-                  <option value="crown">
-                    Zirconia / Metal-Ceramic Crown
-                  </option>
+          </div>
 
-                  <option value="orthodontics">
-                    Orthodontics & 3D Scanning
-                  </option>
+          <!-- Date -->
+          <div class="col-12 col-md-6">
 
-                  <option value="pediatric">
-                    Pediatric Dental Care
-                  </option>
+            <label for="appointment-date"
+                   class="form-label fw-bold">
+              Preferred Date
+            </label>
 
-                </select>
+            <input id="appointment-date"
+                   name="appointment-date"
+                   class="form-control"
+                   type="date">
 
-              </div>
+          </div>
 
+          <!-- Message -->
+          <div class="col-12">
 
+            <label for="message" class="form-label fw-bold">
+              Additional Information
+            </label>
 
-              <!-- DOCTOR -->
-              <div class="col-12 col-md-6">
+            <textarea id="message"
+                      name="message"
+                      class="form-control"
+                      rows="4"
+                      placeholder="Describe your question or preferences"></textarea>
 
-                <label
-                        class="form-label fw-bold"
-                        for="doctor"
-                >
-                  Select Doctor (Optional)
-                </label>
+          </div>
 
+          <!-- Consent -->
+          <div class="col-12">
 
-                <select
-                        class="form-select"
-                        id="doctor"
-                        name="doctor"
-                >
+            <div class="form-check">
 
-                  <option value="">
-                    Any Available Specialist
-                  </option>
+              <input id="privacy-consent"
+                     name="privacy-consent"
+                     class="form-check-input"
+                     type="checkbox"
+                     required>
 
-                  <option value="kanat">
-                    Dr. Mukhamedyarov Kanat Magauyanovich
-                  </option>
-
-                  <option value="bagzhan">
-                    Dr. Tauershe Bagzhan Ordabayevich
-                  </option>
-
-                  <option value="sarzhan">
-                    Dr. Kenzhe Sarzhan Baizhanovich
-                  </option>
-
-                  <option value="zukhra">
-                    Dr. Sagimbayeva Zukhra Berikovna
-                  </option>
-
-                  <option value="zhamilya">
-                    Dr. Shalabay Zhamilya Kairatovna
-                  </option>
-
-                  <option value="svetlana">
-                    Dr. Tukesheva Svetlana Maratovna
-                  </option>
-
-                  <option value="symbat">
-                    Dr. Abzhapbar Symbat Bagdatovna
-                  </option>
-
-                  <option value="alma">
-                    Dr. Otarbayeva Alma Amanzholovna
-                  </option>
-
-                </select>
-
-              </div>
-
-
-
-              <!-- DATE -->
-              <div class="col-12 col-md-6">
-
-                <label
-                        class="form-label fw-bold"
-                        for="visit-date"
-                >
-                  Preferred Appointment Date
-                </label>
-
-
-                <input
-                        class="form-control"
-                        type="date"
-                        id="visit-date"
-                        name="visit-date"
-                        required
-                >
-
-              </div>
-
-
-
-              <!-- COMMENTS -->
-              <div class="col-12">
-
-                <label
-                        class="form-label fw-bold"
-                        for="comments"
-                >
-                  Symptoms or Additional Requests
-                </label>
-
-
-                <textarea
-                        class="form-control"
-                        id="comments"
-                        name="comments"
-                        rows="5"
-                        placeholder="Briefly describe your request..."
-                ></textarea>
-
-              </div>
-
-
-
-              <!-- BUTTONS -->
-              <div class="col-12 d-flex flex-wrap gap-2">
-
-                <!-- Submit booking request -->
-                <button
-                        type="submit"
-                        class="btn btn-primary btn-lg"
-                >
-                  Send Booking Request
-                </button>
-
-
-                <!-- Reset form -->
-                <button
-                        type="reset"
-                        class="btn btn-outline-secondary btn-sm"
-                >
-                  Reset
-                </button>
-
-
-                <!-- Disabled demonstration button -->
-                <button
-                        type="button"
-                        class="btn btn-secondary"
-                        disabled
-                >
-                  Demo only
-                </button>
-
-              </div>
-
+              <label for="privacy-consent"
+                     class="form-check-label">
+                I understand that this is a demonstration form
+                and that no appointment request will be sent.
+              </label>
 
             </div>
 
-          </fieldset>
+          </div>
 
-        </form>
+          <!-- Buttons -->
+          <div class="col-12">
+
+            <div class="d-flex flex-wrap gap-2">
+
+              <button id="submit-booking"
+                      type="submit"
+                      class="btn btn-primary btn-lg">
+                Submit Demonstration Form
+              </button>
+
+              <button id="reset-booking"
+                      type="reset"
+                      class="btn btn-outline-secondary">
+                Reset
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+      </fieldset>
+
+      <!-- Visible result information -->
+      <div id="booking-result"
+           class="alert alert-info mt-3 mb-0"
+           role="status"
+           aria-live="polite">
+
+        Prototype status: this form is not connected to a booking
+        system. No request is sent to the clinic.
 
       </div>
 
-    </article>
+      <!-- Future JavaScript message areas -->
+      <div id="booking-confirmation"
+           class="alert alert-success d-none is-success mt-3"
+           role="status"
+           aria-live="polite">
+      </div>
 
+      <div id="booking-error"
+           class="alert alert-danger d-none is-error mt-3"
+           role="alert"
+           aria-live="assertive">
+      </div>
+
+    </form>
 
   </section>
 
 </main>
 
-
-
-<!-- ========================================
-     FOOTER
-     Bottom section of the website.
-     ======================================== -->
-<footer class="main-footer mt-5 py-4 text-center">
-
-  <p class="mb-1 small">
-    © 2026 Dent house Dental Clinic
-  </p>
-
-
-  <p class="mb-0 small text-white-50">
-    Page developed by: Turarbek Nurakhmet • SE-2531
-  </p>
-
+<footer class="main-footer text-center py-4 px-3 mt-4">
+  <div class="container">
+    <p class="fw-bold mb-1">Dent house Dental Clinic</p>
+    <p class="mb-1">Astana, Kazakhstan</p>
+    <p class="mb-2">
+      <a href="tel:+77078087848" class="link-light">
+        +7 707 808 78 48
+      </a>
+    </p>
+    <p class="small mb-0">
+      &copy; 2026 Dent house — SE-2531 Web Technologies Project
+    </p>
+  </div>
 </footer>
 
-
-
-<!-- Bootstrap JavaScript Bundle -->
-<script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        defer></script>
 
 </body>
-
 </html>
