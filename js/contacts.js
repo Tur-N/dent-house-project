@@ -43,12 +43,12 @@
 
     // Create an input field with its label and error message.
     function makeField({
-        id,
-        label,
-        type,
-        placeholder = '',
-        autocomplete = 'off'
-    }) {
+                           id,
+                           label,
+                           type,
+                           placeholder = '',
+                           autocomplete = 'off'
+                       }) {
         const wrapper = createNode('div', 'mb-3');
 
         const fieldLabel = createNode(
