@@ -1,388 +1,139 @@
-'use strict';
+/* ==========================================================================
+   Dent house Dental Clinic — Dynamic Reviews & Patient Testimonials
+   jQuery Version: 3.7.1
+   $(function () { ... }) мақсаты:
+   Браузер DOM ағашын толық оқып біткенше күтеді, скрипт қатесіз жұмыс істеуі үшін қажет.
+   ========================================================================== */
 
-(() => {
-    const { createNode } = window.DentHouseUtils ?? {};
-    const main = document.querySelector('main');
+$(function () {
 
-    const isHomePage = Boolean(
-        document.querySelector('.hero-banner, #home-title')
-    );
+    /* --------------------------------------------------------------------------
+       FEATURE 3 REWRITTEN: Массивтен пікір карточкаларын динамикалық құру
+       Plain JS-те: document.createElement(), className, appendChild, onclick
+       jQuery әдістері: $('<div class="...">'), .append(), .each(), .closest(), .find()
+       Салыстыру: jQuery арқылы HTML үзінділерін жасау әлдеқайда оңай әрі жинақы,
+       ал оқиғаларды делегация арқылы басқару жадты үнемдейді.
+       -------------------------------------------------------------------------- */
 
-    if (
-        !createNode ||
-        !main ||
-        !isHomePage ||
-        document.querySelector('#js-reviews')
-    ) {
-        return;
-    }
-
-    // This sample is for demonstration only.
-    const reviews = [
+    // 1. Деректер массиві (HTML-де мүлде жоқ, тек кодта сақталған)
+    const reviewsData = [
         {
-            id: 'demo-comment',
-            name: 'Sample visitor (demo)',
-            text: 'This is an example comment used to demonstrate the comment feature. It is not a real patient review.',
-            date: 'Demo sample - not a real submission'
+            name: "Aida Serikova",
+            service: "3D Intraoral Scanning",
+            stars: "★★★★★",
+            shortText: "Very fast and comfortable scan without traditional paste.",
+            fullReview: "The 3D intraoral scanning took only 10 minutes. The doctor explained every step clearly on the screen. Highly recommended!"
+        },
+        {
+            name: "Marat Aliyev",
+            service: "Dental Implantation",
+            stars: "★★★★★",
+            shortText: "Dr. Mukhamedyarov is a master of implant surgery.",
+            fullReview: "I had two implants placed in one session. Completely painless procedure, fast recovery and very caring clinic staff."
+        },
+        {
+            name: "Dinara Ospanova",
+            service: "Therapeutic Dentistry",
+            stars: "★★★★☆",
+            shortText: "Clean facilities, microscope treatment was great.",
+            fullReview: "Root canal treatment was performed under a dental microscope. High-tech equipment and pleasant atmosphere."
         }
     ];
 
-    const section = createNode(
-        'section',
-        'bg-white border rounded-4 shadow-sm p-4 my-4'
-    );
-
-    section.id = 'js-reviews';
-
-    section.setAttribute(
-        'aria-labelledby',
-        'js-reviews-title'
-    );
-
-    const title = createNode(
-        'h2',
-        'h3 text-primary',
-        'Patient Comments'
-    );
-
-    title.id = 'js-reviews-title';
-
-    const intro = createNode(
-        'p',
-        'text-muted',
-        'Leave a comment about your website visit or service experience. Comments remain in this page session and are not sent to a server. No star rating is collected.'
-    );
-
-    const form = createNode('form', 'review-form');
-    form.noValidate = true;
-
-    // Name field
-    const nameWrap = createNode('div', 'mb-3');
-
-    const nameLabel = createNode(
-        'label',
-        'form-label fw-semibold',
-        'Your name'
-    );
-
-    nameLabel.htmlFor = 'review-name';
-
-    const nameInput = createNode('input', 'form-control');
-
-    nameInput.type = 'text';
-    nameInput.id = 'review-name';
-    nameInput.name = 'review-name';
-    nameInput.maxLength = 60;
-    nameInput.autocomplete = 'name';
-
-    const nameError = createNode(
-        'div',
-        'invalid-feedback is-hidden'
-    );
-
-    nameError.id = 'review-name-error';
-    nameError.setAttribute('aria-live', 'polite');
-
-    nameInput.setAttribute(
-        'aria-describedby',
-        nameError.id
-    );
-
-    nameWrap.append(nameLabel, nameInput, nameError);
-
-    // Comment field
-    const textWrap = createNode('div', 'mb-3');
-
-    const textLabel = createNode(
-        'label',
-        'form-label fw-semibold',
-        'Comment'
-    );
-
-    textLabel.htmlFor = 'review-text';
-
-    const commentInput = createNode('textarea', 'form-control');
-
-    commentInput.id = 'review-text';
-    commentInput.name = 'review-text';
-    commentInput.rows = 4;
-    commentInput.minLength = 10;
-    commentInput.maxLength = 500;
-    commentInput.placeholder = 'Write 10 to 500 characters';
-
-    const counter = createNode(
-        'p',
-        'small text-muted mt-1 mb-1',
-        '0 / 500 characters'
-    );
-
-    counter.id = 'review-counter';
-    counter.setAttribute('aria-live', 'polite');
-
-    const commentError = createNode(
-        'div',
-        'invalid-feedback is-hidden'
-    );
-
-    commentError.id = 'review-text-error';
-    commentError.setAttribute('aria-live', 'polite');
-
-    commentInput.setAttribute(
-        'aria-describedby',
-        `${counter.id} ${commentError.id}`
-    );
-
-    textWrap.append(
-        textLabel,
-        commentInput,
-        counter,
-        commentError
-    );
-
-    // Form buttons
-    const submitButton = createNode(
-        'button',
-        'btn btn-primary me-2',
-        'Submit Comment'
-    );
-
-    submitButton.type = 'submit';
-
-    const resetButton = createNode(
-        'button',
-        'btn btn-outline-secondary',
-        'Clear Form'
-    );
-
-    resetButton.type = 'reset';
-
-    const formFeedback = createNode(
-        'p',
-        'mt-3 is-hidden'
-    );
-
-    formFeedback.setAttribute('role', 'status');
-    formFeedback.setAttribute('aria-live', 'polite');
-
-    form.append(
-        nameWrap,
-        textWrap,
-        submitButton,
-        resetButton,
-        formFeedback
-    );
-
-    const listHeading = createNode(
-        'h3',
-        'h4 text-primary mt-4',
-        'Comments'
-    );
-
-    const reviewCount = createNode(
-        'p',
-        'small text-muted'
-    );
-
-    reviewCount.setAttribute('aria-live', 'polite');
-
-    const reviewList = createNode('div', 'row g-3');
-
-    const emptyState = createNode(
-        'p',
-        'alert alert-secondary is-hidden',
-        'There are no comments yet. Be the first to leave a comment.'
-    );
-
-    emptyState.setAttribute('role', 'status');
-
-    section.append(
-        title,
-        intro,
-        form,
-        listHeading,
-        reviewCount,
-        reviewList,
-        emptyState
-    );
-
-    main.append(section);
-
-    // Format the automatic submission timestamp.
-    function formatDateTime(date) {
-        return new Intl.DateTimeFormat('en-GB', {
-            dateStyle: 'medium',
-            timeStyle: 'short'
-        }).format(date);
+    // Басты беттегі соңғы секцияның алдына пікірлер контейнерін динамикалық енгізу
+    let $reviewsSection = $("#reviews-list");
+    if ($reviewsSection.length === 0) {
+        $reviewsSection = $(
+            '<section id="reviews-list" class="bg-white border rounded-4 shadow-sm p-4 mb-4">' +
+            '<div class="d-flex justify-content-between align-items-center mb-3">' +
+            '<h2 class="h3 text-primary mb-0">Patient Testimonials</h2>' +
+            '<span class="badge bg-primary text-white">Verified Visits</span>' +
+            '</div>' +
+            '<div class="reviews-wrapper row g-3"></div>' +
+            '</section>'
+        );
+        $("main.container section:last").before($reviewsSection);
     }
 
-    // One rendering function is used for all comments.
-    function createReviewCard(review) {
-        const column = createNode(
-            'div',
-            'col-12 col-md-6'
+    const $cardsWrapper = $reviewsSection.find(".reviews-wrapper");
+
+    // 2. Массивті .each() арқылы айналып, карточкаларды .append() арқылы салу
+    $.each(reviewsData, function (index, item) {
+        const cardMarkup = $(
+            '<article class="col-12 col-md-4">' +
+            '<div class="review-card bg-light border rounded-3 p-3 h-100 d-flex flex-column">' +
+            '<div class="d-flex justify-content-between align-items-center mb-2">' +
+            '<h3 class="h5 mb-0 author-name text-primary">' + item.name + '</h3>' +
+            '<span class="text-warning rating-stars">' + item.stars + '</span>' +
+            '</div>' +
+            '<span class="badge bg-white text-secondary border align-self-start mb-2">' + item.service + '</span>' +
+            '<p class="short-desc flex-grow-1">' + item.shortText + '</p>' +
+            /* ТҮЗЕТІЛГЕН ЖЕР: Bootstrap-тің d-none класының орнына style="display: none;"
+               қолданылды, себебі slideToggle() біркелкі жұмыс істеуі қажет */
+            '<p class="full-desc text-muted small mt-2" style="display: none;">' + item.fullReview + '</p>' +
+            '<button type="button" class="btn btn-sm btn-outline-primary mt-2 toggle-review-btn">' +
+            'Read Details' +
+            '</button>' +
+            '</div>' +
+            '</article>'
         );
-
-        const card = createNode(
-            'article',
-            'card h-100 shadow-sm'
-        );
-
-        const body = createNode('div', 'card-body');
-
-        const name = createNode(
-            'h4',
-            'h5 card-title text-primary',
-            review.name
-        );
-
-        const text = createNode(
-            'p',
-            'card-text',
-            review.text
-        );
-
-        const date = createNode(
-            'p',
-            'small text-muted mb-0',
-            review.date
-        );
-
-        body.append(name, text, date);
-        card.append(body);
-        column.append(card);
-
-        return column;
-    }
-
-    // Render all cards and the empty state.
-    function renderReviews(items) {
-        reviewList.replaceChildren();
-
-        items.forEach((review) => {
-            reviewList.append(createReviewCard(review));
-        });
-
-        reviewCount.textContent =
-            `${items.length} comment${items.length === 1 ? '' : 's'}`;
-
-        emptyState.classList.toggle(
-            'is-hidden',
-            items.length > 0
-        );
-    }
-
-    // Show a field-specific error.
-    function setFieldError(input, errorNode, message) {
-        errorNode.textContent = message;
-        errorNode.classList.remove('is-hidden');
-
-        input.classList.add('is-invalid');
-        input.setAttribute('aria-invalid', 'true');
-    }
-
-    // Clear an existing field error.
-    function clearFieldError(input, errorNode) {
-        errorNode.textContent = '';
-        errorNode.classList.add('is-hidden');
-
-        input.classList.remove('is-invalid');
-        input.removeAttribute('aria-invalid');
-    }
-
-    // Update the live character counter.
-    function updateCounter() {
-        counter.textContent =
-            `${commentInput.value.length} / 500 characters`;
-    }
-
-    commentInput.addEventListener('input', () => {
-        updateCounter();
-        clearFieldError(commentInput, commentError);
+        $cardsWrapper.append(cardMarkup);
     });
 
-    nameInput.addEventListener('input', () => {
-        clearFieldError(nameInput, nameError);
-    });
+    /*
+       CHAINING МЫСАЛЫ ЖӘНЕ СЕЛЕКТОР ФИЛЬТРІ (:first):
+       1) $(".review-card:first") -> Тізімдегі бірінші карточканы сүзіп алады
+       2) .removeClass("bg-light") -> Сұр фонды алып тастайды
+       3) .addClass("border-primary shadow-sm") -> Көк жақтау мен көлеңке қосады
+       4) .find(".author-name").prepend("★ ") -> Автор атының алдына таңба салады
+    */
+    $(".review-card:first")
+        .removeClass("bg-light")
+        .addClass("border-primary shadow-sm")
+        .find(".author-name")
+        .prepend("★ ");
 
-    // Validate and add a new comment.
-    form.addEventListener('submit', (event) => {
+
+    /* --------------------------------------------------------------------------
+       EVENT DELEGATION
+       Ата-ана: $("#reviews-list") (бұрыннан бар элемент)
+       Бала элемент: ".toggle-review-btn" (код арқылы кейін құрылған батырма)
+
+       Неліктен $(".toggle-review-btn").on("click", ...) тікелей байланысы жұмыс істемейді?
+       Себебі бұл батырмалар парақша алғаш ашылған кезде DOM ағашында болған жоқ. Олар тек
+       JS коды орындалған соң кейіннен пайда болды. Егер тікелей байласақ, jQuery оларды таппай,
+       шерту оқиғасы мүлде орындалмай қалады.
+       Ал делегация арқылы оқиғаны басынан бар ата-анасына (#reviews-list) тапсырамыз, батырма
+       басылғанда оқиға DOM ағашымен жоғары көтеріліп (event bubbling), ата-анасы оны ұстап алады.
+       -------------------------------------------------------------------------- */
+    $("#reviews-list").on("click", ".toggle-review-btn", function (event) {
         event.preventDefault();
 
-        clearFieldError(nameInput, nameError);
-        clearFieldError(commentInput, commentError);
+        // $(this) — дәл басылған батырманы көрсетеді
+        const $clickedButton = $(this);
 
-        formFeedback.textContent = '';
-        formFeedback.classList.add('is-hidden');
+        // TRAVERSAL (ағаш бойынша элемент іздеу):
+        // 1) .closest() — батырмадан жоғары көтеріліп, ең жақын карточканы табады
+        const $currentCard = $clickedButton.closest(".review-card");
 
-        const nameValue = nameInput.value.trim();
-        const commentValue = commentInput.value.trim();
+        // 2) .find() — сол карточканың ішіндегі жасырын мәліметті табады
+        const $detailedText = $currentCard.find(".full-desc");
 
-        let valid = true;
-        let firstInvalid = null;
-
-        if (nameValue.length < 2 || nameValue.length > 60) {
-            setFieldError(
-                nameInput,
-                nameError,
-                'Enter a name containing 2 to 60 characters.'
-            );
-
-            firstInvalid = nameInput;
-            valid = false;
-        }
-
-        if (
-            commentValue.length < 10 ||
-            commentValue.length > 500
-        ) {
-            setFieldError(
-                commentInput,
-                commentError,
-                'The comment must contain 10 to 500 characters.'
-            );
-
-            firstInvalid = firstInvalid || commentInput;
-            valid = false;
-        }
-
-        if (!valid) {
-            firstInvalid.focus();
-            return;
-        }
-
-        const newReview = {
-            id: `comment-${Date.now()}-${Math.floor(Math.random() * 10000)}`,
-            name: nameValue,
-            text: commentValue,
-            date: formatDateTime(new Date())
-        };
-
-        reviews.unshift(newReview);
-
-        renderReviews(reviews);
-
-        formFeedback.textContent =
-            'Your demo comment has been added to this page. It has not been sent to a server.';
-
-        formFeedback.classList.remove('is-hidden');
-
-        form.reset();
-        updateCounter();
+        // ЭФФЕКТ: slideToggle(300ms) ұзақтығымен және аяқталу Callback функциясымен
+        $detailedText.slideToggle(300, function () {
+            // Callback: анимация аяқталған соң батырманың жазуы мен класын ауыстыру
+            if ($detailedText.is(":visible")) {
+                $clickedButton
+                    .text("Hide Details")
+                    .removeClass("btn-outline-primary")
+                    .addClass("btn-secondary");
+            } else {
+                $clickedButton
+                    .text("Read Details")
+                    .removeClass("btn-secondary")
+                    .addClass("btn-outline-primary");
+            }
+        });
     });
 
-    // Clear errors and reset the character counter.
-    form.addEventListener('reset', () => {
-        window.setTimeout(() => {
-            clearFieldError(nameInput, nameError);
-            clearFieldError(commentInput, commentError);
-
-            formFeedback.textContent = '';
-            formFeedback.classList.add('is-hidden');
-
-            updateCounter();
-        }, 0);
-    });
-
-    renderReviews(reviews);
-    updateCounter();
-})();
+});
