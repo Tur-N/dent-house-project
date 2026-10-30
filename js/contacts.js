@@ -1,15 +1,13 @@
 /* ==========================================================================
    Dent house Dental Clinic — Contacts & Booking Script
    jQuery Version: 3.7.1
-   $(function () { ... }) не үшін қажет:
-   Бұл — $(document).ready() әдісінің қысқа жазылуы. Ол браузер бүкіл HTML
-   құрылымын (DOM) жүктеп болғаннан кейін ғана осы іштегі кодты іске қосады.
-   Онсыз біз іздеген тегтер әлі табылмауы мүмкін.
+   $(function () { ... }) мақсаты:
+   DOM құрылымы толық жүктелгеннен кейін ғана осы іштегі код іске қосылады.
    ========================================================================== */
 
 $(function () {
 
-    // 1. Дәрігерлердің демонстрациялық бос уақыттары (нысан/object)
+    // 1. Дәрігерлердің бос уақыттарының деректер нысаны (Object)
     const doctorSchedules = {
         mukhamedyarov: ["10:00", "11:00", "14:00", "16:00"],
         tauershe: ["10:30", "12:00", "15:00", "17:00"],
@@ -17,70 +15,66 @@ $(function () {
         sagimbayeva: ["10:00", "12:30", "15:00", "16:30"]
     };
 
-    // 2. Бүгінгі күнді анықтап, өткен күндерді таңдауға тыйым салу (.attr қолданысы)
+    // Бүгінгі күнді күнтізбеге ең алғашқы күн етіп бекіту (.attr)
     const today = new Date().toISOString().split("T")[0];
     $("#appointment-date").attr("min", today);
 
 
     /* --------------------------------------------------------------------------
-       FEATURE 1 REWRITTEN: Дәрігер уақыттарын басқару (Effects + DOM manipulation)
-       Plain JS-тегі: addEventListener("change"), hidden, replaceChildren, innerHTML
-       jQuery әдістері: .on("change"), .slideDown(), .slideUp(), .html(), .prop(), .append()
-       Салыстыру: Код едәуір қысқарды әрі jQuery-дің .slideDown/slideUp анимацияларының
-       арқасында блок бірден жоғалып кетпей, жұмсақ ашылып-жабылатын болды.
+       FEATURE 1 REWRITTEN: Дәрігер уақыттарын басқару (Effects + DOM)
+       Plain JS: hidden=true, replaceChildren, innerHTML
+       jQuery: .slideDown(), .slideUp(), .html(), .prop(), .append()
        -------------------------------------------------------------------------- */
     function updateSchedule() {
         const doctorKey = $("#doctor").val();
         const $panel = $("#availability-panel");
         const $timeSelect = $("#appointment-time");
         const $info = $("#availability-info");
+        const $result = $("#booking-result");
 
-        // Егер дәрігер таңдалмаса — панельді жоғары қарай жұмсақ жабу (slideUp 300ms)
+        // Дәрігер таңдалмаса панельді жабу (slideUp 300ms)
         if (!doctorKey) {
             $panel.slideUp(300, function () {
-                // Callback: жабылып болған соң селекторды тазартып, өшіру (disabled)
                 $timeSelect.html('<option value="">Select a doctor first</option>').prop("disabled", true);
             });
             $info.text("Select a doctor to view available times.");
+            $result.text("Select a specialist and appointment date to view the available times.");
             return;
         }
 
-        // Дәрігер таңдалса — панельді төмен қарай ашу (slideDown 300ms)
+        // Дәрігер таңдалса панельді жұмсақ ашу (slideDown 300ms)
         $panel.slideDown(300);
         $timeSelect.prop("disabled", false).html('<option value="">Choose an available time</option>');
 
-        // Сол дәрігердің бос уақыттарын <select> ішіне .append() арқылы салу (.each қолданысы)
         const times = doctorSchedules[doctorKey] || [];
+        const doctorName = $("#doctor option:selected").text().trim();
+
+        // Опцияларды .append() арқылы тіркеу (.each циклі)
         $.each(times, function (index, time) {
             $timeSelect.append($("<option>", { value: time, text: time }));
         });
 
-        const doctorName = $("#doctor option:selected").text().trim();
         $info.text("Available times loaded for " + doctorName);
+        $result.text("Select a convenient time from the list above.");
     }
 
-    // Дәрігер таңдауы ауысқан кезде функцияны шақыру (.on("change") қолданысы)
     $("#doctor").on("change", updateSchedule);
 
 
     /* --------------------------------------------------------------------------
-       FEATURE 2 REWRITTEN: Форма валидациясы (Validation + Traversal + Chaining)
-       Plain JS-тегі: form.reportValidity(), alert() терезесі
-       jQuery әдістері: .on("submit"), .val().trim(), .addClass(), .siblings(), .fadeIn()
-       Салыстыру: Қате енді экранға қарабайыр alert() болып емес, Bootstrap-тің
-       is-invalid класы арқылы нақты қатесі бар өрістің астына әдемі шығады.
+       FEATURE 2 REWRITTEN: Форма валидациясы және Талонды шығару
+       Plain JS: reportValidity(), alert()
+       jQuery: .on("submit"), .val().trim(), .addClass(), .siblings(), .fadeIn()
 
-       МАҢЫЗДЫ ТҮСІНІКТЕМЕ (МҰҒАЛІМ СҰРАҒЫНА ЖАУАП):
-       Браузерлік (клиенттік) валидация ешқашан сервердегі тексерісті алмастыра алмайды!
-       Себебі кез келген пайдаланушы браузердің DevTools (F12) құралынан JS-ті өшіре салады
-       немесе Postman/скрипт арқылы тура сұраныс жібере алады. Сервер — басты қорғаныс шебі.
+       КОММЕНТАРИЙ (МҰҒАЛІМ СҰРАҒЫНА ЖАУАП):
+       Браузерлік тексеріс ешқашан серверлік тексерісті алмастыра алмайды!
+       Себебі кез келген адам DevTools арқылы тексеруді өшіре салады. Сервер — басты қорғаныс.
        -------------------------------------------------------------------------- */
 
-    // Өріс қатесін шығару функциясы (.siblings қолданысы)
+    // Өріс қатесін шығару (.siblings арқылы жанындағы блокты табу)
     function showError($input, message) {
         $input.addClass("is-invalid").removeClass("is-valid");
 
-        // .siblings() арқылы осы инпуттың дәл қасындағы қате блогын табамыз
         let $feedback = $input.siblings(".invalid-feedback");
         if ($feedback.length === 0) {
             $feedback = $('<div class="invalid-feedback"></div>');
@@ -89,21 +83,20 @@ $(function () {
         $feedback.text(message).show();
     }
 
-    // Қатені тазарту функциясы
+    // Қатені өшіру
     function clearError($input) {
         $input.removeClass("is-invalid").addClass("is-valid");
         $input.siblings(".invalid-feedback").text("").hide();
     }
 
-    // Қолданушы өрісті түзей бастағанда қатені бірден өшіру (live check, $(this) қолдану)
+    // Пациент мәтін жазғанда қатені лезде кетіру (live check, $(this))
     $(".form-control, .form-select").on("input change", function () {
-        // $(this) — дәл қазір өзгертіліп жатқан нақты инпут
         if ($(this).val().trim() !== "") {
             clearError($(this));
         }
     });
 
-    // Келісім чекбоксы басылғанда қатені алып тастау (.prop("checked"))
+    // Келісім чекбоксы басылғанда қатені өшіру (.prop("checked"))
     $("#privacy-consent").on("change", function () {
         if ($(this).prop("checked")) {
             $(this).removeClass("is-invalid");
@@ -111,13 +104,8 @@ $(function () {
         }
     });
 
-    // Форма жіберілген (submit) кездегі басты тексеріс
+    // Форма жіберілген (submit) кез
     $("#booking-form").on("submit", function (event) {
-        /*
-           event.preventDefault() түсініктемесі:
-           Бұл әдіс браузердің парақшаны қайта жүктеп (page reload) жіберуін тоқтатады.
-           Онсыз деректер тексерілмей жоғалып кетіп, парақша басынан ашылып кетер еді.
-        */
         event.preventDefault();
 
         let isValid = true;
@@ -144,7 +132,7 @@ $(function () {
         // 3. Қызметті тексеру
         const $service = $("#service");
         if (!$service.val()) {
-            showError($service, "Please choose a service from the list.");
+            showError($service, "Please select a required service.");
             isValid = false;
         } else {
             clearError($service);
@@ -153,7 +141,7 @@ $(function () {
         // 4. Дәрігерді тексеру
         const $doctor = $("#doctor");
         if (!$doctor.val()) {
-            showError($doctor, "Please select a specialist.");
+            showError($doctor, "Please choose a specialist.");
             isValid = false;
         } else {
             clearError($doctor);
@@ -162,13 +150,13 @@ $(function () {
         // 5. Күнді тексеру
         const $date = $("#appointment-date");
         if (!$date.val()) {
-            showError($date, "Please choose a preferred appointment date.");
+            showError($date, "Please choose an appointment date.");
             isValid = false;
         } else {
             clearError($date);
         }
 
-        // 6. Уақытты тексеру (.prop("disabled") арқылы)
+        // 6. Уақытты тексеру (.prop("disabled"))
         const $time = $("#appointment-time");
         if (!$time.val() || $time.prop("disabled")) {
             showError($time, "Please select an available appointment time.");
@@ -181,65 +169,73 @@ $(function () {
         const $consent = $("#privacy-consent");
         if (!$consent.prop("checked")) {
             $consent.addClass("is-invalid");
-            showError($consent, "You must agree before submitting.");
+            showError($consent, "You must confirm the details before booking.");
             isValid = false;
         } else {
             $consent.removeClass("is-invalid");
             $consent.siblings(".invalid-feedback").hide();
         }
 
-        // Егер кем дегенде бір өріс қате болса — тоқтату
+        // Егер қате болса — тоқтату
         if (!isValid) {
-            /* 1-ШЫНЖЫР (Chaining 1): 3 әдісті қатар қолдану
-               1) .removeClass("d-none") -> жасыру класын өшіреді
-               2) .html(...) -> қате мәтінін жазады
-               3) .fadeIn(400) -> 400 миллисекунд ішінде эффектімен шығарады */
             $("#booking-error")
                 .removeClass("d-none")
-                .html("<strong>Error:</strong> Please correct the highlighted fields above.")
+                .html("<strong>Error:</strong> Please fill in all highlighted fields.")
                 .fadeIn(400);
 
             $("#booking-confirmation").fadeOut(200);
             return;
         }
 
-        // Барлық өріс дұрыс болса
+        // Қате блогын жасыру
         $("#booking-error").fadeOut(200);
 
+        const patientName = $name.val().trim();
+        const patientPhone = $phone.val().trim();
+        const serviceName = $service.val();
         const doctorName = $("#doctor option:selected").text().trim();
-        const messageVal = $("#message").val().trim() || "Not provided";
+        const appDate = $date.val();
+        const appTime = $time.val();
+        const ticketNumber = "DH-" + Math.floor(1000 + Math.random() * 9000);
 
-        // WhatsApp-қа жіберілетін мәтін
-        const whatsappMsg =
-            "DENT HOUSE — APPOINTMENT REQUEST\n\n" +
-            "Full Name: " + $name.val().trim() + "\n" +
-            "Phone Number: " + $phone.val().trim() + "\n" +
-            "Service: " + $service.val() + "\n" +
-            "Specialist: " + doctorName + "\n" +
-            "Preferred Date: " + $date.val() + "\n" +
-            "Preferred Time: " + $time.val() + "\n" +
-            "Additional Info: " + messageVal;
+        // ҚАБЫЛДАУ ТАЛОНЫНЫҢ МАЗМҰНЫ
+        const ticketMarkup = `
+            <div class="p-3 border border-success rounded-3 bg-white text-dark mt-2 shadow-sm">
+                <div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-3">
+                    <h4 class="h5 mb-0 text-success fw-bold">✓ Appointment Confirmed!</h4>
+                    <span class="badge bg-success fs-6">Ticket: ${ticketNumber}</span>
+                </div>
+                <p class="mb-1"><strong>Patient:</strong> ${patientName}</p>
+                <p class="mb-1"><strong>Phone:</strong> ${patientPhone}</p>
+                <p class="mb-1"><strong>Doctor:</strong> ${doctorName}</p>
+                <p class="mb-1"><strong>Service:</strong> ${serviceName}</p>
+                <p class="mb-2"><strong>Date & Time:</strong> <span class="text-primary fw-bold">${appDate} at ${appTime}</span></p>
+                <p class="small text-muted mb-0">Clinic address: 48 Alikhan Bokeikhan Street, Astana</p>
+            </div>
+        `;
 
-        const whatsappURL = "https://wa.me/77763362830?text=" + encodeURIComponent(whatsappMsg);
-
-        /* 2-ШЫНЖЫР (Chaining 2) + Callback:
-           1) .removeClass("d-none") -> класты алып тастайды
-           2) .text(...) -> растау мәтінін орнатады
-           3) .fadeIn(500, callback) -> 500мс ішінде пайда болып, аяқталған соң callback іске қосылады */
+        /* CHAINING + CALLBACK:
+           Талон шығады, инпуттар тазарады, бірақ талон өшпей сақталып қалады */
         $("#booking-confirmation")
             .removeClass("d-none")
-            .text("Verification successful! Opening WhatsApp...")
+            .html(ticketMarkup)
             .fadeIn(500, function () {
-                // Callback: анимация біткен сәтте орындалады
-                window.open(whatsappURL, "_blank", "noopener,noreferrer");
-                $("#booking-form").trigger("reset");
-                $(".form-control, .form-select").removeClass("is-valid");
+                // Экранды талонға қарай жұмсақ жылжыту
+                $("html, body").animate({
+                    scrollTop: $("#booking-confirmation").offset().top - 30
+                }, 400);
+
+                // Өрістердің мәнін тазарту (талонды өшірмейтін қауіпсіз тәсіл)
+                $("#fullname, #phone, #appointment-date, #message").val("");
+                $("#doctor, #service, #appointment-time").val("");
+                $("#privacy-consent").prop("checked", false);
+                $(".form-control, .form-select").removeClass("is-valid is-invalid");
                 $("#availability-panel").slideUp(300);
             });
     });
 
-    // Форма "Reset" басылғанда өрістер мен кестені тазарту (.on("reset"))
-    $("#booking-form").on("reset", function () {
+    // Қолданушы өзі "Reset" батырмасын қолмен басқанда ғана талонды өшіру
+    $("#reset-booking").on("click", function () {
         setTimeout(function () {
             $(".form-control, .form-select").removeClass("is-invalid is-valid");
             $(".invalid-feedback").hide();
