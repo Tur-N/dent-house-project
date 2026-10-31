@@ -1,277 +1,75 @@
-'use strict';
+/* ==========================================================================
+   Dent house Dental Clinic — Shared Main Script
+   jQuery Version: 3.7.1 (Assignment талабы бойынша қосылған нұсқа)
+   $(function () { ... }) не үшін қажет:
+   Бұл — $(document).ready() әдісінің қысқа түрі. Браузер бүкіл HTML құрылымын
+   (DOM) толық оқып біткеннен кейін ғана осы іштегі код орындалады. Онсыз элементтер
+   әлі құрылмаған болып шығып, код қате береді.
+   ========================================================================== */
 
-(() => {
-    const clinicHours = '10:00-21:00';
+$(function () {
 
-    // Medical team data
-    const doctors = [
-        {
-            id: 'mukhamediyarov-kanat',
-            name: 'Мухамедьяров Канат Магауиянович',
-            specialty: 'Implantologist and prosthodontist',
-            experienceYears: 25,
-            clinicHours,
-            note: 'Individual appointment times must be confirmed with the clinic.'
-        },
-        {
-            id: 'tauershe-baghzhan',
-            name: 'Тауерше Багжан Ордабаевич',
-            specialty: 'Oral surgeon and implantologist',
-            experienceYears: 7,
-            clinicHours,
-            note: 'Individual appointment times must be confirmed with the clinic.'
-        },
-        {
-            id: 'kenzhe-sarzhan',
-            name: 'Кенже Саржан Байжанович',
-            specialty: 'General dentist, surgeon, implantologist and prosthodontist',
-            experienceYears: 9,
-            clinicHours,
-            note: 'Individual appointment times must be confirmed with the clinic.'
-        },
-        {
-            id: 'sagimbaeva-zukhra',
-            name: 'Сагимбаева Зухра Бериковна',
-            specialty: 'Microscopic dentistry and therapeutic dentistry',
-            experienceYears: 10,
-            clinicHours,
-            note: 'Individual appointment times must be confirmed with the clinic.'
-        },
-        {
-            id: 'shalabay-zhamilya',
-            name: 'Шалабай Жамиля Кайратовна',
-            specialty: 'Microscopic dentistry and therapeutic dentistry',
-            experienceYears: 6,
-            clinicHours,
-            note: 'Individual appointment times must be confirmed with the clinic.'
-        },
-        {
-            id: 'tukesheva-svetlana',
-            name: 'Тукешева Светлана Маратовна',
-            specialty: 'Therapeutic dentist and periodontist',
-            experienceYears: 15,
-            clinicHours,
-            note: 'Individual appointment times must be confirmed with the clinic.'
-        },
-        {
-            id: 'abzhapbar-symbat',
-            name: 'Абжапбар Сымбат Багдатовна',
-            specialty: 'Pediatric dentist and microscopic dentistry',
-            experienceYears: 10,
-            clinicHours,
-            note: 'Individual appointment times must be confirmed with the clinic.'
-        },
-        {
-            id: 'otarbaeva-alma',
-            name: 'Отарбаева Алма Аманжоловна',
-            specialty: 'Orthodontist',
-            experienceYears: 10,
-            clinicHours,
-            note: 'Individual appointment times must be confirmed with the clinic.'
+    /* --------------------------------------------------------------------------
+       1. Ортақ навигацияны бақылау (Active Navigation Link Handler)
+       Селекторлар: тег пен класс бойынша ('nav .nav-link')
+       Traversal: .parent(), .siblings(), .find(), .each() әдістері
+       -------------------------------------------------------------------------- */
+    const currentPath = window.location.pathname.split("/").pop() || "index.html";
+
+    $("nav .nav-link").each(function () {
+        const linkHref = $(this).attr("href");
+
+        // Егер сілтеме дәл осы ашылып тұрған бетке тең болса — active класын бекіту
+        if (linkHref === currentPath) {
+            $(this)
+                .addClass("active")
+                .attr("aria-current", "page")
+                .parent()
+                .siblings()
+                .find(".nav-link")
+                .removeClass("active")
+                .removeAttr("aria-current");
         }
-    ];
+    });
 
-    // Service catalogue
-    const services = [
-        {
-            id: 'xray-lower',
-            name: 'Lower Jaw X-ray',
-            category: 'Diagnostics',
-            price: 7500,
-            durationMinutes: 15,
-            description: 'Radiographic examination of the lower jaw.'
-        },
-        {
-            id: 'xray-upper',
-            name: 'Upper Jaw X-ray',
-            category: 'Diagnostics',
-            price: 7500,
-            durationMinutes: 15,
-            description: 'Radiographic examination of the upper jaw.'
-        },
-        {
-            id: 'caries-treatment',
-            name: 'Caries Treatment',
-            category: 'Therapeutic',
-            price: 24000,
-            durationMinutes: 60,
-            description: 'Starting price. The final price depends on the diagnosis and cavity depth.'
-        },
-        {
-            id: 'tooth-extraction',
-            name: 'Tooth Extraction',
-            category: 'Surgical',
-            price: 20000,
-            durationMinutes: 45,
-            description: 'Starting price. Complexity and root access affect the final price.'
-        },
-        {
-            id: 'dental-implantation',
-            name: 'Dental Implantation',
-            category: 'Surgical',
-            price: 200000,
-            durationMinutes: 120,
-            description: 'Starting price. The final price depends on the selected implant system.'
-        },
-        {
-            id: 'root-canal-1',
-            name: '1-Canal Root Canal Therapy',
-            category: 'Therapeutic',
-            price: 90000,
-            durationMinutes: 90,
-            description: 'Microscopic cleaning and filling of a single canal.'
-        },
-        {
-            id: 'root-canal-2',
-            name: '2-Canal Root Canal Therapy',
-            category: 'Therapeutic',
-            price: 110000,
-            durationMinutes: 120,
-            description: 'Dual-canal treatment under a microscope.'
-        },
-        {
-            id: 'zirconia-natural-crown',
-            name: 'Zirconium Dioxide Crown for a Natural Tooth',
-            category: 'Restorative',
-            price: 140000,
-            durationMinutes: 90,
-            description: 'Listed price per unit for a natural tooth.'
-        },
-        {
-            id: 'zirconia-implant-crown',
-            name: 'Zirconium Dioxide Crown for an Implant',
-            category: 'Restorative',
-            price: 165000,
-            durationMinutes: 90,
-            description: 'Listed price per unit for a dental implant.'
-        },
-        {
-            id: 'metal-ceramic-natural-crown',
-            name: 'Metal-Ceramic Crown for a Natural Tooth',
-            category: 'Restorative',
-            price: 85000,
-            durationMinutes: 90,
-            description: 'Listed price per unit for a natural tooth.'
-        },
-        {
-            id: 'metal-ceramic-implant-crown',
-            name: 'Metal-Ceramic Crown for an Implant',
-            category: 'Restorative',
-            price: 120000,
-            durationMinutes: 90,
-            description: 'Listed price per unit for a dental implant.'
+
+    /* --------------------------------------------------------------------------
+       2. Шынжырлау (Chaining) және тышқан оқиғалары (mouseenter / mouseleave)
+       Батырмаларға анимациялық интерактивті микро-эффект беру
+       -------------------------------------------------------------------------- */
+    /* 
+       CHAINING МЫСАЛЫ:
+       1) $(this) -> Тышқан үстіне келген нақты батырманы таңдайды
+       2) .stop(true, true) -> Алдыңғы аяқталмаған анимацияны бірден тоқтатады
+       3) .animate({ opacity: 0.85 }, 150) -> 150мс ішінде мөлдірлікті жұмсақ өзгертеді
+    */
+    $(".btn-primary, .btn-warning")
+        .on("mouseenter", function () {
+            $(this).stop(true, true).animate({ opacity: 0.85 }, 150);
+        })
+        .on("mouseleave", function () {
+            $(this).stop(true, true).animate({ opacity: 1.0 }, 150);
+        });
+
+
+    /* --------------------------------------------------------------------------
+       3. Shared Booking Link Handler (Брондау блогына жылжу)
+       README талабы: contacts.html#booking-form бағытына өту
+       -------------------------------------------------------------------------- */
+    $('a[href^="contacts.html#booking-form"]').on("click", function (event) {
+        // Егер қолданушы дәл қазір contacts.html бетінде тұрса, парақшаны қайта жүктемейді
+        if (window.location.pathname.endsWith("contacts.html")) {
+            event.preventDefault();
+            const $targetForm =$("#booking-form");
+
+            if ($targetForm.length > 0) {$("html, body").animate({
+                scrollTop: $targetForm.offset().top - 40
+            }, 400);
+
+                // Формаға назар аударту үшін қысқа жыпылықтау эффектісі
+                $targetForm.fadeOut(100).fadeIn(200);
+            }
         }
-    ];
+    });
 
-    // Create a DOM element without inserting HTML strings.
-    function createNode(tagName, className = '', text = '') {
-        const node = document.createElement(tagName);
-
-        if (className) {
-            node.className = className;
-        }
-
-        if (text !== '') {
-            node.textContent = String(text);
-        }
-
-        return node;
-    }
-
-    // Normalize text for case-insensitive search.
-    function normalizeText(value) {
-        return String(value ?? '').trim().toLocaleLowerCase();
-    }
-
-    // Format a price in Kazakhstani tenge.
-    function formatKzt(value) {
-        return `${new Intl.NumberFormat('en-US', {
-            maximumFractionDigits: 0
-        }).format(value)} KZT`;
-    }
-
-    // Find a service by its unique identifier.
-    function findServiceById(serviceId) {
-        return services.find(
-            (service) => service.id === serviceId
-        ) ?? null;
-    }
-
-    // Calculate a total from service IDs and quantities.
-    function calculateTotal(items) {
-        return items.reduce((total, item) => {
-            const service = findServiceById(item.id);
-            const quantity = Number(item.quantity) || 1;
-
-            return total + (
-                service ? service.price * quantity : 0
-            );
-        }, 0);
-    }
-
-    // Share project data and reusable functions with other scripts.
-    window.DentHouseData = {
-        clinicHours,
-        doctors,
-        services
-    };
-
-    window.DentHouseUtils = {
-        createNode,
-        normalizeText,
-        formatKzt,
-        findServiceById,
-        calculateTotal
-    };
-
-    // Add a shared appointment link to the site header.
-    function addQuickBookingLink() {
-        const header = document.querySelector(
-            '.main-header .container-fluid, .main-header .container'
-        );
-
-        if (
-            !header ||
-            document.querySelector('.js-quick-booking-wrap')
-        ) {
-            return;
-        }
-
-        const wrapper = createNode(
-            'div',
-            'js-quick-booking-wrap text-center mt-3'
-        );
-
-        const link = createNode(
-            'a',
-            'btn btn-warning fw-bold px-4',
-            'Book an Appointment'
-        );
-
-        link.href = 'contacts.html#booking-form';
-        link.setAttribute(
-            'aria-label',
-            'Open the appointment form'
-        );
-
-        wrapper.append(link);
-        header.append(wrapper);
-    }
-
-    addQuickBookingLink();
-})();
-(() => {
-    "use strict";
-
-    const desktopNavigation = document.querySelector(
-        ".desktop-navigation"
-    );
-
-    if (desktopNavigation) {
-        desktopNavigation.classList.add(
-            "w-100",
-            "mx-auto",
-            "justify-content-center"
-        );
-    }
-})();
+});
