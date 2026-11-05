@@ -1,38 +1,124 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="author" content="Turarbek Nurakhmet">
-  <meta name="description"
-        content="Contact Dent house Dental Clinic and request an appointment.">
+  <meta name="description" content="Contact Dent house Dental Clinic, explore specialists and save a local appointment request.">
 
   <title>Contacts & Booking — Dent house</title>
 
-  <!-- Bootstrap CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         rel="stylesheet">
 
-  <!-- Project CSS -->
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/turarbek.css">
+
+  <!-- Keep the Contacts header aligned with the homepage. -->
+  <style>
+    .contacts-page .main-header {
+        width: 100%;
+        min-height: 280px;
+        box-sizing: border-box;
+    }
+
+    .contacts-page .main-header > .container-fluid {
+        min-height: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .contacts-page .main-header .site-title {
+        font-size: clamp(2rem, 3.5vw, 3.5rem);
+        line-height: 1.1;
+        font-weight: 700;
+        margin-bottom: 8px;
+        text-align: left;
+    }
+
+    .contacts-page .main-header .site-tagline {
+        margin-bottom: 24px;
+        text-align: left;
+    }
+
+    .contacts-page .main-header nav.navbar {
+        width: 100%;
+        padding: 0;
+        margin-top: auto;
+        justify-content: center;
+    }
+
+    .contacts-page .main-header .navbar-collapse {
+        justify-content: center;
+    }
+
+    .contacts-page .main-header .navbar-nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin: 0;
+    }
+
+    .contacts-page .main-header .navbar-nav .nav-link {
+        white-space: nowrap;
+    }
+
+    @media (max-width: 991.98px) {
+        .contacts-page .main-header {
+            min-height: auto;
+        }
+
+        .contacts-page .main-header > .container-fluid {
+            min-height: 280px;
+        }
+
+        .contacts-page .main-header .navbar-nav {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .contacts-page .main-header > .container-fluid {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .contacts-page .main-header .site-title {
+            font-size: clamp(2rem, 7vw, 3rem);
+        }
+    }
+  </style>
+
 </head>
 
 <body class="contacts-page">
 
-<!-- =====================================================
-     HEADER
-     ===================================================== -->
+<!-- =========================================
+     HEADER — MATCHES HOMEPAGE STRUCTURE
+========================================= -->
 
 <header class="main-header">
+
   <div class="container-fluid px-3 px-md-5 py-4">
 
     <p class="eyebrow text-uppercase fw-bold small mb-2">
       DENT HOUSE • CONTACT
     </p>
 
-    <h1 class="site-title display-5 fw-bold mb-2">
+    <h1 class="site-title display-4 fw-bold mb-2">
       Contact Dent house & Book a Visit
     </h1>
 
@@ -40,21 +126,26 @@
       Schedule a Consultation with Our Dental Specialists
     </p>
 
-    <!-- Navigation without Bootstrap JavaScript -->
-
-    <nav class="navbar navbar-dark"
+    <nav class="navbar navbar-expand-lg navbar-dark"
          aria-label="Primary navigation">
 
-      <!-- Mobile navigation -->
+      <button id="nav-toggle"
+              class="navbar-toggler mx-auto"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#primaryNav"
+              aria-controls="primaryNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
 
-      <details class="mobile-navigation d-lg-none">
+        <span class="navbar-toggler-icon"></span>
 
-        <summary id="nav-toggle"
-                 class="btn btn-outline-light">
-          Menu
-        </summary>
+      </button>
 
-        <ul class="navbar-nav gap-2 mt-3">
+      <div class="collapse navbar-collapse justify-content-center"
+           id="primaryNav">
+
+        <ul class="navbar-nav flex-wrap justify-content-center gap-2">
 
           <li class="nav-item">
             <a href="index.html"
@@ -93,65 +184,22 @@
           </li>
 
         </ul>
-      </details>
 
-      <!-- Desktop navigation -->
-
-      <ul class="navbar-nav desktop-navigation
-                       d-none d-lg-flex flex-row flex-wrap
-                       justify-content-center gap-2">
-
-        <li class="nav-item">
-          <a href="index.html"
-             class="nav-link px-3 py-2 rounded">
-            Home
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="services.html"
-             class="nav-link px-3 py-2 rounded">
-            Services & Pricing
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="orthodontics.html"
-             class="nav-link px-3 py-2 rounded">
-            Orthodontics & 3D Scanning
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="team.html"
-             class="nav-link px-3 py-2 rounded">
-            Medical Team
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="contacts.html"
-             class="nav-link active px-3 py-2 rounded"
-             aria-current="page">
-            Contacts & Booking
-          </a>
-        </li>
-
-      </ul>
+      </div>
 
     </nav>
+
   </div>
+
 </header>
 
-
-<!-- =====================================================
+<!-- =========================================
      MAIN CONTENT
-     ===================================================== -->
+========================================= -->
 
 <main class="container py-4 py-md-5">
 
-  <!-- Introduction -->
-
+  <!-- Page introduction -->
   <section class="bg-white border rounded-4 shadow-sm p-4 mb-4"
            aria-labelledby="contacts-title">
 
@@ -164,22 +212,18 @@
     </h2>
 
     <p class="lead mb-0">
-      Find our clinic details, select a dental specialist
-      and choose a preferred appointment time.
-      You can prepare an appointment request through WhatsApp.
+      Find clinic details, select a dental specialist,
+      choose dental services and calculate your estimated treatment cost.
     </p>
 
   </section>
 
-
-  <!-- =================================================
-       CONTACT INFORMATION
-       ================================================= -->
+  <!-- =====================================
+       CLINIC INFORMATION
+  ====================================== -->
 
   <section class="row g-4 mb-4"
            aria-label="Clinic contact information">
-
-    <!-- Clinic details -->
 
     <article class="col-12 col-lg-6">
 
@@ -208,12 +252,13 @@
                class="text-primary fw-bold">
               +7 707 808 78 48
             </a>
+
           </p>
 
           <p>
-            <strong>Working hours:</strong><br>
-            Monday–Friday: 10:00–21:00<br>
-            Saturday–Sunday: 10:00–18:00
+            <strong>Working Hours:</strong><br>
+            Monday-Friday: 10:00-21:00<br>
+            Saturday-Sunday: 10:00-18:00
           </p>
 
         </address>
@@ -222,31 +267,30 @@
            class="btn btn-success"
            target="_blank"
            rel="noopener noreferrer">
+
           Contact via WhatsApp
+
         </a>
 
       </div>
+
     </article>
-
-
-    <!-- Quick contact -->
 
     <article class="col-12 col-lg-6">
 
       <div class="bg-white border rounded-4 shadow-sm p-4 h-100">
 
         <p class="text-uppercase text-secondary fw-bold small">
-          QUICK CONTACT
+          QUICK ACCESS
         </p>
 
         <h2 class="h3 text-primary">
-          Direct Access
+          Explore Our Clinic
         </h2>
 
         <p>
-          Contact the clinic by phone or WhatsApp.
-          You can also review the service prices and
-          available specialist information.
+          Explore treatment prices, meet our medical specialists
+          and learn about digital diagnostics.
         </p>
 
         <div class="d-flex flex-wrap gap-2">
@@ -266,19 +310,24 @@
             Meet the Team
           </a>
 
+          <a href="orthodontics.html"
+             class="btn btn-outline-primary">
+            3D Diagnostics
+          </a>
+
         </div>
 
       </div>
+
     </article>
 
   </section>
 
+  <!-- =====================================
+       APPOINTMENT FORM
+  ====================================== -->
 
-  <!-- =================================================
-       APPOINTMENT BOOKING FORM
-       ================================================= -->
-
-  <section class="bg-white border rounded-4 shadow-sm p-4"
+  <section class="bg-white border rounded-4 shadow-sm p-3 p-md-4"
            aria-labelledby="booking-heading">
 
     <p class="text-uppercase text-secondary fw-bold small">
@@ -293,14 +342,14 @@
        class="alert alert-info"
        role="note">
 
-      Complete the form to prepare your appointment request.
-      Your selected details will be placed in a WhatsApp message.
-      You must review and send the message in WhatsApp yourself.
-    </p>
+      Complete the form to save your demonstration appointment.
+      Your request is stored in this browser and is not sent to a server.
 
+    </p>
 
     <form id="booking-form"
           class="booking-form"
+          novalidate
           aria-describedby="booking-form-note">
 
       <fieldset class="border rounded-4 p-3">
@@ -311,8 +360,7 @@
 
         <div class="row g-3">
 
-
-          <!-- Full name -->
+          <!-- FULL NAME -->
 
           <div class="col-12 col-md-6">
 
@@ -323,16 +371,17 @@
 
             <input id="fullname"
                    name="fullname"
-                   class="form-control"
                    type="text"
+                   class="form-control"
                    autocomplete="name"
                    placeholder="Enter your full name"
+                   minlength="2"
+                   maxlength="100"
                    required>
 
           </div>
 
-
-          <!-- Phone number -->
+          <!-- PHONE -->
 
           <div class="col-12 col-md-6">
 
@@ -343,63 +392,113 @@
 
             <input id="phone"
                    name="phone"
-                   class="form-control"
                    type="tel"
+                   class="form-control"
                    autocomplete="tel"
                    placeholder="+7 707 000 00 00"
+                   maxlength="20"
                    required>
 
           </div>
 
+          <!-- EMAIL -->
 
-          <!-- Service -->
+          <div class="col-12 col-md-6">
+
+            <label for="email"
+                   class="form-label fw-bold">
+              Email Address
+            </label>
+
+            <input id="email"
+                   name="email"
+                   type="email"
+                   class="form-control"
+                   autocomplete="email"
+                   placeholder="example@email.com"
+                   maxlength="120"
+                   required>
+
+          </div>
+
+          <!-- DENTAL SERVICE -->
 
           <div class="col-12 col-md-6">
 
             <label for="service"
                    class="form-label fw-bold">
-              Select Required Service
+              Dental Treatment
             </label>
 
             <select id="service"
                     name="service"
-                    class="form-select"
-                    required>
+                    class="form-select">
 
               <option value="">
-                Choose a service
+                Choose an additional service
               </option>
 
-              <option value="Caries Treatment">
+              <option value="caries">
                 Caries Treatment
               </option>
 
-              <option value="Tooth Extraction">
+              <option value="extraction">
                 Tooth Extraction
               </option>
 
-              <option value="Dental Implantation">
+              <option value="implant">
                 Dental Implantation
               </option>
 
-              <option value="Orthodontics">
+              <option value="root1">
+                1-Canal Root Canal Therapy
+              </option>
+
+              <option value="root2">
+                2-Canal Root Canal Therapy
+              </option>
+
+              <option value="zirconium-natural">
+                Zirconium Crown — Natural Tooth
+              </option>
+
+              <option value="zirconium-implant">
+                Zirconium Crown — Dental Implant
+              </option>
+
+              <option value="metal-natural">
+                Metal-Ceramic Crown — Natural Tooth
+              </option>
+
+              <option value="metal-implant">
+                Metal-Ceramic Crown — Dental Implant
+              </option>
+
+              <option value="orthodontics">
                 Orthodontics
               </option>
 
-              <option value="3D Intraoral Scanning">
+              <option value="scan">
                 3D Intraoral Scanning
               </option>
 
-              <option value="General Consultation">
+              <option value="model">
+                3D Diagnostic Model
+              </option>
+
+              <option value="consultation">
                 General Consultation
               </option>
 
             </select>
 
+            <p class="form-text mb-0">
+              You can also select services from the Services page.
+            </p>
+
           </div>
 
-
-          <!-- Doctor selection -->
+          <!-- DOCTOR -->
 
           <div class="col-12 col-md-6">
 
@@ -417,80 +516,183 @@
                 Choose a specialist
               </option>
 
-              <option value="mukhamedyarov">
-                Dr. Mukhamedyarov Kanat Magauyanovich
-              </option>
-
-              <option value="tauershe">
-                Dr. Tauershe Bagzhan Ordabayevich
-              </option>
-
-              <option value="kenzhe">
-                Dr. Kenzhe Sarzhan Baizhanovich
-              </option>
-
-              <option value="sagimbayeva">
-                Dr. Sagimbayeva Zukhra Berikovna
-              </option>
-
             </select>
 
           </div>
 
-
-          <!-- Appointment date -->
+          <!-- DATE -->
 
           <div class="col-12 col-md-6">
 
             <label for="appointment-date"
                    class="form-label fw-bold">
-              Preferred Date
+              Appointment Date
             </label>
 
             <input id="appointment-date"
                    name="appointment-date"
-                   class="form-control"
                    type="date"
+                   class="form-control"
                    required>
 
           </div>
 
+          <!-- X-RAY SELECTION -->
 
-          <!-- Appointment time -->
+          <div class="col-12">
 
-          <div class="col-12 col-md-6"
-               id="availability-panel"
-               hidden>
+            <fieldset id="xray-selection"
+                      class="border rounded-3 p-3">
 
-            <label for="appointment-time"
-                   class="form-label fw-bold">
-              Available Appointment Times
-            </label>
+              <legend class="float-none w-auto px-2 fw-bold text-primary">
+                X-ray Selection
+              </legend>
 
-            <select id="appointment-time"
-                    name="appointment-time"
-                    class="form-select"
-                    required
-                    disabled>
+              <p class="small text-muted">
+                Select the lower jaw, upper jaw or both areas.
+              </p>
 
-              <option value="">
-                Select a doctor first
-              </option>
+              <div id="xray-checkboxes"
+                   class="row g-3">
 
-            </select>
+                <div class="col-12 col-md-6">
 
-            <p id="availability-info"
-               class="form-text mt-2"
-               aria-live="polite">
+                  <div class="form-check border rounded-3 p-3 h-100">
 
-              Select a doctor to view available times.
+                    <input id="xray-lower"
+                           name="xray-area"
+                           type="checkbox"
+                           class="form-check-input"
+                           value="xray-lower">
 
-            </p>
+                    <label for="xray-lower"
+                           class="form-check-label fw-bold">
+
+                      Lower Jaw X-ray — 7,500 KZT
+
+                    </label>
+
+                  </div>
+
+                </div>
+
+                <div class="col-12 col-md-6">
+
+                  <div class="form-check border rounded-3 p-3 h-100">
+
+                    <input id="xray-upper"
+                           name="xray-area"
+                           type="checkbox"
+                           class="form-check-input"
+                           value="xray-upper">
+
+                    <label for="xray-upper"
+                           class="form-check-label fw-bold">
+
+                      Upper Jaw X-ray — 7,500 KZT
+
+                    </label>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </fieldset>
 
           </div>
 
+          <!-- APPOINTMENT TIME -->
 
-          <!-- Additional information -->
+          <div class="col-12">
+
+            <button id="show-times"
+                    type="button"
+                    class="btn btn-outline-primary mb-3"
+                    aria-expanded="false">
+
+              Choose Appointment Time
+
+            </button>
+
+            <div id="availability-panel" hidden>
+
+              <label for="appointment-time"
+                     class="form-label fw-bold">
+
+                Available Demonstration Times
+
+              </label>
+
+              <select id="appointment-time"
+                      name="appointment-time"
+                      class="form-select"
+                      required
+                      disabled>
+
+                <option value="">
+                  Select a specialist and date first
+                </option>
+
+              </select>
+
+              <p id="availability-info"
+                 class="form-text mt-2 mb-0"
+                 aria-live="polite">
+
+                Select a specialist and date to view example times.
+
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- PRICE CALCULATOR -->
+
+          <div class="col-12">
+
+            <section id="price-calculator"
+                     class="card bg-light border-0">
+
+              <div class="card-body">
+
+                <h3 class="h5 text-primary">
+                  Treatment Price Calculator
+                </h3>
+
+                <div id="calculator-items">
+
+                  <p class="text-muted mb-0">
+                    No service selected.
+                  </p>
+
+                </div>
+
+                <hr>
+
+                <p id="calculator-total"
+                   class="fw-bold h5 mb-1">
+
+                  Known Estimated Total: 0 KZT
+
+                </p>
+
+                <p id="calculator-note"
+                   class="small text-muted mb-0">
+
+                  Select services to calculate the estimated price.
+
+                </p>
+
+              </div>
+
+            </section>
+
+          </div>
+
+          <!-- ADDITIONAL INFORMATION -->
 
           <div class="col-12">
 
@@ -503,12 +705,19 @@
                       name="message"
                       class="form-control"
                       rows="4"
+                      maxlength="500"
                       placeholder="Describe your question or preferences"></textarea>
+
+            <p id="message-counter"
+               class="small text-muted mt-1 mb-0">
+
+              0 / 500 characters
+
+            </p>
 
           </div>
 
-
-          <!-- Consent -->
+          <!-- PRIVACY CONSENT -->
 
           <div class="col-12">
 
@@ -523,8 +732,8 @@
               <label for="privacy-consent"
                      class="form-check-label">
 
-                I agree to send the appointment information
-                above to the clinic contact through WhatsApp.
+                I confirm that the appointment information
+                provided above is correct.
 
               </label>
 
@@ -532,8 +741,7 @@
 
           </div>
 
-
-          <!-- Submit and reset buttons -->
+          <!-- FORM BUTTONS -->
 
           <div class="col-12">
 
@@ -543,7 +751,7 @@
                       type="submit"
                       class="btn btn-success btn-lg">
 
-                Send Request via WhatsApp
+                Confirm Appointment
 
               </button>
 
@@ -551,7 +759,7 @@
                       type="reset"
                       class="btn btn-outline-secondary">
 
-                Reset
+                Reset Form
 
               </button>
 
@@ -563,44 +771,51 @@
 
       </fieldset>
 
+    </form>
 
-      <!-- Form result -->
+    <!-- STATUS -->
 
-      <p id="booking-result"
-         class="alert alert-info mt-3 mb-0"
+    <div id="booking-result"
+         class="alert alert-info mt-3"
          role="status"
          aria-live="polite">
 
-        Select a specialist and appointment date to view
-        the demonstration schedule.
+      Complete the form to prepare your appointment request.
 
-      </p>
+    </div>
 
+    <!-- SAVED APPOINTMENT -->
 
-      <!-- Future interface message areas -->
+    <div id="booking-confirmation"
+         class="mt-3"
+         aria-live="polite">
 
-      <div id="booking-confirmation"
-           class="alert alert-success d-none is-success mt-3"
-           role="status"
-           aria-live="polite">
-      </div>
+    </div>
 
-      <div id="booking-error"
-           class="alert alert-danger d-none is-error mt-3"
-           role="alert"
-           aria-live="assertive">
-      </div>
+    <!-- VALIDATION ERROR -->
 
-    </form>
+    <div id="booking-error"
+         class="alert alert-danger mt-3"
+         role="alert"
+         aria-live="assertive"
+         hidden>
+
+    </div>
+
+    <p class="small text-muted mt-3 mb-0">
+
+      This is a front-end demonstration. Appointment data is saved
+      in this browser and is not transmitted to a real clinic system.
+
+    </p>
 
   </section>
 
 </main>
 
-
-<!-- =====================================================
+<!-- =========================================
      FOOTER
-     ===================================================== -->
+========================================= -->
 
 <footer class="main-footer text-center py-4 px-3 mt-4">
 
@@ -616,8 +831,7 @@
 
     <p class="mb-2">
 
-      <a href="tel:+77078087848"
-         class="link-light">
+      <a href="tel:+77078087848" class="link-light">
         +7 707 808 78 48
       </a>
 
@@ -631,376 +845,18 @@
 
 </footer>
 
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
 
-<!-- =====================================================
-     CUSTOM JAVASCRIPT
-     No Bootstrap JavaScript is used.
-     ===================================================== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        defer></script>
 
-<script>
-  const bookingForm = document.getElementById("booking-form");
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        defer></script>
 
-  const doctorSelect = document.getElementById("doctor");
-
-  const dateInput = document.getElementById("appointment-date");
-
-  const timeSelect = document.getElementById("appointment-time");
-
-  const availabilityPanel =
-      document.getElementById("availability-panel");
-
-  const availabilityInfo =
-      document.getElementById("availability-info");
-
-  const bookingResult =
-      document.getElementById("booking-result");
-
-
-  /*
-     Demonstration schedules only.
-
-     These are example times, not verified real appointments.
-     Replace them with the clinic's actual schedule before
-     using the website for real bookings.
-  */
-
-  const doctorSchedules = {
-      mukhamedyarov: {
-          days: [1, 2, 3, 4, 5],
-          times: ["10:00", "11:00", "14:00", "16:00"]
-      },
-
-      tauershe: {
-          days: [2, 4, 6],
-          times: ["10:30", "12:00", "15:00", "17:00"]
-      },
-
-      kenzhe: {
-          days: [1, 2, 4, 5],
-          times: ["09:30", "11:30", "14:30", "17:30"]
-      },
-
-      sagimbayeva: {
-          days: [3, 4, 6],
-          times: ["10:00", "12:30", "15:00", "16:30"]
-      }
-  };
-
-
-  const dayNames = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-  ];
-
-
-  /*
-     Set the minimum date to today's local date.
-  */
-
-  const today = new Date();
-
-  const localToday =
-      today.getFullYear() + "-" +
-      String(today.getMonth() + 1).padStart(2, "0") + "-" +
-      String(today.getDate()).padStart(2, "0");
-
-  dateInput.min = localToday;
-
-
-  /*
-     Update the sample availability whenever
-     the selected doctor or date changes.
-  */
-
-  function updateAvailability() {
-
-      const doctorKey = doctorSelect.value;
-
-      const dateValue = dateInput.value;
-
-      // Remove all previous time options.
-      timeSelect.replaceChildren();
-
-      // Add a fresh placeholder.
-      timeSelect.add(
-          new Option("Choose an available time", "")
-      );
-
-      // Clear the previous selection.
-      timeSelect.value = "";
-
-      // Disable the time selector until valid times are available.
-      timeSelect.disabled = true;
-
-      // Show the schedule area only after a doctor is selected.
-      availabilityPanel.hidden = !doctorKey;
-
-
-      if (!doctorKey) {
-
-          availabilityInfo.textContent =
-              "Select a doctor to view available times.";
-
-          bookingResult.textContent =
-              "Choose a specialist to see the demonstration schedule.";
-
-          return;
-      }
-
-
-      const schedule = doctorSchedules[doctorKey];
-
-      const doctorName =
-          doctorSelect.selectedOptions[0].text;
-
-
-      if (!schedule) {
-
-          availabilityInfo.textContent =
-              "A sample schedule is not available for this selection.";
-
-          return;
-      }
-
-
-      /*
-         A doctor is selected, but the date has not been selected.
-         Show the example times for that doctor.
-      */
-
-      if (!dateValue) {
-
-          schedule.times.forEach(function (time) {
-              timeSelect.add(
-                  new Option(time, time)
-              );
-          });
-
-          timeSelect.disabled = false;
-
-          availabilityInfo.textContent =
-              "Example times for " + doctorName + ": " +
-              schedule.times.join(", ") +
-              ". Select a date to check the sample weekly schedule.";
-
-          bookingResult.textContent =
-              "The displayed times are examples only. Actual availability " +
-              "must be confirmed with the clinic.";
-
-          return;
-      }
-
-
-      /*
-         Use noon to avoid timezone boundary changes
-         when determining the selected weekday.
-      */
-
-      const selectedDate =
-          new Date(dateValue + "T12:00:00");
-
-      const weekday = selectedDate.getDay();
-
-      const dayName = dayNames[weekday];
-
-
-      // Check whether the example schedule includes this weekday.
-      if (!schedule.days.includes(weekday)) {
-
-          availabilityInfo.textContent =
-              "No example time slots are listed for " +
-              doctorName + " on " + dayName +
-              ". Please select another date.";
-
-          bookingResult.textContent =
-              "No sample time slots are listed for the selected day. " +
-              "Choose another date or contact the clinic.";
-
-          return;
-      }
-
-
-      // Add sample time options for the selected date.
-      schedule.times.forEach(function (time) {
-
-          timeSelect.add(
-              new Option(time, time)
-          );
-
-      });
-
-      timeSelect.disabled = false;
-
-      availabilityInfo.textContent =
-          "Example times for " + doctorName + " on " +
-          dayName + ": " + schedule.times.join(", ") +
-          ". Actual availability must be confirmed with the clinic.";
-
-      bookingResult.textContent =
-          "You can choose an example time. This does not reserve " +
-          "an appointment automatically.";
-
-  }
-
-
-  // Listen for doctor and date changes.
-  doctorSelect.addEventListener(
-      "change",
-      updateAvailability
-  );
-
-  dateInput.addEventListener(
-      "change",
-      updateAvailability
-  );
-
-
-  /*
-     Prepare the appointment request for WhatsApp.
-  */
-
-  bookingForm.addEventListener("submit", function (event) {
-
-      // Prevent normal form submission.
-      event.preventDefault();
-
-
-      // Check required fields.
-      if (!bookingForm.reportValidity()) {
-          return;
-      }
-
-
-      // A doctor, date and time must all be selected.
-      if (
-          !doctorSelect.value ||
-          !dateInput.value ||
-          timeSelect.disabled ||
-          !timeSelect.value
-      ) {
-
-          availabilityPanel.hidden = !doctorSelect.value;
-
-          availabilityInfo.textContent =
-              "Please select a doctor, a date and an available time.";
-
-          bookingResult.textContent =
-              "Complete the doctor, date and time selections first.";
-
-          return;
-      }
-
-
-      // Read form information.
-      const fullname =
-          document.getElementById("fullname").value.trim();
-
-      const phone =
-          document.getElementById("phone").value.trim();
-
-      const service =
-          document.getElementById("service").value;
-
-      const doctor =
-          doctorSelect.selectedOptions[0].text;
-
-      const appointmentDate =
-          dateInput.value;
-
-      const appointmentTime =
-          timeSelect.value;
-
-      const message =
-          document.getElementById("message").value.trim();
-
-
-      // Create the message to be reviewed in WhatsApp.
-      const whatsappMessage =
-          "DENT HOUSE — APPOINTMENT REQUEST\n\n" +
-          "Full Name: " + fullname + "\n" +
-          "Phone Number: " + phone + "\n" +
-          "Service: " + service + "\n" +
-          "Preferred Specialist: " + doctor + "\n" +
-          "Preferred Date: " + appointmentDate + "\n" +
-          "Preferred Time: " + appointmentTime + "\n" +
-          "Additional Information: " +
-          (message || "Not provided") +
-          "\n\nPlease confirm the actual appointment availability.";
-
-
-      // WhatsApp number in international format without the plus sign.
-      const whatsappNumber = "77763362830";
-
-
-      const whatsappURL =
-          "https://wa.me/" + whatsappNumber +
-          "?text=" + encodeURIComponent(whatsappMessage);
-
-
-      /*
-         Open WhatsApp in a new tab.
-         The user must press Send in WhatsApp.
-      */
-
-      const whatsappWindow = window.open(
-          whatsappURL,
-          "_blank",
-          "noopener,noreferrer"
-      );
-
-
-      if (!whatsappWindow) {
-
-          bookingResult.textContent =
-              "WhatsApp could not open in a new tab. " +
-              "Allow pop-ups for this page and try again, " +
-              "or use the Contact via WhatsApp link above.";
-
-          return;
-      }
-
-
-      bookingResult.textContent =
-          "WhatsApp has been opened with your prepared request. " +
-          "Review the details and press Send in WhatsApp to deliver it.";
-
-  });
-
-
-  /*
-     Reset the schedule when the form is cleared.
-  */
-
-  bookingForm.addEventListener("reset", function () {
-
-      window.setTimeout(function () {
-
-          availabilityPanel.hidden = true;
-
-          timeSelect.replaceChildren(
-              new Option("Select a doctor first", "")
-          );
-
-          timeSelect.disabled = true;
-
-          availabilityInfo.textContent =
-              "Select a doctor to view available times.";
-
-          bookingResult.textContent =
-              "Form cleared. Select a specialist to begin again.";
-
-      }, 0);
-
-  });
-
-</script>
-<script src="js/main.js" defer></script>
-<script src="js/contacts.js" defer></script>
+<script src="js/jquery-common.js" defer></script>
+<script src="js/jquery-contacts.js" defer></script>
 
 </body>
 </html>

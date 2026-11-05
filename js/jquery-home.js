@@ -3,94 +3,142 @@
 
 $(document).ready(function () {
 
-    // Run only on the homepage.
     if (!$('body').hasClass('home-page')) {
         return;
     }
 
-    const $main = $('main').first();
-
-    if (!$main.length) {
-        return;
-    }
-
-    // Demonstration testimonial records.
-    // These are sample project entries, not verified patient reviews.
-    const testimonials = [
+    // Clinic facility images.
+    const facilities = [
         {
-            id: 'aida',
-            name: 'Aida Serikova',
-            service: '3D Intraoral Scanning',
-            text: 'Very fast and comfortable scan without traditional paste.',
-            details: 'This sample testimonial describes a comfortable digital scanning experience and the use of modern intraoral diagnostic technology.'
+            id: 1,
+            image: 'images/1.jpeg',
+            title: 'Modern Dental Facilities',
+            description: 'Dental clinic facilities and patient areas.'
         },
         {
-            id: 'marat',
-            name: 'Marat Aliyev',
-            service: 'Dental Implantation',
-            text: 'Dr. Mukhamedyarov is a master of implant surgery.',
-            details: 'This sample testimonial highlights the dental implantation service and the importance of experienced implantology specialists.'
+            id: 2,
+            image: 'images/2.jpeg',
+            title: 'Patient Environment',
+            description: 'A comfortable environment for dental visits.'
         },
         {
-            id: 'dinara',
-            name: 'Dinara Ospanova',
-            service: 'Therapeutic Dentistry',
-            text: 'Clean facilities, microscope treatment was great.',
-            details: 'This sample testimonial describes the clinic environment and therapeutic treatment using microscopic dental equipment.'
+            id: 3,
+            image: 'images/3.jpeg',
+            title: 'Dental Care Environment',
+            description: 'The Dent house clinic environment.'
         }
     ];
 
-    // Locate the existing gallery in index.html.
-    // The original three images are preserved.
-    const $gallery = $main
-        .find('section[aria-labelledby="gallery-heading"]')
-        .first();
+    // Demonstration testimonials based on the homepage reference.
+    // These are not verified patient records.
+    const testimonials = [
+        {
+            id: 1,
+            name: 'Aida Serikova',
+            service: '3D Intraoral Scanning',
+            text: 'Very fast and comfortable scan without traditional paste.',
+            details: 'This demonstration entry illustrates how patients can describe their experience with digital diagnostics.'
+        },
+        {
+            id: 2,
+            name: 'Marat Aliyev',
+            service: 'Dental Implantation',
+            text: 'Dr. Mukhamedyarov is a master of implant surgery.',
+            details: 'This example highlights the implantology service and professional experience information shown on the medical team page.'
+        },
+        {
+            id: 3,
+            name: 'Dinara Ospanova',
+            service: 'Therapeutic Dentistry',
+            text: 'Clean facilities, microscope treatment was great.',
+            details: 'This example demonstrates a testimonial about the clinic environment and therapeutic dentistry.'
+        }
+    ];
 
-    // Remove any previous dynamically generated version.
-    $('#patient-testimonials').remove();
+    // Render clinic facilities.
+    function renderFacilities() {
 
-    // Create the testimonials section.
-    const $section = $('<section>', {
-        id: 'patient-testimonials',
-        class: 'bg-white border rounded-4 shadow-sm p-4 mb-4',
-        'aria-labelledby': 'testimonials-heading'
-    });
+        const $grid = $('#facility-grid');
 
-    const $header = $('<div>', {
-        class: 'd-flex flex-wrap justify-content-between align-items-center gap-2 mb-3'
-    });
+        if (!$grid.length) {
+            return;
+        }
 
-    const $headingGroup = $('<div>');
+        $grid.empty();
 
-    $('<p>', {
-        class: 'text-uppercase text-secondary fw-bold small mb-1',
-        text: 'PATIENT EXPERIENCE'
-    }).appendTo($headingGroup);
+        $.each(facilities, function (_, facility) {
 
-    $('<h2>', {
-        id: 'testimonials-heading',
-        class: 'h3 text-primary mb-0',
-        text: 'Patient Testimonials'
-    }).appendTo($headingGroup);
+            const $column = $('<div>', {
+                class: 'col-12 col-md-6 col-lg-4'
+            });
 
-    const $badge = $('<span>', {
-        class: 'badge text-bg-secondary',
-        text: 'Sample Demonstration Content'
-    });
+            const $card = $('<article>', {
+                class: 'card h-100 shadow-sm overflow-hidden'
+            });
 
-    $header.append($headingGroup, $badge);
+            const $image = $('<img>', {
+                src: facility.image,
+                alt: facility.title,
+                class: 'card-img-top',
+                loading: 'lazy'
+            });
 
-    const $notice = $('<p>', {
-        class: 'small text-muted',
-        text: 'The following examples are illustrative project content and are not verified patient reviews.'
-    });
+            $image.css({
+                width: '100%',
+                height: '220px',
+                objectFit: 'cover'
+            });
 
-    const $list = $('<div>', {
-        id: 'testimonial-list',
-        class: 'row g-3'
-    });
+            // Display a fallback message if an image is missing.
+            $image.on('error', function () {
 
-    // Build one independent testimonial card.
+                $(this).replaceWith(
+                    $('<div>', {
+                        class: 'bg-light d-flex align-items-center justify-content-center text-muted',
+                        text: 'Image unavailable'
+                    }).css({
+                        height: '220px'
+                    })
+                );
+
+            });
+
+            const $body = $('<div>', {
+                class: 'card-body'
+            });
+
+            const $title = $('<h3>', {
+                class: 'h5 card-title',
+                text: facility.title
+            });
+
+            const $description = $('<p>', {
+                class: 'card-text small text-muted mb-0',
+                text: facility.description
+            });
+
+            $body.append($title, $description);
+
+            $card.append($image, $body);
+
+            $column.append($card);
+
+            $grid.append($column);
+        });
+    }
+
+    // Create a static decorative star display.
+    // No patient rating is collected or stored.
+    function createStars() {
+
+        return $('<span>', {
+            class: 'text-warning fw-bold',
+            text: '★★★★★',
+            'aria-label': 'Illustrative display only'
+        });
+    }
+
+    // Create one demonstration testimonial.
     function createTestimonialCard(item) {
 
         const $column = $('<div>', {
@@ -98,20 +146,28 @@ $(document).ready(function () {
         });
 
         const $card = $('<article>', {
-            class: 'card testimonial-card h-100 shadow-sm'
-        }).attr('data-testimonial-id', item.id);
+            class: 'card h-100 shadow-sm'
+        });
 
         const $body = $('<div>', {
             class: 'card-body d-flex flex-column'
         });
 
+        const $header = $('<div>', {
+            class: 'd-flex flex-wrap justify-content-between align-items-center gap-2'
+        });
+
         const $name = $('<h3>', {
-            class: 'h5 text-primary mb-2',
+            class: 'h5 mb-0',
             text: item.name
         });
 
+        const $stars = createStars();
+
+        $header.append($name, $stars);
+
         const $service = $('<span>', {
-            class: 'badge text-bg-light align-self-start mb-3',
+            class: 'badge text-bg-light align-self-start mt-3 mb-2',
             text: item.service
         });
 
@@ -120,32 +176,21 @@ $(document).ready(function () {
             text: item.text
         });
 
-        // Each card has its OWN details element.
-        const detailsId = 'testimonial-details-' + item.id;
-
-        const $details = $('<div>', {
-            id: detailsId,
-            class: 'testimonial-details border-top pt-3 mt-2'
-        }).hide();
-
-        $('<p>', {
-            class: 'small text-muted mb-0',
+        const $details = $('<p>', {
+            class: 'small text-muted js-testimonial-details',
             text: item.details
-        }).appendTo($details);
+        }).hide();
 
         const $button = $('<button>', {
             type: 'button',
-            class: 'btn btn-outline-primary w-100 mt-auto js-testimonial-details-toggle',
+            class: 'btn btn-outline-primary w-100 mt-auto js-testimonial-button',
             text: 'Read Details'
-        });
-
-        $button
-            .attr('data-testimonial-id', item.id)
-            .attr('aria-controls', detailsId)
-            .attr('aria-expanded', 'false');
+        })
+        .attr('data-testimonial-id', item.id)
+        .attr('aria-expanded', 'false');
 
         $body.append(
-            $name,
+            $header,
             $service,
             $text,
             $details,
@@ -153,64 +198,63 @@ $(document).ready(function () {
         );
 
         $card.append($body);
+
         $column.append($card);
 
         return $column;
     }
 
-    // Render all three independent cards.
-    $.each(testimonials, function (_, item) {
+    // Render all testimonials.
+    function renderTestimonials() {
 
-        $list.append(
-            createTestimonialCard(item)
-        );
-    });
+        const $list = $('#testimonial-list');
 
-    $section.append(
-        $header,
-        $notice,
-        $list
-    );
+        if (!$list.length) {
+            return;
+        }
 
-    // Place testimonials directly after the existing image gallery.
-    if ($gallery.length) {
-        $gallery.after($section);
-    } else {
-        $main.append($section);
+        $list.empty();
+
+        $.each(testimonials, function (_, item) {
+
+            $list.append(
+                createTestimonialCard(item)
+            );
+
+        });
     }
 
-    // Remove only handlers registered by this module before rebinding.
-    // This prevents duplicate clicks if the module is initialised again.
-    $section.off('click.testimonialDetails');
-
-    // Delegated event handling for dynamically generated buttons.
-    $section.on(
-        'click.testimonialDetails',
-        '.js-testimonial-details-toggle',
+    // Delegation handles dynamically generated testimonial buttons.
+    // A direct click handler would not catch buttons created later.
+    $('#testimonial-list').on(
+        'click',
+        '.js-testimonial-button',
         function (event) {
 
             event.preventDefault();
 
             const $button = $(this);
 
-            // Find ONLY the card associated with the clicked button.
-            const $card = $button.closest('.testimonial-card');
+            const $card = $button.closest('.card');
 
-            // Find ONLY the details inside that specific card.
-            const $details = $card.find('.testimonial-details');
+            const $details = $card.find(
+                '.js-testimonial-details'
+            );
 
-            // Toggle the current card, not the whole testimonial list.
             $details.stop(true, true).slideToggle(250, function () {
 
-                const isOpen = $details.is(':visible');
+                const visible = $details.is(':visible');
 
                 $button
-                    .text(isOpen ? 'Hide Details' : 'Read Details')
-                    .attr('aria-expanded', String(isOpen));
+                    .text(visible ? 'Hide Details' : 'Read Details')
+                    .attr('aria-expanded', String(visible));
 
             });
-
         }
     );
+
+    // Render the main page.
+    renderFacilities();
+    renderTestimonials();
 
 });
