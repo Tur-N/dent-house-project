@@ -1,8 +1,3 @@
-/* OLD VANILLA JAVASCRIPT VERSIONS (ASSIGNMENT ARCHIVE)
-   Бұл файл ешбір HTML-ге қосылмаған. Тек
-   jQuery нұсқасымен салыстыру үшін арнайы сақталған.
-   */
-
 // --- FEATURE 1: Form Validation & WhatsApp URL Generator (Vanilla JS) ---
 const oldBookingForm = document.getElementById("booking-form");
 if (oldBookingForm) {
